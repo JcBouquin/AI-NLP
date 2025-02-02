@@ -1,4 +1,4 @@
-# LangGraph Basics
+# LangGraph  
 
 This directory demonstrates the fundamentals of LangGraph framework for building structured conversations and workflows with Language Models.
 
