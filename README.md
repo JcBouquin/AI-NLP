@@ -10,13 +10,6 @@ Conversational agents and dialogue systems implementation:
 - Open-domain chatbots
 - Custom agent frameworks
 
-### Coursera-NLP-specialisation
-Implementation of NLP techniques and exercises from Coursera specialization:
-- Text classification
-- Named Entity Recognition (NER)
-- Machine translation
-- Sentiment analysis
-
 ### Langchain
 Integration with LangChain framework for building NLP applications:
 - Document processing
@@ -29,6 +22,15 @@ Implementation and fine-tuning of Transformer models:
 - BERT implementations
 - Custom model training
 - Task-specific adaptations
+- 
+### Coursera-NLP-specialisation
+Implementation of NLP techniques and exercises from Coursera specialization:
+- Text classification
+- Named Entity Recognition (NER)
+- Machine translation
+- Sentiment analysis
+- Musique generation
+  
 
 ## Prerequisites
 
