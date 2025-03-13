@@ -1,0 +1,114 @@
+=== QUESTION ===
+
+Marie gave half of her apples to Jean. Jean ate three apples, then gave half of what he had left to Pierre. Pierre now has 4 apples. How many apples did Marie have at the beginning?
+
+=== FINAL ANSWER (STEP 5) ===
+
+Final Solution**
+
+To find out how many apples Marie had initially:
+
+1. Let M be the number of apples Marie had.  
+2. Marie gave half of her apples to Jean: Jean received M/2 apples.  
+3. Jean ate 3 apples: Now he has (M/2 - 3) apples.  
+4. Jean gave half of what he had left to Pierre: Pierre received (M/2 - 3)/2 apples.  
+5. We know Pierre has 4 apples, so we set up the equation:  
+   (M/2 - 3)/2 = 4.  
+6. Multiply both sides by 2:  
+   M/2 - 3 = 8.  
+7. Add 3 to both sides:  
+   M/2 = 11.  
+8. Multiply both sides by 2:  
+   M = 22.  
+
+Therefore, Marie had 22 apples at the beginning.
+
+=== COMPLETE PROCESSING (FOR REFERENCE) ===
+
+**Step 1: Initial Exemplars**
+
+Exemplar 1:  
+Q: If Sarah has 10 candies and gives half to her friend, how many does she have left?  
+A: To find out how many candies Sarah has left, I first calculate half of 10. Half of 10 is 5. Then, I subtract the 5 candies she gave away from her original amount.  
+10 - 5 = 5.  
+Therefore, Sarah has 5 candies left.
+
+Exemplar 2:  
+Q: John had 20 marbles, he lost 4, and then gave half of what he had left to his brother. How many marbles does he have now?  
+A: First, I calculate how many marbles John has after losing 4.  
+20 - 4 = 16.  
+Next, I find half of 16, which is 8.  
+Then, I subtract the 8 marbles he gave to his brother from what he had left.  
+16 - 8 = 8.  
+So, John has 8 marbles now.
+
+Exemplar 3:  
+Q: Lisa had 30 stickers, gave away 10, and then split the remaining stickers with her friend. How many stickers does she have now?  
+A: First, I calculate how many stickers Lisa has after giving away 10.  
+30 - 10 = 20.  
+Then, I find half of 20, which is 10.  
+So, Lisa has 10 stickers left after sharing with her friend.
+
+**Step 2: First Iteration**
+
+For the question about Marie and her apples:  
+1. Let M be the number of apples Marie had initially.  
+2. Marie gave half of her apples to Jean, so Jean received M/2 apples.  
+3. Jean ate 3 apples, so now he has (M/2 - 3) apples.  
+4. Jean then gave half of what he had left to Pierre, which is (M/2 - 3)/2.  
+5. According to the problem, Pierre now has 4 apples. Therefore, we can set up the equation:  
+   (M/2 - 3)/2 = 4.  
+6. To solve for M, I first multiply both sides by 2:  
+   M/2 - 3 = 8.  
+7. Then, I add 3 to both sides:  
+   M/2 = 11.  
+8. Finally, I multiply both sides by 2:  
+   M = 22.  
+Thus, Marie had 22 apples initially.
+
+**Step 3: Uncertainty Analysis**
+
+The calculations seem straightforward, but there might be uncertainty in the interpretation of how many apples Jean had after eating and before giving to Pierre. The step of dividing Jean's remaining apples could lead to confusion if not clearly articulated.
+
+**Step 4: Refined Exemplars**
+
+Exemplar 1 (Rewritten):  
+Q: If Sarah has 10 candies and gives half to her friend, how many does she have left?  
+A: To find out how many candies Sarah has left, I first calculate half of 10. Half of 10 is 5. Then, I subtract the 5 candies she gave away from her original amount.  
+10 - 5 = 5.  
+Therefore, Sarah has 5 candies left.
+
+Exemplar 2 (Rewritten):  
+Q: John had 20 marbles, he lost 4, and then gave half of what he had left to his brother. How many marbles does he have now?  
+A: First, I calculate how many marbles John has after losing 4.  
+20 - 4 = 16.  
+Next, I find half of 16, which is 8.  
+Then, I subtract the 8 marbles he gave to his brother from what he had left.  
+16 - 8 = 8.  
+So, John has 8 marbles now.
+
+Exemplar 3 (Rewritten):  
+Q: Lisa had 30 stickers, gave away 10, and then split the remaining stickers with her friend. How many stickers does she have now?  
+A: First, I calculate how many stickers Lisa has after giving away 10.  
+30 - 10 = 20.  
+Then, I find half of 20, which is 10.  
+So, Lisa has 10 stickers left after sharing with her friend.
+
+**Step 5: Final Solution**
+
+To find out how many apples Marie had initially:
+
+1. Let M be the number of apples Marie had.  
+2. Marie gave half of her apples to Jean: Jean received M/2 apples.  
+3. Jean ate 3 apples: Now he has (M/2 - 3) apples.  
+4. Jean gave half of what he had left to Pierre: Pierre received (M/2 - 3)/2 apples.  
+5. We know Pierre has 4 apples, so we set up the equation:  
+   (M/2 - 3)/2 = 4.  
+6. Multiply both sides by 2:  
+   M/2 - 3 = 8.  
+7. Add 3 to both sides:  
+   M/2 = 11.  
+8. Multiply both sides by 2:  
+   M = 22.  
+
+Therefore, Marie had 22 apples at the beginning.
