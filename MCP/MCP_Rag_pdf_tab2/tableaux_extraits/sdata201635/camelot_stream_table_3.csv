@@ -1,0 +1,45 @@
+0,1
+"● the dataset spans more than a decade, with detailed information about",individual patient care;
+,"● analysis is unrestricted once a data use agreement is accepted, enabling clinical research and education"
+around the world.,
+Hospital,
+ICU,
+"MICU
+SICU
+ CCU 
+ CSRU
+ NICU",
+"Bedside monitoring
+Chart",
+" Vital signs
+ Fluids",
+" Medications
+ Waveforms",
+" Progress notes
+ Trends",
+ Alarms,
+Tests,
+ Laboratory,
+ Microbiology,
+Orders,
+,MIMIC-III
+ Provider order entry (POE),
+"Date shifting
+Data archive",Database
+Billing,
+ ICD9,
+ DRG,
+Format conversion,
+ Procedures (CPT),
+Demographics,
+ Admission/discharge dates,
+ Date of birth/death,
+ Religion/ethnicity/marital status,
+Notes and reports,
+ Discharge summaries,
+User feedback,
+" Radiology (X-ray, CT, MRI, Ultrasound)",
+and,
+" Cardiology (ECHO, ECG)",
+corrections,
+External,

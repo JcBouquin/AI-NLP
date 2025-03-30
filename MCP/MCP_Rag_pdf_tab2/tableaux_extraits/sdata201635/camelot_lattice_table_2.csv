@@ -1,0 +1,41 @@
+0
+"Hospital
+ICU
+MICU
+SICU
+ CCU 
+ CSRU
+ NICU 
+Bedside monitoring
+Chart
+ Vital signs
+ Fluids
+ Medications
+ Waveforms
+ Progress notes
+ Trends
+ Alarms"
+""
+""
+"Tests
+ Laboratory
+ Microbiology"
+""
+"Orders
+ Provider order entry (POE)"
+""
+"Billing
+ ICD9
+ DRG
+ Procedures (CPT)"
+""
+"Demographics
+ Admission/discharge dates
+ Date of birth/death
+ Religion/ethnicity/marital status"
+""
+"Notes and reports
+ Discharge summaries
+ Radiology (X-ray, CT, MRI, Ultrasound)
+ Cardiology (ECHO, ECG)"
+""

@@ -1,0 +1,56 @@
+0,1
+0,"60
+10
+30
+40
+50
+20"
+,"Time after admission to the intensive care unit, hours"
+,"Figure 2.
+Sample data for a single patient stay in a medical
+intensive care unit. GCS is Glasgow Coma Scale;"
+,NIBP is non-invasive blood pressure; and O2 saturation is blood oxygen saturation.
+,"Metavision
+system are
+stored
+in INPUTEVENTS_MV. Additional
+information was
+collected
+from"
+,"hospital and laboratory health record systems,
+including:"
+,● patient demographics and in-hospital mortality.
+,"● laboratory test results (for example, hematology, chemistry, and microbiology results)."
+,● discharge summaries and reports of electrocardiogram and imaging studies.
+,"● billing-related information such as International Classiﬁcation of Disease, 9th Edition (ICD-9) codes,"
+,"Diagnosis Related Group (DRG) codes, and Current Procedural Terminology (CPT) codes."
+,Out-of-hospital mortality dates were obtained using the Social Security Administration Death Master
+,File. A more detailed description of the data is shown in Table 1. Physiological waveforms obtained from
+,"bedside monitors
+(such
+as
+electrocardiograms,
+blood
+pressure waveforms,
+photoplethysmograms,"
+,impedance pneumograms) were obtained for a subset of patients.
+,Several projects are ongoing to map concepts within the MIMIC database to standardized dictionaries.
+,"For example, researchers at the National Library of Medicine National Institutes of Health have mapped"
+,"laboratory tests and medications
+in MIMIC-II
+to LOINC and RxNorm,
+respectively4. Efforts are also"
+,"underway to transform MIMIC to common data models, such as the Observational Medical Outcomes"
+,"Partnership Common Data Model, to support the application of standardized tools and methods5. These"
+,developments are progressively incorporated into the MIMIC database where possible.
+,The project was approved by the Institutional Review Boards of Beth Israel Deaconess Medical Center
+,"(Boston, MA)
+and
+the Massachusetts
+Institute
+of Technology
+(Cambridge, MA). Requirement
+for"
+,"individual patient consent was waived because the project did not
+impact clinical care and all protected"
+,health information was deidentiﬁed.

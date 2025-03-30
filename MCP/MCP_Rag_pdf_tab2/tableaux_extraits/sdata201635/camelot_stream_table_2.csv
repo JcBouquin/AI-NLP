@@ -1,0 +1,70 @@
+0
+Background & Summary
+In recent years there has been a concerted move towards the adoption of digital health record systems in
+"hospitals.
+In the US,
+for
+example,
+the number of non-federal
+acute
+care hospitals with basic digital"
+systems increased from 9.4 to 75.5% over the 7 year period between 2008 and 2014 (ref. 1).
+"Despite this advance, interoperability of digital systems remains an open issue,
+leading to challenges in"
+"data
+integration. As
+a
+result,
+the potential
+that hospital data offers
+in terms of understanding
+and"
+"improving care is yet
+to be fully realized.
+In parallel,
+the scientiﬁc research community is
+increasingly"
+coming under criticism for the lack of reproducibility of studies2.
+"Here we
+report
+the
+release of
+the MIMIC-III database,
+an update
+to the widely-used MIMIC-II"
+"database (Data Citation 1). MIMIC-III
+integrates deidentiﬁed, comprehensive clinical data of patients"
+"admitted to the Beth Israel Deaconess Medical Center
+in Boston, Massachusetts, and makes
+it widely"
+accessible to researchers internationally under a data use agreement (Fig. 1). The open nature of the data
+allows clinical studies to be reproduced and improved in ways that would not otherwise be possible.
+"Based on our experience with the previous major release of MIMIC (MIMIC-II, released in 2010) we"
+"anticipate MIMIC-III to be widely used internationally in areas such as academic and industrial research,"
+"quality improvement
+initiatives, and higher education coursework."
+"To
+recognize
+the
+increasingly
+broad
+usage
+of MIMIC, we
+have
+renamed
+the
+full
+title
+of
+the"
+"database from ‘Multiparameter Intelligent Monitoring in Intensive Care’
+to ‘Medical
+Information Mart"
+for Intensive Care’. The MIMIC-III critical care database is unique and notable for the following reasons:
+"● it
+is the only freely accessible critical care database of
+its kind;"
+"● the dataset spans more than a decade, with detailed information about
+individual patient care;"
+"● analysis is unrestricted once a data use agreement is accepted, enabling clinical research and education"
+around the world.

@@ -1,0 +1,175 @@
+0
+Patient characteristics
+"MIMIC-III
+contains
+data
+associated with
+53,423
+distinct
+hospital
+admissions
+for
+adult
+patients"
+"(aged
+16
+years
+or
+above)
+admitted
+to
+critical
+care
+units
+between
+2001
+and
+2012.
+In
+addition,
+it"
+"contains data
+for 7870 neonates
+admitted between 2001 and 2008. The data
+covers 38,597 distinct"
+"adult
+patients
+and
+49,785
+hospital
+admissions.
+The median
+age
+of
+adult
+patients
+is
+65.8
+years"
+"(Q1–Q3: 52.8–77.8), 55.9% patients are male, and in-hospital mortality is 11.5%. The median length of an"
+"ICU stay is 2.1 days
+(Q1–Q3: 1.2–4.6) and the median length of a hospital
+stay is 6.9 days
+(Q1-Q3:"
+"4.1–11.9). A mean
+of
+4579
+charted
+observations
+(’chartevents’)
+and
+380
+laboratory measurements"
+"(’labevents’)
+are
+available
+for
+each hospital
+admission. Table
+1 provides
+a
+breakdown of
+the
+adult"
+population by care unit.
+"The primary
+International Classiﬁcation of Diseases
+(ICD-9)
+codes
+from the patient
+discharges"
+"are
+listed in Table 2. The
+top three
+codes across hospital admissions
+for patients aged 16 years and"
+above were:
+"● 414.01
+(‘Coronary
+atherosclerosis of native
+coronary
+artery’),
+accounting
+for
+7.1% of
+all hospital"
+admissions;
+"● 038.9 (‘Unspeciﬁed septicemia’), accounting for 4.2% of all hospital admissions; and"
+"● 410.71
+(‘Subendocardial
+infarction,
+initial
+episode
+of
+care’),
+accounting
+for
+3.6% of
+all
+hospital"
+admissions.
+Classes of data
+"Data
+available
+in
+the MIMIC-III
+database
+ranges
+from time-stamped,
+nurse-veriﬁed
+physiological"
+"measurements made
+at
+the
+bedside
+to free-text
+interpretations
+of
+imaging
+studies provided by
+the"
+radiology department. Table 3 gives an overview of the different classes of data available. Figure 2 shows
+"sample data for a single patient stay in a medical
+intensive care unit. The patient, who was undergoing a"
+"course of
+chemotherapy
+at
+the
+time of
+admission, presented with febrile neutropenia,
+anemia,
+and"
+thrombocytopenia.
+Methods
+"The
+Laboratory
+for
+Computational
+Physiology
+at Massachusetts
+Institute
+of
+Technology
+is
+an"
+"interdisciplinary team of data scientists and practicing physicians. MIMIC-III
+is
+the third iteration of"
+"the MIMIC critical
+care database,
+enabling us
+to draw upon prior
+experience with regard to data"
+management and integration3.
+Database development
+"The MIMIC-III database was populated with data that had been acquired during routine hospital care, so"
+"there was no
+associated
+burden on caregivers
+and no
+interference with their workﬂow. Data was"
+"downloaded from several sources,
+including:"
+● archives from critical care information systems.
+● hospital electronic health record databases.
+● Social Security Administration Death Master File.
