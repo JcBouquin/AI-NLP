@@ -1,0 +1,31 @@
+=== QUESTION ===
+
+If a train travels at 60 mph for 2 hours, then slows to 40 mph for 1 hour, what is the average speed for the journey?
+
+=== FINAL SOLUTION (STEP 4) ===
+
+Final Solution  
+The average speed for the journey is approximately 53.33 mph. This is calculated by dividing the total distance of 160 miles by the total time of 3 hours.
+
+=== COMPLETE PROCESSING (FOR REFERENCE) ===
+
+Step 1: Generate Zero-Shot CoT  
+Let's think step by step. To find the average speed, we need to calculate the total distance traveled and the total time taken. The train travels at 60 mph for 2 hours, so the distance for that part is 60 mph * 2 hours = 120 miles. Then, it slows to 40 mph for 1 hour, covering an additional distance of 40 mph * 1 hour = 40 miles. The total distance is 120 miles + 40 miles = 160 miles. The total time is 2 hours + 1 hour = 3 hours. Finally, the average speed is total distance divided by total time, which is 160 miles / 3 hours = approximately 53.33 mph.
+
+Step 2: Construct Few-Shot CoT Prompt  
+Example 1:  
+Q: A car travels at 50 mph for 3 hours and then at 30 mph for 2 hours. What is the average speed for the journey?  
+A: Let's think step by step. The car travels 50 mph * 3 hours = 150 miles in the first part. Then, it travels 30 mph * 2 hours = 60 miles in the second part. The total distance is 150 miles + 60 miles = 210 miles. The total time is 3 hours + 2 hours = 5 hours. The average speed is 210 miles / 5 hours = 42 mph.
+
+Example 2:  
+Q: A cyclist rides at 15 mph for 4 hours and then at 10 mph for 1 hour. What is the average speed for the journey?  
+A: Let's think step by step. The cyclist travels 15 mph * 4 hours = 60 miles in the first part. Then, they travel 10 mph * 1 hour = 10 miles in the second part. The total distance is 60 miles + 10 miles = 70 miles. The total time is 4 hours + 1 hour = 5 hours. The average speed is 70 miles / 5 hours = 14 mph.
+
+Q: If a train travels at 60 mph for 2 hours, then slows to 40 mph for 1 hour, what is the average speed for the journey?  
+A: 
+
+Step 3: Solve with Few-Shot CoT  
+Let's think step by step. The train travels 60 mph * 2 hours = 120 miles in the first part. Then, it travels 40 mph * 1 hour = 40 miles in the second part. The total distance is 120 miles + 40 miles = 160 miles. The total time is 2 hours + 1 hour = 3 hours. The average speed is 160 miles / 3 hours = approximately 53.33 mph.
+
+Step 4: Final Solution  
+The average speed for the journey is approximately 53.33 mph. This is calculated by dividing the total distance of 160 miles by the total time of 3 hours.
