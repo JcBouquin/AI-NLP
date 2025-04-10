@@ -1,0 +1,79 @@
+=== QUESTION ===
+
+Marie gave half of her apples to Jean. Jean ate three apples, then gave half of what he had left to Pierre. Pierre now has 4 apples. How many apples did Marie have at the beginning?
+
+=== FINAL ANSWER (STEP 5) ===
+
+Final Solution**  
+Marie initially had 22 apples.  
+To summarize:  
+- Marie gave half (11 apples) to Jean.  
+- Jean ate 3 apples (leaving him with 8 apples).  
+- Jean then gave half of his remaining apples (4 apples) to Pierre, who now has 4 apples.  
+Thus, the calculations confirm that Marie started with 22 apples.
+
+=== COMPLETE PROCESSING (FOR REFERENCE) ===
+
+**Step 1: Memory Bank Creation**
+
+Exemplar 1:  
+Q: If Sarah has 20 candies and gives half to her friend, how many does she have left?  
+A: To find out how many candies Sarah has left, I need to calculate half of 20.  
+Half of 20 = 20 / 2 = 10.  
+So, Sarah gives away 10 candies.  
+Remaining candies = 20 - 10 = 10.  
+Therefore, Sarah has 10 candies left.
+
+Exemplar 2:  
+Q: Tom had 15 marbles, he lost 5, and then gave half of what he had left to his brother. How many marbles does Tom have now?  
+A: First, I calculate how many marbles Tom has after losing 5.  
+15 - 5 = 10 marbles left.  
+Now, he gives half of 10 to his brother.  
+Half of 10 = 10 / 2 = 5.  
+So, Tom gives away 5 marbles.  
+Remaining marbles = 10 - 5 = 5.  
+Therefore, Tom has 5 marbles left.
+
+Exemplar 3:  
+Q: Lisa had 30 stickers, she gave 10 to her friend and then gave half of the remaining stickers to another friend. How many stickers does she have now?  
+A: First, I calculate how many stickers Lisa has after giving away 10.  
+30 - 10 = 20 stickers left.  
+Now, she gives half of 20 to another friend.  
+Half of 20 = 20 / 2 = 10.  
+So, Lisa gives away 10 stickers.  
+Remaining stickers = 20 - 10 = 10.  
+Therefore, Lisa has 10 stickers left.
+
+**Step 2: Similarity Analysis**  
+For the question about Marie's apples, Exemplar 1 and Exemplar 2 are relevant as they both involve giving away a portion of items and calculating the remaining amount. Exemplar 3 is less relevant as it involves a fixed number given away rather than a proportion.
+
+**Step 3: Context Retrieval**  
+From Exemplar 1: The process of giving away half of a quantity and calculating the remainder.  
+From Exemplar 2: The process of losing a fixed amount and then giving away half of what remains.
+
+**Step 4: Memory-Augmented Reasoning**  
+Let's denote the number of apples Marie had initially as \( x \).  
+1. Marie gives half of her apples to Jean:  
+   Jean receives \( \frac{x}{2} \) apples.  
+   
+2. Jean eats 3 apples:  
+   Apples left with Jean = \( \frac{x}{2} - 3 \).  
+   
+3. Jean gives half of what he has left to Pierre:  
+   Apples given to Pierre = \( \frac{1}{2} \left( \frac{x}{2} - 3 \right) = \frac{x}{4} - \frac{3}{2} \).  
+   
+4. According to the problem, Pierre now has 4 apples:  
+   \[ \frac{x}{4} - \frac{3}{2} = 4 \]  
+   
+5. Solving for \( x \):  
+   \[ \frac{x}{4} = 4 + \frac{3}{2} \]  
+   \[ \frac{x}{4} = 4 + 1.5 = 5.5 \]  
+   \[ x = 5.5 \times 4 = 22 \]  
+
+**Step 5: Final Solution**  
+Marie initially had 22 apples.  
+To summarize:  
+- Marie gave half (11 apples) to Jean.  
+- Jean ate 3 apples (leaving him with 8 apples).  
+- Jean then gave half of his remaining apples (4 apples) to Pierre, who now has 4 apples.  
+Thus, the calculations confirm that Marie started with 22 apples.

@@ -1,0 +1,81 @@
+=== QUESTION ===
+
+If a factory can produce 800 units in 4 days with 10 workers, how many units can it produce in 6 days with 15 workers, assuming production scales linearly with time and workers?
+
+=== FINAL ANSWER (STEP 5) ===
+
+Majority Vote Solution**  
+All three reasoning paths arrived at the same answer: 1800 units.  
+Therefore, based on the majority vote (3 out of 3), the factory can produce **1800 units** in 6 days with 15 workers.
+
+=== COMPLETE PROCESSING (FOR REFERENCE) ===
+
+**Step 1: Complexity Analysis**  
+This question involves multiple steps: calculating the production rate per worker, determining the total production capacity for the new number of workers and days, and applying the linear scaling of production. The question length is moderate, and it requires 4-5 reasoning steps, making it suitable for Complexity-based Prompting.
+
+**Step 2: Complex Exemplars**  
+**Exemplar 1:**  
+Q: A factory produces 600 units in 3 days with 8 workers. How many units can it produce in 5 days with 12 workers?  
+A: First, calculate the production rate per worker per day.  
+Production rate = Total units / (Number of workers × Number of days)  
+Production rate = 600 / (8 × 3) = 600 / 24 = 25 units per worker per day.  
+Next, calculate the total production with 12 workers in 5 days.  
+Total production = Production rate × Number of workers × Number of days  
+Total production = 25 × 12 × 5 = 1500 units.  
+Therefore, the factory can produce 1500 units.
+
+**Exemplar 2:**  
+Q: If a workshop can make 1000 toys in 5 days with 5 workers, how many toys can it make in 10 days with 10 workers?  
+A: First, find the production rate per worker per day.  
+Production rate = 1000 / (5 × 5) = 1000 / 25 = 40 toys per worker per day.  
+Now, calculate the total production with 10 workers in 10 days.  
+Total production = 40 × 10 × 10 = 4000 toys.  
+Thus, the workshop can make 4000 toys.
+
+**Exemplar 3:**  
+Q: A bakery produces 300 loaves of bread in 2 days with 6 bakers. How many loaves can it produce in 4 days with 9 bakers?  
+A: Calculate the production rate per baker per day.  
+Production rate = 300 / (6 × 2) = 300 / 12 = 25 loaves per baker per day.  
+Now, calculate the total production with 9 bakers in 4 days.  
+Total production = 25 × 9 × 4 = 900 loaves.  
+Therefore, the bakery can produce 900 loaves.
+
+**Step 3: Multiple Reasoning Paths**  
+**Reasoning Path 1:**  
+Step 1: Calculate the production rate per worker per day.  
+Production rate = 800 units / (10 workers × 4 days) = 800 / 40 = 20 units per worker per day.  
+Step 2: Calculate the total production with 15 workers in 6 days.  
+Total production = 20 units/worker/day × 15 workers × 6 days = 1800 units.  
+Therefore, the factory can produce 1800 units.
+
+**Reasoning Path 2:**  
+Step 1: Determine the total worker-days in the original scenario.  
+Total worker-days = 10 workers × 4 days = 40 worker-days.  
+Step 2: Calculate the production per worker-day.  
+Production per worker-day = 800 units / 40 worker-days = 20 units per worker-day.  
+Step 3: Calculate the total worker-days in the new scenario.  
+New total worker-days = 15 workers × 6 days = 90 worker-days.  
+Step 4: Calculate the total production in the new scenario.  
+Total production = 20 units/worker-day × 90 worker-days = 1800 units.  
+Thus, the factory can produce 1800 units.
+
+**Reasoning Path 3:**  
+Step 1: Find the total production capacity in the original scenario.  
+Total production = 800 units in 4 days with 10 workers.  
+Step 2: Calculate the production capacity per day.  
+Daily production = 800 units / 4 days = 200 units per day.  
+Step 3: Calculate the production capacity per worker.  
+Production per worker = 200 units / 10 workers = 20 units per worker per day.  
+Step 4: Calculate the total production for 15 workers in 6 days.  
+Total production = 20 units/worker/day × 15 workers × 6 days = 1800 units.  
+Therefore, the factory can produce 1800 units.
+
+**Step 4: Length-Based Filtering**  
+Reasoning Path 1: 4 steps (exceeds threshold)  
+Reasoning Path 2: 4 steps (exceeds threshold)  
+Reasoning Path 3: 4 steps (exceeds threshold)  
+All reasoning paths have at least 4 steps, which meets our complexity threshold.
+
+**Step 5: Majority Vote Solution**  
+All three reasoning paths arrived at the same answer: 1800 units.  
+Therefore, based on the majority vote (3 out of 3), the factory can produce **1800 units** in 6 days with 15 workers.
