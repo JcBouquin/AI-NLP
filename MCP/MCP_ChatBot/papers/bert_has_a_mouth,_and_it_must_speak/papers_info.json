@@ -1,0 +1,54 @@
+{
+  "1902.04094v2": {
+    "title": "BERT has a Mouth, and It Must Speak: BERT as a Markov Random Field Language Model",
+    "authors": [
+      "Alex Wang",
+      "Kyunghyun Cho"
+    ],
+    "summary": "We show that BERT (Devlin et al., 2018) is a Markov random field language\nmodel. This formulation gives way to a natural procedure to sample sentences\nfrom BERT. We generate from BERT and find that it can produce high-quality,\nfluent generations. Compared to the generations of a traditional left-to-right\nlanguage model, BERT generates sentences that are more diverse but of slightly\nworse quality.",
+    "pdf_url": "http://arxiv.org/pdf/1902.04094v2",
+    "published": "2019-02-11"
+  },
+  "1902.04285v1": {
+    "title": "Puppet Dubbing",
+    "authors": [
+      "Ohad Fried",
+      "Maneesh Agrawala"
+    ],
+    "summary": "Dubbing puppet videos to make the characters (e.g. Kermit the Frog)\nconvincingly speak a new speech track is a popular activity with many examples\nof well-known puppets speaking lines from films or singing rap songs. But\nmanually aligning puppet mouth movements to match a new speech track is tedious\nas each syllable of the speech must match a closed-open-closed segment of mouth\nmovement for the dub to be convincing. In this work, we present two methods to\nalign a new speech track with puppet video, one semi-automatic appearance-based\nand the other fully-automatic audio-based. The methods offer complementary\nadvantages and disadvantages. Our appearance-based approach directly identifies\nclosed-open-closed segments in the puppet video and is robust to low-quality\naudio as well as misalignments between the mouth movements and speech in the\noriginal performance, but requires some manual annotation. Our audio-based\napproach assumes the original performance matches a closed-open-closed mouth\nsegment to each syllable of the original speech. It is fully automatic, robust\nto visual occlusions and fast puppet movements, but does not handle\nmisalignments in the original performance. We compare the methods and show that\nboth improve the credibility of the resulting video over simple baseline\ntechniques, via quantitative evaluation and user ratings.",
+    "pdf_url": "http://arxiv.org/pdf/1902.04285v1",
+    "published": "2019-02-12"
+  },
+  "2312.09750v1": {
+    "title": "Attention-Based VR Facial Animation with Visual Mouth Camera Guidance for Immersive Telepresence Avatars",
+    "authors": [
+      "Andre Rochow",
+      "Max Schwarz",
+      "Sven Behnke"
+    ],
+    "summary": "Facial animation in virtual reality environments is essential for\napplications that necessitate clear visibility of the user's face and the\nability to convey emotional signals. In our scenario, we animate the face of an\noperator who controls a robotic Avatar system. The use of facial animation is\nparticularly valuable when the perception of interacting with a specific\nindividual, rather than just a robot, is intended. Purely keypoint-driven\nanimation approaches struggle with the complexity of facial movements. We\npresent a hybrid method that uses both keypoints and direct visual guidance\nfrom a mouth camera. Our method generalizes to unseen operators and requires\nonly a quick enrolment step with capture of two short videos. Multiple source\nimages are selected with the intention to cover different facial expressions.\nGiven a mouth camera frame from the HMD, we dynamically construct the target\nkeypoints and apply an attention mechanism to determine the importance of each\nsource image. To resolve keypoint ambiguities and animate a broader range of\nmouth expressions, we propose to inject visual mouth camera information into\nthe latent space. We enable training on large-scale speaking head datasets by\nsimulating the mouth camera input with its perspective differences and facial\ndeformations. Our method outperforms a baseline in quality, capability, and\ntemporal consistency. In addition, we highlight how the facial animation\ncontributed to our victory at the ANA Avatar XPRIZE Finals.",
+    "pdf_url": "http://arxiv.org/pdf/2312.09750v1",
+    "published": "2023-12-15"
+  },
+  "2211.00792v2": {
+    "title": "BECTRA: Transducer-based End-to-End ASR with BERT-Enhanced Encoder",
+    "authors": [
+      "Yosuke Higuchi",
+      "Tetsuji Ogawa",
+      "Tetsunori Kobayashi",
+      "Shinji Watanabe"
+    ],
+    "summary": "We present BERT-CTC-Transducer (BECTRA), a novel end-to-end automatic speech\nrecognition (E2E-ASR) model formulated by the transducer with a BERT-enhanced\nencoder. Integrating a large-scale pre-trained language model (LM) into E2E-ASR\nhas been actively studied, aiming to utilize versatile linguistic knowledge for\ngenerating accurate text. One crucial factor that makes this integration\nchallenging lies in the vocabulary mismatch; the vocabulary constructed for a\npre-trained LM is generally too large for E2E-ASR training and is likely to\nhave a mismatch against a target ASR domain. To overcome such an issue, we\npropose BECTRA, an extended version of our previous BERT-CTC, that realizes\nBERT-based E2E-ASR using a vocabulary of interest. BECTRA is a transducer-based\nmodel, which adopts BERT-CTC for its encoder and trains an ASR-specific decoder\nusing a vocabulary suitable for a target task. With the combination of the\ntransducer and BERT-CTC, we also propose a novel inference algorithm for taking\nadvantage of both autoregressive and non-autoregressive decoding. Experimental\nresults on several ASR tasks, varying in amounts of data, speaking styles, and\nlanguages, demonstrate that BECTRA outperforms BERT-CTC by effectively dealing\nwith the vocabulary mismatch while exploiting BERT knowledge.",
+    "pdf_url": "http://arxiv.org/pdf/2211.00792v2",
+    "published": "2022-11-02"
+  },
+  "2406.08279v1": {
+    "title": "Positive and negative word of mouth in the United States",
+    "authors": [
+      "Shawn Berry"
+    ],
+    "summary": "Word of mouth is a process by which consumers transmit positive or negative\nsentiment to other consumers about a business. While this process has long been\nrecognized as a type of promotion for businesses, the value of word of mouth is\nquestionable. This study will examine the various correlates of word of mouth\nto demographic variables, including the role of the trust of business owners.\nEducation level, region of residence, and income level were found to be\nsignificant predictors of positive word of mouth. Although the results\ngenerally suggest that the majority of respondents do not engage in word of\nmouth, there are valuable insights to be learned.",
+    "pdf_url": "http://arxiv.org/pdf/2406.08279v1",
+    "published": "2024-06-12"
+  }
+}
