@@ -34,16 +34,33 @@ Asynchronous client that orchestrates communication between Claude and MCP serve
 - **Conversational interface** : Interactive chat loop with Claude
 
 ### 3. `server_config.json` - Configuration
-JSON configuration file defining MCP servers to connect:
+JSON configuration file defining MCP servers to connect: add filesystem and fetch MCP 
 
 ```json
 {
   "mcpServers": {
-    "research": {
-      "command": "python",
-      "args": ["research_server.py"]
+        "filesystem": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-filesystem",
+                "."
+            ]
+        },
+        "research": {
+            "command": "uv",
+            "args": [
+                "run",
+                "research_server.py"
+            ]
+        },
+        "fetch": {
+            "command": "uvx",
+            "args": [
+                "mcp-server-fetch"
+            ]
+        }
     }
-  }
 }
 ```
 
