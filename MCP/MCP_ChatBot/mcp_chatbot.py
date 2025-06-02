@@ -1,15 +1,15 @@
 
 """
-MCP ChatBot - Asynchronous Research Assistant
+MCP ChatBot - arXiv Research Assistant 
 ============================================
 
 This script implements a asynchronous MCP (Model Context Protocol) client 
-that connects to multiple research servers and provides an interactive chat interface 
+that connects to a arXiv research MCP servers and provides an interactive chat interface 
 with Claude AI.
 
 Key Architectural Components:
-- Asynchronous multi-server connection management
-- Dynamic tool discovery from connected MCP servers
+- Asynchronous multi-server connection  
+- tool from connected MCP servers
 - Bidirectional communication with Claude via Anthropic API
 - Proper resource lifecycle management with automatic cleanup
 
