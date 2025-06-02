@@ -3,7 +3,7 @@
 MCP ChatBot - Asynchronous Research Assistant
 ============================================
 
-This script implements a sophisticated asynchronous MCP (Model Context Protocol) client 
+This script implements a asynchronous MCP (Model Context Protocol) client 
 that connects to multiple research servers and provides an interactive chat interface 
 with Claude AI.
 
