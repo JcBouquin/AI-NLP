@@ -39,7 +39,7 @@ mcp = FastMCP("langgraph-rag-server")
 # Initialiser le LLM avec gestion sécurisée de la clé API
 api_key = os.getenv('OPENAI_API_KEY')
 if not api_key:
-    print("⚠️ ATTENTION: Utilisez une variable d'environnement pour la clé API en production")
+     
     api_key = "sk-proj-0xUZ6aBpi14QWLtzQC2n hRFwAy9HhFfHS_cUMhXQMX6_U0pycw_XiZUUtZ4V6Gc5xEwhMZOsYA6xKN4HruNnPRcA"
 
 # ===== ÉTAT DU GRAPHE =====
@@ -64,7 +64,7 @@ class LangGraphRAGServer:
         self.data_loaded = False
     
     async def setup_data_and_components(self):
-        """Initialise les données et les composants RAG - ASYNC comme votre code météo"""
+         
         print("🔄 Initialisation des données RAG...")
         
         try:
