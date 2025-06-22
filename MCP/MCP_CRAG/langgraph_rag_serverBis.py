@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-LangGraph RAG Server avec FastMCP - Structure basée sur le code météo qui fonctionne
+ 
 """
 
 import os
