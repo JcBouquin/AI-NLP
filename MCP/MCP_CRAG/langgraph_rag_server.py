@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Serveur MCP pour intégrer LangGraph RAG avec Claude Desktop - Version moderne avec @mcp.tools
+Serveur  
 """
 
 import asyncio
