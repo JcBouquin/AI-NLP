@@ -8,12 +8,8 @@ Ce projet utilise **LangGraph** et **GPT-4o-mini** pour analyser automatiquement
 
 Le système fonctionne avec **4 nœuds séquentiels** :
 
-```mermaid
-graph LR
-    A[📖 EXTRACTION] --> B[🔬 ANALYSE]
-    B --> C[📊 STATISTIQUES]
-    C --> D[📤 EXPORT]
-    D --> E[✅ FIN]
+```
+📖 EXTRACTION → 🔬 ANALYSE → 📊 STATISTIQUES → 📤 EXPORT → ✅ FIN
 ```
 
 ---
