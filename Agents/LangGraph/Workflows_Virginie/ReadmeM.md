@@ -256,18 +256,11 @@ Cette approche ne se limite pas à l'automatisation de tâches existantes. Elle 
 - **Nouveaux services :** Offres enrichies grâce à l'analyse automatisée
 - **Avantage concurrentiel :** Réactivité et précision supérieures
 
-**L'enjeu n'est plus de savoir *si* vous allez automatiser, mais *à quelle vitesse* vous allez prendre cette avance sur vos concurrents.**
+ 
 
 ---
 
-## 📞 Contact
-
-**Prêt à transformer vos processus documentaires ?**
-
-- 📧 **Email :** [votre-contact-business]
-- 📱 **Téléphone :** [numéro direct]
-- 📅 **Calendrier :** [lien booking démo]
-
+ 
 ---
 
  
