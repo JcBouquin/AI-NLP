@@ -270,4 +270,4 @@ Cette approche ne se limite pas à l'automatisation de tâches existantes. Elle 
 
 ---
 
-*"Dans un monde où la donnée est reine, celui qui l'exploite le plus rapidement et précisément gagne."*
+ 
