@@ -15,7 +15,7 @@ Cette méthode d'analyse doit être appliquée sur l'ensemble du document admini
 5. Compiler les résultats en respectant le format suivant pour chaque article :
 
 Article [Numéro]
-[En cas d'absence ou d'empêchement de] : [Nom de la personne ou "Non mentionné"]
+[En cas d'absence ou d'empêchement de] : [Nom de la personne]
 [Délégation est donnée à] : [Nom de la personne ou "Non mentionné"]
 
 Exemple 1:
@@ -188,6 +188,9 @@ Voici l'exemple formaté avec des noms et prénoms fictifs :
      [En cas d'absence ou d'empêchement de] :   de la directrice générale de Santé publique France
      [Délégation est donnée à] :   Mme Amélie BERNARD, M. Julien MOREAU, Mme Sarah DUBOIS, M. Pierre LEFEBVRE, fonction : gestionnaires de l'Unité pilotage et exécution financière au sein de la Direction des achats et des finances
 
+     
+TU ECRIRAS DANS LE FICHIER FINAL UNIQUEMENT LES FORMATS SUIVANTS 
+
 Article 11
 [En cas d'absence ou d'empêchement de] : de la directrice générale de Santé publique France
 [Délégation est donnée à] : Mme Amélie BERNARD, M. Julien MOREAU, Mme Sarah DUBOIS, M. Pierre LEFEBVRE, fonction : gestionnaires de l'Unité pilotage et exécution financière au sein de la Direction des achats et des finances
@@ -201,7 +204,7 @@ Article 8
 [Délégation est donnée à] : M. Thomas DUPONT fonction : responsable de l'Unité budget et contrôle interne au sein de la Direction des achats et des finances
 
 Article 15
-[En cas d'absence ou d'empêchement de] : Non mentionné
-[Délégation est donnée à] : Non mentionné
+[En cas d'absence ou d'empêchement de] : De la directrice générale de Santé publique France
+[Délégation est donnée à] : Mme Camille LAURENT fonction : adjointe
 
 Analysez le texte suivant :
