@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project implements a document analysis system using LangGraph to process administrative PDF documents, specifically oriented towards the identification and extraction of identified terms. The system consists of two complementary workflows that automate the entire document analysis process.
+This project implements a document analysis system using LangGraph WorkFlows Prompt chaining to process administrative PDF documents, specifically oriented towards the identification and extraction of identified terms. The system consists of two complementary workflows that automate the entire document analysis process.
 
 ## System Architecture
 
