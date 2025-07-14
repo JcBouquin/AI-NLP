@@ -1,411 +1,122 @@
-# 📄 Analyseur de Délégations PDF avec LangGraph
+# Système d'Analyse PDF avec LangGraph
 
-## 🎯 Vue d'ensemble
+## Vue d'ensemble
 
-Ce projet utilise **LangGraph** et **GPT-4o-mini** pour analyser automatiquement les documents PDF de délégations de pouvoir. Il extrait, analyse et produit des statistiques sur les délégations administratives avec export multi-format.
+Ce projet implémente un système d'analyse documentaire sophistiqué utilisant LangGraph pour traiter des documents PDF administratifs, spécifiquement orienté vers l'extraction et l'analyse de délégations de pouvoir. Le système est composé de deux workflows complémentaires qui automatisent l'ensemble du processus d'analyse documentaire.
 
-### 🔄 Architecture du Workflow
+## Architecture du Système
 
-Le système fonctionne avec **4 nœuds séquentiels** :
+### Workflow 1 : Analyse Primaire PDF
+**Pipeline :** `Extraction → Analyse → Export`
 
-```
-📖 EXTRACTION → 🔬 ANALYSE → 📊 STATISTIQUES → 📤 EXPORT → ✅ FIN
-```
+Le premier workflow constitue le cœur du système d'analyse documentaire. Il traite les documents PDF en appliquant une approche innovante de segmentation contextuelle.
 
----
+#### Fonctionnement
+1. **Extraction** : Lecture et prétraitement du PDF avec nettoyage automatique du texte
+2. **Analyse** : Application d'un modèle LLM pour identifier les délégations de pouvoir
+3. **Export** : Génération de fichiers de synthèse structurés
 
-## 🏗️ Installation
+#### Innovation Technique : Traitement par Lots
+Une caractéristique distinctive de ce workflow réside dans son approche de **traitement par lots réduits**. Au lieu d'analyser l'intégralité du document en une seule opération, le système segmente le traitement par tranches de 2 pages (paramétrable à 3 ou plus).
 
-### Prérequis
-- Python 3.8+
-- Jupyter Notebook
-- Clé API OpenAI
+**Avantages de cette approche :**
+- **Élimination des hallucinations** : La réduction du contexte permet au LLM de maintenir sa précision
+- **Fiabilité accrue** : Zéro erreur d'interprétation observée vs. nombreuses hallucinations en traitement global
+- **Contrôle qualité** : Validation possible tranche par tranche
 
-### Dépendances
-```bash
-pip install langchain-openai
-pip install langgraph
-pip install pdfplumber
-pip install reportlab
-pip install pygraphviz  # Pour l'affichage des graphiques
-```
+**Limitation :**
+- Nécessite l'exécution multiple du workflow pour traiter un document complet
 
-### Configuration
-1. Définir votre clé API OpenAI :
-```bash
-export OPENAI_API_KEY="votre-clé-api"
-```
+### Workflow 2 : Analyse Secondaire de Synthèse
+**Pipeline :** `Lecture → Formatage → Statistiques → Export`
 
-2. Ajuster le chemin de base dans le code :
+Le second workflow exploite les résultats du premier pour produire des analyses approfondies.
+
+#### Fonctionnement
+1. **Lecture** : Ingestion du fichier de synthèse généré par le Workflow 1
+2. **Formatage** : Extraction et structuration des données clés
+3. **Statistiques** : Analyse quantitative et identification de patterns
+4. **Export** : Génération de rapports analytiques distincts
+
+## Stratégie de Prompting Avancée
+
+### Chain of Thought (CoT)
+Le système implémente des techniques de prompting sophistiquées basées sur les chaînes de raisonnement. Cette approche guide le modèle LLM à travers un processus de réflexion structuré.
+
+**Variantes CoT utilisées :**
+- **Step-back Prompting** : Décomposition des tâches complexes en étapes élémentaires
+- **Thread of Thought** : Maintien de la cohérence logique à travers les analyses
+
+### Analogical Prompting
+Une innovation particulière du système réside dans l'utilisation d'**analogical prompting** pour le nœud d'analyse principal. Cette technique consiste à fournir au modèle des exemples concrets similaires au cas d'usage cible, permettant une généralisation par analogie.
+
+**Principe :**
+- Présentation d'exemples types avec leur résolution complète
+- Guidance par l'exemple plutôt que par l'instruction abstraite
+- Amélioration significative de la précision d'extraction
+
+## Outputs du Système
+
+### Workflow 1
+- **Fichier de synthèse** : `{nom_pdf}_synthese_{timestamp}.md`
+- Consolidation de toutes les analyses par tranches
+- Structure hiérarchique avec métadonnées complètes
+
+### Workflow 2
+- **Rapport formaté** : `{synthese}_formatted_{timestamp}.md`
+- **Analyse statistique** : `{synthese}_statistics_{timestamp}.md`
+- Horodatage automatique pour la traçabilité
+
+## Avantages Opérationnels
+
+### Précision
+- **Taux d'erreur réduit** grâce au traitement par lots
+- **Validation multi-niveaux** avec workflows séquentiels
+- **Cohérence terminologique** via l'analogical prompting
+
+### Scalabilité
+- **Architecture modulaire** permettant l'adaptation à différents types de documents
+- **Traitement parallélisable** des tranches pour optimisation future
+- **Extensibilité** des analyses statistiques
+
+### Traçabilité
+- **Horodatage systématique** de tous les outputs
+- **Conservation des fichiers intermédiaires** pour audit
+- **Métadonnées complètes** sur les paramètres de traitement
+
+## Configuration et Utilisation
+
+### Paramètres Principaux
 ```python
-BASE_DIR = os.path.abspath(r"C:\Votre\Chemin\Vers\LangGraph")
+pdf_filename = "document.pdf"  # Document à analyser
+start_page = 102               # Page de début
+end_page = 118                 # Page de fin
+step = 2                       # Taille des lots (recommandé: 2-3)
 ```
 
----
-
-## 🔍 Détail des Nœuds
-
-### 1️⃣ Nœud EXTRACTION (`extraction_node`)
-
-**Objectif :** Extraire le texte des pages PDF spécifiées
-
-**Processus :**
-- 🔍 Localise le fichier PDF dans plusieurs emplacements possibles
-- 📄 Extrait le texte des pages demandées avec `pdfplumber`
-- 🧹 Nettoie et formate le texte (correction des sauts de ligne, articles)
-- 💾 Sauvegarde le texte extrait dans `textes_extraits/`
-
-**Entrées :**
-- `pdf_filename` : Nom du fichier PDF
-- `start_page`, `end_page` : Plage de pages (optionnel)
-
-**Sorties :**
-- `extracted_text` : Texte complet extrait
-- `extracted_file_path` : Chemin du fichier texte sauvé
-
-**Exemple de fichier généré :**
-```
-==================== PAGE 117 ====================
-
-Article 25
-
-Délégation est donnée à M. Jean MARTIN, directeur des ressources humaines...
-```
-
-### 2️⃣ Nœud ANALYSE (`analysis_node`)
-
-**Objectif :** Analyser le texte pour identifier les délégations de pouvoir
-
-**Processus Chain of Thought :**
-
-1. **Lecture du document** : Compréhension du contexte
-2. **Recherche "délégation est donnée"** : Identification des bénéficiaires
-3. **Recherche "en cas d'absence"** : Identification des suppléants
-4. **Formatage structuré** : Organisation des résultats
-
-**Méthode d'analyse :**
-- 🔍 Recherche systématique des expressions clés
-- 👥 Extraction des noms et fonctions
-- 📝 Gestion des cas particuliers (délégations multiples)
-- ❌ Indication "Non mentionné" si absence d'information
-
-**Sortie type :**
-```
-Article 25
-[En cas d'absence ou d'empêchement de] : M. Pierre DUPONT, fonction : directeur général
-[Délégation est donnée à] : M. Jean MARTIN, fonction : directeur des ressources humaines
-
-Article 26
-[En cas d'absence ou d'empêchement de] : Non mentionné
-[Délégation est donnée à] : Mme Sophie BERNARD, Mme Claire ROUSSEAU, fonction : gestionnaires de l'unité budget
-```
-
-### 3️⃣ Nœud STATISTIQUES (`statistics_node`)
-
-**Objectif :** Analyser les patterns et produire des insights statistiques
-
-**Méthode Chain of Thought en 5 étapes :**
-
-#### Étape 1: Inventaire des données
-- 📊 Comptage total d'articles analysés
-- ✅ Articles avec délégations vs sans délégations
-- 👥 Recensement de toutes les personnes mentionnées
-
-#### Étape 2: Analyse des patterns de délégation
-- 🏢 Types de fonctions qui reçoivent des délégations
-- 📈 Directions/services les plus représentés
-- 👤 Analyse des noms (répartition hommes/femmes)
-
-#### Étape 3: Mécanismes de substitution
-- 🔄 Articles avec mécanismes de suppléance
-- 🔗 Relations hiérarchiques identifiées
-- ⚠️ Postes clés sans suppléants
-
-#### Étape 4: Détection d'anomalies
-- 🚫 Articles sans délégation explicite
-- 👥 Délégations multiples (plusieurs personnes)
-- 🔍 Fonctions atypiques ou uniques
-
-#### Étape 5: Synthèse et recommandations
-- 📊 Calcul de pourcentages et ratios
-- 📈 Identification des tendances
-- 💡 Recommandations d'amélioration
-
-**Exemple de sortie statistique :**
-```
-=== ANALYSE STATISTIQUE ===
-
-Étape 1 - Inventaire:
-- Nombre d'articles analysés: 15
-- Articles avec délégation: 12 (80%)
-- Articles sans délégation: 3 (20%)
-- Total personnes identifiées: 28
-
-Étape 2 - Patterns de délégation:
-- Délégations individuelles: 8 articles (53%)
-- Délégations multiples: 4 articles (27%)
-- Directions les plus représentées: Finances (40%), RH (25%)
-
-Étape 3 - Mécanismes de substitution:
-- Articles avec suppléant: 9/15 (60%)
-- Relations hiérarchiques identifiées: 12
-- Couverture de suppléance: Bonne (60%)
-
-Étape 4 - Anomalies détectées:
-- Articles 7, 12, 18: Absence de délégation (nécessitent vérification)
-- Article 11: Délégation multiple sans suppléant désigné
-
-Étape 5 - Recommandations:
-- Définir des suppléants pour 6 postes clés
-- Clarifier les délégations manquantes
-- Standardiser les intitulés de fonctions
-```
-
-### 4️⃣ Nœud EXPORT (`export_node`)
-
-**Objectif :** Exporter les résultats dans plusieurs formats consultables
-
-**Formats générés :**
-
-#### 📄 Export Markdown (`.md`)
-- **Usage :** Documentation lisible et modifiable
-- **Contenu :** Analyse complète + statistiques + métadonnées
-- **Avantages :** Facile à consulter, modifier, partager
-
-#### 📕 Export PDF (`.pdf`)
-- **Usage :** Rapport professionnel pour présentation
-- **Contenu :** Mise en page soignée avec styles
-- **Avantages :** Format officiel, impression facile
-
-#### 📋 Export JSON (`.json`)
-- **Usage :** Traitement automatique et intégration
-- **Contenu :** Données structurées + métriques calculées
-- **Avantages :** Parsing facile, intégration système
-
-**Structure des fichiers générés :**
-```
-2025.5.sante_analyse_20250107_143052.md
-2025.5.sante_analyse_20250107_143052.pdf
-2025.5.sante_analyse_20250107_143052.json
-```
-
-**Exemple de structure JSON :**
-```json
-{
-  "metadata": {
-    "source_file": "2025.5.sante.pdf",
-    "pages_analyzed": "117 à 131",
-    "analysis_date": "2025-01-07T14:30:52",
-    "tool": "LangGraph + GPT-4o-mini"
-  },
-  "detailed_analysis": {
-    "articles": [...],
-    "raw_result": "Article 25\n[Délégation]..."
-  },
-  "statistical_analysis": {
-    "raw_statistics": "=== ANALYSE STATISTIQUE ===...",
-    "computed_metrics": {
-      "total_articles": 15,
-      "articles_with_delegation": 12,
-      "delegation_rate": 80.0,
-      "substitution_rate": 60.0
-    }
-  }
-}
-```
-
----
-
-## 🚀 Utilisation
-
-### Méthode 1: Analyse complète automatique
+### Exécution
 ```python
-# Tout en une fois avec affichage du graphique
-result = run_complete_analysis("2025.5.sante.pdf", 117, 131)
+# Workflow 1 - Analyse PDF
+result = process_pdf(pdf_filename, start_page, end_page)
+
+# Workflow 2 - Analyse de synthèse (automatique après Workflow 1)
+synthesis_result = process_synthesis_analysis(synthesis_file_path)
 ```
 
-### Méthode 2: Étape par étape
-```python
-# 1. Afficher le workflow
-display_workflow_graph()
+## Technologies Utilisées
 
-# 2. Lancer l'analyse
-result = process_pdf("2025.5.sante.pdf", 117, 131)
+- **LangGraph** : Orchestration des workflows
+- **LangChain** : Interface LLM et gestion des prompts
+- **OpenAI GPT-4o-mini** : Moteur d'analyse linguistique
+- **PDFPlumber** : Extraction de texte PDF
+- **Python** : Environnement de développement
 
-# 3. Afficher les résultats complets
-show_final_results(result)
-```
+## Cas d'Usage
 
-### Méthode 3: Fonctions individuelles
-```python
-# Juste le graphique
-show_graph()
+Ce système est particulièrement adapté pour :
+- **Analyse de documents administratifs** complexes
+- **Extraction de délégations de pouvoir** et responsabilités
+- **Audit organisationnel** et compliance
+- **Traitement de volumes documentaires** importants avec exigence de précision
 
-# Juste l'analyse sans affichage
-result = process_pdf("mon_document.pdf", 1, 50)
-```
-
----
-
-## 📁 Structure des Fichiers de Sortie
-
-### Localisation
-Tous les fichiers sont générés dans le **même répertoire que le PDF source**.
-
-### Nomenclature
-```
-[nom_pdf]_analyse_[timestamp].[extension]
-```
-
-### Contenu des exports
-
-#### 📄 Fichier Markdown
-```markdown
-# Analyse de délégations de pouvoir
-
-## Informations du document
-- **Fichier source :** 2025.5.sante.pdf
-- **Pages analysées :** 117 à 131
-
-## Résultats de l'analyse détaillée
-[Résultats article par article]
-
-## Analyse statistique et insights
-[Statistiques et recommandations]
-```
-
-#### 📕 Fichier PDF
-- Page de garde avec métadonnées
-- Section analyse détaillée avec formatage
-- Section statistiques avec mise en page soignée
-- Styles professionnels (couleurs, typographie)
-
-#### 📋 Fichier JSON
-- Structure de données complète
-- Métriques calculées automatiquement
-- Facilite l'intégration avec d'autres outils
-
----
-
-## 📊 Métriques Calculées Automatiquement
-
-Le système calcule automatiquement :
-
-- **Nombre total d'articles** analysés
-- **Taux de délégation** (% d'articles avec délégation)
-- **Taux de suppléance** (% d'articles avec mécanisme de substitution)
-- **Répartition par types** de délégation (individuelle vs multiple)
-- **Analyse des directions** les plus représentées
-- **Détection d'anomalies** et articles problématiques
-
----
-
-## 🛠️ Personnalisation
-
-### Modifier les pages à analyser
-```python
-result = process_pdf("document.pdf", start_page=10, end_page=25)
-```
-
-### Analyser tout le document
-```python
-result = process_pdf("document.pdf")  # Analyse tout le PDF
-```
-
-### Changer le modèle LLM
-```python
-llm = ChatOpenAI(
-    model="gpt-3.5-turbo",  # Plus rapide
-    # model="gpt-4o",       # Plus précis
-    temperature=0,
-    api_key=api_key
-)
-```
-
----
-
-## 🔧 Dépannage
-
-### Erreur "fichier non trouvé"
-Le système recherche le PDF dans :
-1. Répertoire courant du notebook
-2. `BASE_DIR` défini dans le code
-3. Chemin absolu spécifié
-
-### Erreur d'affichage graphique
-```bash
-# Windows
-pip install graphviz
-# Télécharger depuis https://graphviz.org/download/
-
-# Mac
-brew install graphviz
-
-# Linux
-sudo apt-get install graphviz
-```
-
-### Performances lentes
-- Réduire la plage de pages
-- Utiliser `gpt-3.5-turbo` au lieu de `gpt-4o-mini`
-- Vérifier la taille du prompt
-
----
-
-## 📈 Cas d'Usage
-
-### 1. Audit de gouvernance
-- Identifier les délégations manquantes
-- Vérifier la couverture de suppléance
-- Analyser la répartition des pouvoirs
-
-### 2. Conformité réglementaire
-- Documenter les délégations existantes
-- Générer des rapports officiels
-- Tracer les responsabilités
-
-### 3. Optimisation organisationnelle
-- Identifier les goulots d'étranglement
-- Proposer des améliorations
-- Standardiser les processus
-
----
-
-## 🔮 Extensions Possibles
-
-- **Multi-langues :** Support d'autres langues
-- **OCR :** Support des PDF scannés
-- **Base de données :** Stockage des résultats
-- **API REST :** Interface web
-- **Comparaison :** Évolution entre versions
-- **Alertes :** Détection automatique d'anomalies
-
----
-
-## 📝 Licence
-
-Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
-
----
-
-## 🤝 Contribution
-
-Les contributions sont les bienvenues ! Veuillez :
-1. Fork le projet
-2. Créer une branche pour votre fonctionnalité
-3. Commiter vos changements
-4. Pousser vers la branche
-5. Ouvrir une Pull Request
-
----
-
-## 📞 Support
-
-Pour toute question ou problème :
-- 📧 Email : [votre-email]
-- 🐛 Issues : [lien-github-issues]
-- 📖 Documentation : [lien-docs]
-
----
-
-*Développé avec ❤️ en utilisant LangGraph et GPT-4o-mini*
+Le système démontre comment l'ingénierie de prompts avancée et l'architecture workflow peuvent résoudre les défis de précision des LLM sur des tâches d'extraction documentaire complexes.
