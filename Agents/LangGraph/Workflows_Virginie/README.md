@@ -2,7 +2,7 @@
 
 ## Vue d'ensemble
 
-Ce projet implémente un système d'analyse documentaire en utilisant LangGraph pour traiter des documents PDF administratifs, spécifiquement orienté vers l'identification et l'extraction de terme identifié . Le système est composé de deux workflows complémentaires qui automatisent l'ensemble du processus d'analyse documentaire.
+Ce projet implémente un système d'analyse documentaire en utilisant un WorkFlow LangGraph de type Prompt chaining pour traiter des documents PDF administratifs, spécifiquement orienté vers l'identification et l'extraction de terme identifié . Le système est composé de deux workflows complémentaires qui automatisent l'ensemble du processus d'analyse documentaire.
 
 ## Architecture du Système
 
