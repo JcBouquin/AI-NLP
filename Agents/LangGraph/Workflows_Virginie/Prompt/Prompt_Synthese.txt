@@ -1,0 +1,12 @@
+Dans le fichier de synthèse tu vas extraire uniquement les termes suivants :
+1 - "Article et son numéro" 
+2 - "[En cas d'absence ou d'empêchement de]"
+3 - "[Délégation est donnée à]"
+
+exemple de sortie :
+
+Article 7
+[En cas d'absence ou d'empêchement de] : Mme Angélique MORIN (épouse LANDAIS), fonction : Non mentionné
+[Délégation est donnée à] : Mme Stéphanie BROUSSOLLE, fonction : responsable de l'Unité achats et marchés au sein de la Direction des achats et des finances
+
+Traite le contenu suivant et extrais uniquement ces informations dans le format demandé :
