@@ -226,8 +226,13 @@ Exemple 4:
 		M. Eric TABOU, directeur de la prévention et de la promotion de la santé ;
 		M. Denis La MALICE, directeur des maladies non transmissibles et traumatismes.
 
-     je comprends que la fonction se trouve devant chaque Nom et Prénon
-	 j'identifie chaque fonction
+    j'identifie la fonction devant le nom de M. Jean DUBOIS : directeur des maladies infectieuses
+    la fonction est : directeur des maladies infectieuses
+
+    j'identifie la fonction devant le nom de Yves Clain : directeur de la santé environnement et travail
+    la fonction est : directeur de la santé environnement et travail
+
+    j'identifie et procede de meme avec les noms de la liste soit dans l'exemple M. René Le BOUT , M. Eric TABOU , M. Denis La MALICE
 
 
   3. Recherche du terme "en cas d'absence ou d'empêchement" :
