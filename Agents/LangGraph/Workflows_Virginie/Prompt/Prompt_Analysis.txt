@@ -54,35 +54,35 @@ Exemple 1:
    Trouvé : "en cas d'absence ou d'empêchement de la directrice des achats et des finances, Mme Sophie MARTIN (épouse DURAND)"
 
    Dans ce contexte, je comprends que Mme Sophie MARTIN (épouse DURAND) est mentionnée comme la directrice des achats et des finances.
-   
+
    la fonction est : directrice des achats et des finances
 
    Si cette expression est présente j'identife également la fonction devant le nom de Mme Sophie MARTIN (épouse DURAND) : directrice des achats et des finances
 
-   Si cette expression "en cas d'absence ou d'empêchement"  est non  présente , il faut procéder suivant la methode ici : 
-   
+   Si cette expression "en cas d'absence ou d'empêchement"  est non  présente , il faut procéder suivant la methode ici :
+
    Recherche du terme "au nom de la directrice générale de Santé publique France" :
-   
+
    Dans ce contexte, je comprends que la personne mentionnée est la directrice générale de Santé publique France.
-   
-   dans ce cas la fonction est absente il ne faut pas l"écrire 
-   
-   Sortie ex  
-   
+
+   dans ce cas la fonction est absente il ne faut pas l"écrire
+
+   Sortie ex
+
    [En cas d'absence ou d'empêchement de] : de la directrice générale de Santé publique France
    [Délégation est donnée à] : M. John muse , fonction : responsable de l'Unité budget et contrôle interne au sein de la Direction des achats et des finances
 
-   
+
 4. Format de sortie :
    Je structure les informations collectées selon le format demandé.
-   
-   expression "en cas d'absence ou d'empêchement"  présente : 
+
+   expression "en cas d'absence ou d'empêchement"  présente :
 
    [En cas d'absence ou d'empêchement de] : Mme Sophie MARTIN (épouse DURAND) , fonction : directrice des achats et des finances
    [Délégation est donnée à] : M. Thomas DUPONT , fonction : responsable de l'Unité budget et contrôle interne au sein de la Direction des achats et des finances
-   
-   expression "en cas d'absence ou d'empêchement"  NON présente : 
-   
+
+   expression "en cas d'absence ou d'empêchement"  NON présente :
+
    [En cas d'absence ou d'empêchement de] : de la directrice générale de Santé publique France
    [Délégation est donnée à] : M. John muse , fonction : responsable de l'Unité budget et contrôle interne au sein de la Direction des achats et des finances
 
@@ -109,16 +109,16 @@ Exemple 2:
    Si cette expression est présente j'identife également la fonction devant le nom de Mme Sophia DUBOIS : directrice de l'aide et diffusion aux publics
 
    la fonction est : directrice de l'aide et diffusion aux publics
-   
-   Si cette expression "en cas d'absence ou d'empêchement"  est NON  présente , il faut procéder suivant la methode ici : 
-   
+
+   Si cette expression "en cas d'absence ou d'empêchement"  est NON  présente , il faut procéder suivant la methode ici :
+
    Recherche du terme "au nom de la directrice générale de Santé publique France" :
-   
+
    Dans ce contexte, je comprends que la personne mentionnée est la directrice générale de Santé publique France.
-   
-   dans ce cas la fonction est absente il ne faut pas l"écrire 
-   
-    
+
+   dans ce cas la fonction est absente il ne faut pas l"écrire
+
+
 
 3. Recherche du terme "délégation est donnée à" :
    Je cherche cette expression dans le texte et j'examine ce qui suit.
@@ -135,34 +135,32 @@ Exemple 2:
 
 4. Format de sortie :
    Je structure les informations collectées selon le format demandé.
-   
+
    Si L'expression "en cas d'absence ou d'empêchement"  est présente
 
    [En cas d'absence ou d'empêchement de] : Mme Sophia DUBOIS fonction : directrice de l'aide et diffusion aux publics
    [Délégation est donnée à] : Mme Camille LAURENT fonction : adjointe
-   
+
    Si L'expression "en cas d'absence ou d'empêchement"  est NON présente
-   
+
    [En cas d'absence ou d'empêchement de] : de la directrice générale de Santé publique France
    [Délégation est donnée à] : M. John muse , fonction : responsable de l'Unité budget et contrôle interne au sein de la Direction des achats et des finances
 
-Le résultat final pour l'ensemble du document ressemblera à ceci :
 
-Voici l'exemple formaté avec des noms et prénoms fictifs :
 
-  Exemple 3:  
+  Exemple 3:
 
-  1. Lecture du document :  
+  1. Lecture du document :
    Je commence par lire attentivement l'extrait suivant pour en comprendre le contexte et la structure.
 
    *"Délégation est donnée aux gestionnaires de l'Unité pilotage et exécution financière au sein de la Direction des achats et des finances, personnes dont la liste suit, de signer, au nom de la directrice générale de Santé publique France, les certifications de service fait d'un montant hors taxe inférieur à 1 000 € :*
-   
+
    *Mme Amélie BERNARD ;*
    *M. Julien MOREAU ;*
    *Mme Sarah DUBOIS ;*
    *M. Pierre LEFEBVRE."*
 
-  2. Recherche du terme "délégation est donnée" :  
+  2. Recherche du terme "délégation est donnée" :
    Je cherche si cette expression apparaît dans le texte et j'examine ce qui suit.
 
      Trouvé :   *"Délégation est donnée aux gestionnaires de l'Unité pilotage et exécution financière"*
@@ -173,23 +171,85 @@ Voici l'exemple formaté avec des noms et prénoms fictifs :
 
      La fonction commune est :   gestionnaires de l'Unité pilotage et exécution financière au sein de la Direction des achats et des finances
 
-  3. Recherche du terme "en cas d'absence ou d'empêchement" :  
-   Si cette expression "en cas d'absence ou d'empêchement"  est NON  présente , il faut procéder suivant la methode ici : 
-   
-   Recherche du terme "au nom de la directrice générale de Santé publique France" :
-   
-   Dans ce contexte, je comprends que la personne mentionnée est la directrice générale de Santé publique France.
-   
-   dans ce cas la fonction est absente il ne faut pas l"écrire 
+  3. Recherche du terme "en cas d'absence ou d'empêchement" :
+   Si cette expression "en cas d'absence ou d'empêchement"  est NON  présente , il faut procéder suivant la methode ici :
 
-  4. Format de sortie :  
+   Recherche du terme "au nom de la directrice générale de Santé publique France" :
+
+   Dans ce contexte, je comprends que la personne mentionnée est la directrice générale de Santé publique France.
+
+   dans ce cas la fonction est absente il ne faut pas l"écrire
+
+  4. Format de sortie :
    Je structure les informations collectées selon le format demandé.
 
      [En cas d'absence ou d'empêchement de] :   de la directrice générale de Santé publique France
      [Délégation est donnée à] :   Mme Amélie BERNARD, M. Julien MOREAU, Mme Sarah DUBOIS, M. Pierre LEFEBVRE, fonction : gestionnaires de l'Unité pilotage et exécution financière au sein de la Direction des achats et des finances
 
-     
-TU ECRIRAS DANS LE FICHIER FINAL UNIQUEMENT LES FORMATS SUIVANTS 
+Exemple 4:
+
+  1. Lecture du document :
+
+   Je commence par lire attentivement l'extrait suivant pour en comprendre le contexte et la structure.
+
+		   Délégation est donnée, aux personnes dont la liste suit, et chacune pour ce qui concerne
+			uniquement sa direction, de signer, au nom de la directrice générale de Santé publique France,
+			dans la limite de leurs attributions et fonctions :
+			- l’ensemble des bons de commande d’un montant hors taxe inférieur à 5 000 € et les
+			engagements contractuels afférents à l’exclusion des dépenses liées aux missions/déplacements ;
+			- les lettres de mission envoyées à des collaborateurs externes pour la relecture de rapports
+			produits par SpFrance avec la mention du montant d’indemnisation de la vacation fixé dans
+			les limites prévues par délibération du conseil d’administration ;
+			- toute correspondance et la validation des données produites par les partenaires et transmises
+			à Santé publique France et à ses directions à l’exclusion des correspondances et décisions engageant
+			juridiquement ou financièrement l’Agence au-delà de la limite de ses attributions :
+				M. Jean DUBOIS, directeur des régions ;
+				M. Tom LAPIN, directeur des maladies infectieuses ;
+				M. Yves Clain, directeur de la santé environnement et travail ;
+				M. René Le BOUT , directeur de l’appui, traitements et analyses de données ;
+				M. Eric TABOU, directeur de la prévention et de la promotion de la santé ;
+				M. Denis La MALICE, directeur des maladies non transmissibles et traumatismes.
+
+  2. Recherche du terme "délégation est donnée" :
+   Je cherche si cette expression apparaît dans le texte et j'examine ce qui suit.
+
+     Trouvé :   *"délégation est donnée aux personnes dont la liste suit"*
+
+     J'identifie que la délégation est donnée à plusieurs personnes listées. Je note que devant "Délégation est donnée" se trouve le terme : "aux personnes dont la liste suit"
+
+     je comprends alors que la liste des personnes correspond au noms de l'extrait ici
+
+	    M. Jean DUBOIS, directeur des régions ;
+		M. Tom LAPIN, directeur des maladies infectieuses ;
+		M. Yves Clain, directeur de la santé environnement et travail ;
+		M. René Le BOUT , directeur de l’appui, traitements et analyses de données ;
+		M. Eric TABOU, directeur de la prévention et de la promotion de la santé ;
+		M. Denis La MALICE, directeur des maladies non transmissibles et traumatismes.
+
+     je comprends que la fonction se trouve devant chaque Nom et Prénon
+	 j'identifie chaque fonction
+
+
+  3. Recherche du terme "en cas d'absence ou d'empêchement" :
+   Si cette expression "en cas d'absence ou d'empêchement"  est NON  présente , il faut procéder suivant la methode ici :
+
+   Recherche du terme "au nom de la directrice générale de Santé publique France" :
+
+   Dans ce contexte, je comprends que la personne mentionnée est la directrice générale de Santé publique France.
+
+   dans ce cas la fonction est absente il ne faut pas l"écrire
+
+  4. Format de sortie :
+   Je structure les informations collectées selon le format demandé.
+
+     [En cas d'absence ou d'empêchement de] :   de la directrice générale de Santé publique France
+     [Délégation est donnée à] :   M. Jean DUBOIS, fonction : directeur des régions ; M. Tom LAPIN, fonction : directeur des maladies infectieuses ;
+	 M. Yves Clain, fonction : directeur de la santé environnement et travail ;  M. René Le BOUT , fonction : directeur de l’appui  traitements et analyses de données ;
+	 M. Eric TABOU, fonction : directeur de la prévention et de la promotion de la santé ;
+	 M. Denis La MALICE, fonction :  directeur des maladies non transmissibles et traumatismes.
+
+
+TU ECRIRAS DANS LE FICHIER FINAL UNIQUEMENT LES FORMATS SUIVANTS
 
 Article 11
 [En cas d'absence ou d'empêchement de] : de la directrice générale de Santé publique France
