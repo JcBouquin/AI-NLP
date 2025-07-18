@@ -1,0 +1,209 @@
+
+
+
+Ex 1 : 
+
+**Step 1: [Problem identification]**
+
+Le problème consiste à extraire systématiquement des informations spécifiques (noms et fonctions) à partir d'un document de délégation administrative en utilisant des marqueurs textuels précis. Il s'agit d'identifier le délégué principal, la personne de substitution, et leurs fonctions respectives selon une méthode structurée.
+
+**Step 2: [Solution of the problem]**
+
+Pour résoudre ce problème d'extraction d'informations dans le document de délégation :
+
+1. **Lecture attentive** de l'extrait pour comprendre le contexte et la structure :
+   "Délégation est donnée à M. Thomas DUPONT, responsable de l'Unité budget et contrôle interne au sein de la Direction des achats et des finances, à l'effet de signer, au nom de la directrice générale de Santé publique France..."
+
+2. **Recherche du terme "délégation est donnée"** :
+   - Je localise l'expression dans le texte
+   - Trouvé : "Délégation est donnée à M. Thomas DUPONT"
+   - J'identifie le nom qui suit : M. Thomas DUPONT
+   - J'identifie sa fonction : responsable de l'Unité budget et contrôle interne au sein de la Direction des achats et des finances
+
+3. **Recherche du terme "en cas d'absence ou d'empêchement"** :
+   - Je localise cette expression dans le texte
+   - Trouvé : "en cas d'absence ou d'empêchement de la directrice des achats et des finances, Mme Sophie MARTIN (épouse DURAND)"
+   - J'identifie le nom : Mme Sophie MARTIN (épouse DURAND)
+   - J'identifie sa fonction : directrice des achats et des finances
+
+**Step 3: [Transfer of solution strategy]**
+
+La stratégie de résolution se base sur un algorithme conditionnel :
+
+- **Si l'expression "en cas d'absence ou d'empêchement" est présente** :
+  - Extraire le nom et la fonction de la personne mentionnée
+  - Appliquer le format de sortie complet
+
+- **Si l'expression "en cas d'absence ou d'empêchement" est absente** :
+  - Rechercher "au nom de la directrice générale de Santé publique France"
+  - Extraire uniquement la fonction (sans nom spécifique)
+  - Adapter le format de sortie
+
+Cette méthode garantit une extraction cohérente quelle que soit la structure du document.
+
+**Step 4: [Final Answer]**
+
+Application au cas présent où l'expression "en cas d'absence ou d'empêchement" est **présente** :
+
+**Format de sortie :**
+- [En cas d'absence ou d'empêchement de] : Mme Sophie MARTIN (épouse DURAND), fonction : directrice des achats et des finances
+- [Délégation est donnée à] : M. Thomas DUPONT, fonction : responsable de l'Unité budget et contrôle interne au sein de la Direction des achats et des finances
+
+Cette méthode structurée permet une extraction systématique et reproductible des informations clés dans tout document de délégation administrative.
+
+
+
+Exemple 2 
+
+**Step 1: [Problem identification]**
+
+Le problème consiste à extraire systématiquement des informations spécifiques (noms et fonctions) à partir d'un document de délégation administrative où la structure syntaxique est inversée par rapport à l'exemple précédent. Ici, l'expression "En cas d'absence ou d'empêchement" apparaît en début de phrase, suivie de "délégation est donnée à", nécessitant une adaptation de l'ordre de recherche.
+
+**Step 2: [Solution of the problem]**
+
+Pour résoudre ce problème d'extraction d'informations dans ce document de délégation :
+
+1. **Lecture attentive** de l'extrait pour comprendre le contexte et la structure :
+   "En cas d'absence ou d'empêchement de Mme Sophia DUBOIS, directrice de l'aide et diffusion aux publics, délégation est donnée à Mme Camille LAURENT, adjointe..."
+
+2. **Recherche du terme "En cas d'absence ou d'empêchement de"** :
+   - Je localise l'expression dans le texte
+   - Trouvé : "En cas d'absence ou d'empêchement de Mme Sophia DUBOIS"
+   - J'identifie le nom qui suit : Mme Sophia DUBOIS
+   - J'identifie sa fonction : directrice de l'aide et diffusion aux publics
+
+3. **Recherche du terme "délégation est donnée à"** :
+   - Je localise cette expression dans le texte
+   - Trouvé : "délégation est donnée à Mme Camille LAURENT"
+   - J'identifie le nom qui suit : Mme Camille LAURENT
+   - J'identifie sa fonction : adjointe
+
+**Step 3: [Transfer of solution strategy]**
+
+La stratégie de résolution s'adapte à la structure inversée du document mais conserve la même logique conditionnelle :
+
+- **Si l'expression "En cas d'absence ou d'empêchement" est présente** (comme dans ce cas) :
+  - Extraire le nom et la fonction de la personne concernée par l'absence/empêchement
+  - Extraire le nom et la fonction du délégué
+  - Appliquer le format de sortie complet
+
+- **Si l'expression "En cas d'absence ou d'empêchement" est absente** :
+  - Rechercher "au nom de la directrice générale de Santé publique France"
+  - Extraire uniquement la fonction (sans nom spécifique)
+  - Adapter le format de sortie
+
+Cette méthode reste cohérente quelle que soit l'ordre des éléments dans le document.
+
+**Step 4: [Final Answer]**
+
+Application au cas présent où l'expression "En cas d'absence ou d'empêchement" est **présente** :
+
+**Format de sortie :**
+- [En cas d'absence ou d'empêchement de] : Mme Sophia DUBOIS, fonction : directrice de l'aide et diffusion aux publics
+- [Délégation est donnée à] : Mme Camille LAURENT, fonction : adjointe
+
+Cette méthode structurée permet une extraction systématique et reproductible des informations clés,
+ même lorsque l'ordre syntaxique des éléments varie dans le document de délégation administrative.
+ 
+ Exemple 3 
+ 
+ **Step 1: [Problem identification]**
+
+Le problème consiste à extraire systématiquement des informations spécifiques (noms et fonctions) à partir d'un document de délégation administrative où la délégation est accordée à un groupe de personnes partageant la même fonction. L'expression "en cas d'absence ou d'empêchement" est absente, nécessitant l'application de la méthode alternative avec recherche de "au nom de la directrice générale de Santé publique France".
+
+**Step 2: [Solution of the problem]**
+
+Pour résoudre ce problème d'extraction d'informations dans ce document de délégation collective :
+
+1. **Lecture attentive** de l'extrait pour comprendre le contexte et la structure :
+   "Délégation est donnée aux gestionnaires de l'Unité pilotage et exécution financière au sein de la Direction des achats et des finances, personnes dont la liste suit, de signer, au nom de la directrice générale de Santé publique France..."
+
+2. **Recherche du terme "délégation est donnée"** :
+   - Je localise l'expression dans le texte
+   - Trouvé : "Délégation est donnée aux gestionnaires de l'Unité pilotage et exécution financière"
+   - J'identifie que la délégation concerne plusieurs personnes listées
+   - J'identifie la fonction collective : gestionnaires de l'Unité pilotage et exécution financière au sein de la Direction des achats et des finances
+   - J'identifie les noms individuels : Mme Amélie BERNARD, M. Julien MOREAU, Mme Sarah DUBOIS, M. Pierre LEFEBVRE
+
+3. **Recherche du terme "en cas d'absence ou d'empêchement"** :
+   - Cette expression est **absente** du document
+   - J'applique la méthode alternative : recherche de "au nom de la directrice générale de Santé publique France"
+   - Trouvé : la directrice générale de Santé publique France
+   - Dans ce cas, la fonction est présente mais sans nom spécifique
+
+**Step 3: [Transfer of solution strategy]**
+
+La stratégie de résolution s'adapte au cas de délégation collective et à l'absence de l'expression "en cas d'absence ou d'empêchement" :
+
+- **L'expression "en cas d'absence ou d'empêchement" est absente** :
+  - Rechercher "au nom de la directrice générale de Santé publique France"
+  - Extraire uniquement la fonction (sans nom spécifique)
+  - Pour les délégués : traiter la liste complète des noms avec leur fonction commune
+  - Adapter le format de sortie pour la délégation collective
+
+Cette méthode permet de gérer les cas de délégation multiple tout en maintenant la cohérence du processus d'extraction.
+
+**Step 4: [Final Answer]**
+
+Application au cas présent où l'expression "en cas d'absence ou d'empêchement" est **NON présente** :
+
+**Format de sortie :**
+- [En cas d'absence ou d'empêchement de] : de la directrice générale de Santé publique France
+- [Délégation est donnée à] : Mme Amélie BERNARD, M. Julien MOREAU, Mme Sarah DUBOIS, M. Pierre LEFEBVRE, fonction : gestionnaires de l'Unité pilotage et exécution financière au sein de la Direction des achats et des finances
+
+Cette méthode structurée permet une extraction systématique et reproductible des informations clés, 
+même dans les cas de délégation collective où l'expression "en cas d'absence ou d'empêchement" n'apparaît pas dans le document.
+
+Exemple 4 
+
+**Step 1: [Problem identification]**
+
+Le problème consiste à extraire systématiquement des informations spécifiques (noms et fonctions) à partir d'un document de délégation administrative où la délégation est accordée à plusieurs personnes ayant chacune des fonctions individuelles spécifiques. L'expression "en cas d'absence ou d'empêchement" est absente, et chaque délégué possède une fonction distincte clairement mentionnée après son nom.
+
+**Step 2: [Solution of the problem]**
+
+Pour résoudre ce problème d'extraction d'informations dans ce document de délégation multiple avec fonctions individualisées :
+
+1. **Lecture attentive** de l'extrait pour comprendre le contexte et la structure :
+   "Délégation est donnée, aux personnes dont la liste suit, et chacune pour ce qui concerne uniquement sa direction, de signer, au nom de la directrice générale de Santé publique France..."
+
+2. **Recherche du terme "délégation est donnée"** :
+   - Je localise l'expression dans le texte
+   - Trouvé : "délégation est donnée aux personnes dont la liste suit"
+   - J'identifie que la délégation concerne plusieurs personnes listées individuellement
+   - J'identifie chaque nom avec sa fonction spécifique :
+     - M. Jean DUBOIS, fonction : directeur des régions
+     - M. Tom LAPIN, fonction : directeur des maladies infectieuses
+     - M. Yves Clain, fonction : directeur de la santé environnement et travail
+     - M. René Le BOUT, fonction : directeur de l'appui, traitements et analyses de données
+     - M. Eric TABOU, fonction : directeur de la prévention et de la promotion de la santé
+     - M. Denis La MALICE, fonction : directeur des maladies non transmissibles et traumatismes
+
+3. **Recherche du terme "en cas d'absence ou d'empêchement"** :
+   - Cette expression est **absente** du document
+   - J'applique la méthode alternative : recherche de "au nom de la directrice générale de Santé publique France"
+   - Trouvé : la directrice générale de Santé publique France
+   - Dans ce cas, la fonction est présente mais sans nom spécifique
+
+**Step 3: [Transfer of solution strategy]**
+
+La stratégie de résolution s'adapte au cas de délégation multiple avec fonctions individualisées et à l'absence de l'expression "en cas d'absence ou d'empêchement" :
+
+- **L'expression "en cas d'absence ou d'empêchement" est absente** :
+  - Rechercher "au nom de la directrice générale de Santé publique France"
+  - Extraire uniquement la fonction (sans nom spécifique)
+  - Pour les délégués : traiter chaque nom individuellement avec sa fonction propre
+  - Maintenir la correspondance exacte nom-fonction pour chaque personne
+  - Adapter le format de sortie pour la délégation multiple individualisée
+
+Cette méthode permet de gérer les cas de délégation multiple avec fonctions spécifiques tout en maintenant la précision de l'extraction.
+
+**Step 4: [Final Answer]**
+
+Application au cas présent où l'expression "en cas d'absence ou d'empêchement" est **NON présente** :
+
+**Format de sortie :**
+- [En cas d'absence ou d'empêchement de] : de la directrice générale de Santé publique France
+- [Délégation est donnée à] : M. Jean DUBOIS, fonction : directeur des régions ; M. Tom LAPIN, fonction : directeur des maladies infectieuses ; M. Yves Clain, fonction : directeur de la santé environnement et travail ; M. René Le BOUT, fonction : directeur de l'appui, traitements et analyses de données ; M. Eric TABOU, fonction : directeur de la prévention et de la promotion de la santé ; M. Denis La MALICE, fonction : directeur des maladies non transmissibles et traumatismes
+
+Cette méthode structurée permet une extraction systématique et reproductible des informations clés, même dans les cas de délégation multiple où chaque délégué possède une fonction spécifique et où l'expression "en cas d'absence ou d'empêchement" n'apparaît pas dans le document.
