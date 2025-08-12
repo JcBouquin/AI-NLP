@@ -1,0 +1,209 @@
+voici un prompt concernant la technique de prompt suivante Active Prompting dont voici la 
+definition scientifique 
+
+Active Prompting (Diao et al., 2023) starts with
+some training questions/exemplars, asks the LLM
+to solve them, then calculates uncertainty (disagreement in this case) and asks human annotators to
+rewrite the exemplars with highest uncertainty.
+
+cette technique appartient à la famille des  Few-Shot CoT 
+dont voici la definition 
+
+This set of techniques presents the LLM with multiple exemplars, which include chains-of-thought.
+This can significantly enhance performance. This
+technique is occasionally referred to as ManualCoT (Zhang et al., 2022b) or Golden CoT (Del and
+Fishel, 2023).
+
+elle meme appartenant à la famille plus générale des Chains Of Thought (CoT) dont voici la definition générale 
+
+Chain-of-Thought (CoT) Prompting (Wei et al.,
+2022b) leverages few-shot prompting to encourage the LLM to express its thought process before
+delivering its final answer.6 This technique is occasionally referred to as Chain-of-Thoughts (Tutunov
+et al., 2023; Besta et al., 2024; Chen et al., 2023d).
+It has been demonstrated to significantly enhance
+the LLM’s performance in mathematics and reasoning tasks. In Wei et al. (2022b), the prompt includes
+an exemplar featuring a question, a reasoning path,
+and the correct answer (Figure 2.8).
+
+
+mainenant voici le prompt dont je te parlai 
+
+active_prompt_template = ChatPromptTemplate.from_messages([
+    ("system", """
+    Generate Active Prompting examples based on user questions.
+    
+    Active Prompting is a specialized technique within Few-Shot Chain-of-Thought (CoT) prompting that:
+    1. Starts with training questions/exemplars
+    2. Asks the LLM to solve these exemplars
+    3. Calculates uncertainty (disagreement in responses)
+    4. Identifies exemplars with highest uncertainty
+    5. Uses human annotators to rewrite these high-uncertainty exemplars
+    6. Iteratively improves prompting quality through this feedback loop
+    
+    This approach enhances LLM performance by focusing human effort on the most challenging examples.
+    
+    Please structure your response in the following format:
+    
+    Step 1: Initial Exemplars
+    [Provide 3-5 exemplars with questions and CoT reasoning]
+    
+    Step 2: First Iteration
+    [LLM-generated solutions to the exemplars]
+    
+    Step 3: Uncertainty Analysis
+    [Identify which exemplars have highest uncertainty/disagreement]
+    
+    Step 4: Refined Exemplars
+    [Rewritten versions of high-uncertainty exemplars with clearer reasoning chains]
+    
+    Step 5: Final Solution
+    [Improved answer to the original question using insights from the refined exemplars]
+    
+    Example:
+    Question: "What would be the total cost of buying 3 shirts at $24.99 each and 2 pairs of pants at $39.95 each, with an 8% sales tax?"
+    
+    Initial Exemplars:
+    Exemplar 1: 
+    Q: If a book costs $12.50 and I have a 20% off coupon, how much will I pay?
+    A: To find the discounted price, I need to calculate 20% of $12.50 and subtract it from the original price.
+    20% of $12.50 = 0.20 × $12.50 = $2.50
+    Final price = $12.50 - $2.50 = $10.00
+    Therefore, I will pay $10.00 for the book.
+    
+    Exemplar 2:
+    Q: What is the total cost of 4 apples at $0.75 each and 3 oranges at $0.60 each?
+    A: First, I'll calculate the cost of the apples.
+    Cost of apples = 4 × $0.75 = $3.00
+    Next, I'll calculate the cost of the oranges.
+    Cost of oranges = 3 × $0.60 = $1.80
+    Total cost = $3.00 + $1.80 = $4.80
+    Therefore, the total cost is $4.80.
+    
+    Exemplar 3:
+    Q: If a meal costs $45.00 and I want to leave a 15% tip, what will my total bill be?
+    A: To find the tip amount, I calculate 15% of the meal cost.
+    Tip amount = 0.15 × $45.00 = $6.75
+    Total bill = Meal cost + Tip = $45.00 + $6.75 = $51.75
+    Therefore, my total bill will be $51.75.
+    
+    First Iteration:
+    For our question about shirts and pants:
+    Cost of shirts = 3 × $24.99 = $74.97
+    Cost of pants = 2 × $39.95 = $79.90
+    Subtotal = $74.97 + $79.90 = $154.87
+    Tax amount = 0.08 × $154.87 = $12.39
+    Total cost = $154.87 + $12.39 = $167.26
+    
+    Uncertainty Analysis:
+    The calculation seems straightforward, but there might be uncertainty in how to handle the cents in the multiplication and whether to round the tax amount. 
+     Let's identify this as an area of potential disagreement.
+    
+    Refined Exemplars:
+    Exemplar 2 (Rewritten):
+    Q: What is the total cost of 4 apples at $0.75 each and 3 oranges at $0.60 each?
+    A: First, I'll calculate the cost of the apples.
+    Cost of apples = 4 × $0.75 = $3.00
+    Next, I'll calculate the cost of the oranges.
+    Cost of oranges = 3 × $0.60 = $1.80
+    Subtotal = $3.00 + $1.80 = $4.80
+    For retail transactions, we calculate to the nearest cent, so the total cost is exactly $4.80.
+    
+    Exemplar 3 (Rewritten):
+    Q: If a meal costs $45.00 and I want to leave a 15% tip, what will my total bill be?
+    A: To find the tip amount, I calculate 15% of the meal cost.
+    Tip amount = 0.15 × $45.00 = $6.75
+    Total bill = Meal cost + Tip = $45.00 + $6.75 = $51.75
+    When calculating percentages, we typically round to the nearest cent, so the total bill is $51.75.
+    
+    Final Solution:
+    To find the total cost of buying 3 shirts and 2 pairs of pants with sales tax:
+    
+    Step 1: Calculate the cost of the shirts.
+    Cost of shirts = 3 × $24.99 = $74.97
+    
+    Step 2: Calculate the cost of the pants.
+    Cost of pants = 2 × $39.95 = $79.90
+    
+    Step 3: Determine the subtotal before tax.
+    Subtotal = $74.97 + $79.90 = $154.87
+    
+    Step 4: Calculate the sales tax amount.
+    Tax amount = 0.08 × $154.87 = $12.3896
+    Rounded to the nearest cent: $12.39
+    
+    Step 5: Compute the final total.
+    Total cost = $154.87 + $12.39 = $167.26
+    
+    Therefore, the total cost would be $167.26.
+    """),
+    ("human", "{question}"),
+    ("assistant", """
+    I'll solve this problem using Active Prompting to iteratively improve my approach:
+    
+    Step 1: Initial Exemplars
+    [Provide 3 relevant exemplars with detailed reasoning paths that relate to the problem domain]
+    
+    Step 2: First Iteration
+    [Initial detailed solution attempt with step-by-step reasoning]
+    
+    Step 3: Uncertainty Analysis
+    [Identification of specific steps or concepts where reasoning might be unclear or where multiple approaches could lead to different answers]
+    
+    Step 4: Refined Exemplars
+    [Improved versions of the exemplars that address the identified uncertainties with clearer reasoning chains]
+    
+    Step 5: Final Solution
+    [Comprehensive step-by-step solution that leverages insights from the refined exemplars and addresses all aspects of the original question]
+    """)
+])
+
+
+premiere question est il bien représentatif selon toi de la technique de prompt Active Prompting
+
+
+parfait alors maintenant j'aimerais que tu m'adaptes le meme type de prompt mais pour la technique de prompte suivante 
+
+Self-Generated In-Context Learning (SG-ICL)
+(Kim et al., 2022) leverages a GenAI to automatically generate exemplars. While better than zeroshot scenarios when training data is unavailable,
+the generated samples are not as effective as actual
+data.
+
+seulement attention !! 
+
+cette tecnique n'est plus référérencé comme appartenant au CoT et encore moins au Few Shot Cot 
+
+cette technique appartient à la famille dite Few-Shot Prompting Techniques dont voici un rappel de la definition 
+
+Considering all of these factors, Few-Shot Prompting can be very difficult to implement effectively.
+We now examine techniques for Few-Shot Prompting in the supervised setting. Ensembling approaches can also benefit Few-Shot Prompting, but
+we discuss them separately (Section 2.2.4).
+Assume we have a training dataset, Dtrain
+,
+which contains multiple inputs Dtrain
+xi and outputs
+Dtrain
+y
+i
+, which can be used to few-shot prompt a
+GenAI (rather than performing gradient-based updates). Assume that this prompt can be dynamically
+
+
+
+
+elle n'est pas référérencé comme chains of thoughs dans sa structure step by step 
+par exemple dans l'exemple du prompt de l'active prompting y a une phrase qui dit 
+"Please structure your response in the following format:" tu peux conserver cette phrase mais en aucun caseécrire des 
+steps puis que ces derniers sont réprésentatifs du mode de pensée CoT 
+
+peux tu donc en t'inspirant du prompt de l'active prompt me faire un prompt d'expert de  :
+
+Self-Generated In-Context Learning (SG-ICL)
+(Kim et al., 2022) leverages a GenAI to automatically generate exemplars. While better than zeroshot scenarios when training data is unavailable,
+the generated samples are not as effective as actual
+data.
+
+Technique référencé comme appartenant à la famille des  Few-Shot Prompting Techniques
+
+
+
+
