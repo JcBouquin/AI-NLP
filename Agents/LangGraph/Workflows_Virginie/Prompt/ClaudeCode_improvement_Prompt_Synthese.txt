@@ -1,0 +1,54 @@
+-  Dans le fichier de synthèse tu vas extraire uniquement les termes suivants :                                                                                                         │ │
+│ │    2 -  1 - "Article et son numéro"                                                                                                                                                          │ │
+│ │    3 -  2 - "[En cas d'absence ou d'empêchement de]"                                                                                                                                         │ │
+│ │    4 -  3 - "[Délégation est donnée à]"                                                                                                                                                      │ │
+│ │    1 +  Tu es un expert en extraction d'informations administratives. Dans le fichier de synthèse, tu vas extraire UNIQUEMENT les termes suivants pour chaque article :                      │ │
+│ │    2                                                                                                                                                                                         │ │
+│ │    3 -  exemple de sortie :                                                                                                                                                                  │ │
+│ │    3 +  1 - "Article et son numéro" (obligatoire)                                                                                                                                            │ │
+│ │    4 +  2 - "[En cas d'absence ou d'empêchement de]" : nom complet, fonction précise                                                                                                         │ │
+│ │    5 +  3 - "[Délégation est donnée à]" : nom complet, fonction précise                                                                                                                      │ │
+│ │    6                                                                                                                                                                                         │ │
+│ │    7 +  === FORMAT DE SORTIE REQUIS ===                                                                                                                                                      │ │
+│ │    8 +                                                                                                                                                                                       │ │
+│ │    9 +  Pour chaque article trouvé, respecte EXACTEMENT cette structure :                                                                                                                    │ │
+│ │   10 +                                                                                                                                                                                       │ │
+│ │   11 +  Article [NUMÉRO]                                                                                                                                                                     │ │
+│ │   12 +  [En cas d'absence ou d'empêchement de] : [NOM COMPLET], fonction : [FONCTION PRÉCISE]                                                                                                │ │
+│ │   13 +  [Délégation est donnée à] : [NOM COMPLET], fonction : [FONCTION PRÉCISE]                                                                                                             │ │
+│ │   14 +                                                                                                                                                                                       │ │
+│ │   15 +  === GESTION DES CAS D'ABSENCE D'INFORMATION ===                                                                                                                                      │ │
+│ │   16 +                                                                                                                                                                                       │ │
+│ │   17 +  - Si aucune information sur l'absence/empêchement : "[En cas d'absence ou d'empêchement de] : Non mentionné"                                                                         │ │
+│ │   18 +  - Si aucune délégation spécifiée : "[Délégation est donnée à] : Non mentionné"                                                                                                       │ │
+│ │   19 +  - Si fonction non précisée : "fonction : Non mentionné"                                                                                                                              │ │
+│ │   20 +  - Si plusieurs personnes mentionnées : les lister séparées par " ; "                                                                                                                 │ │
+│ │   21 +                                                                                                                                                                                       │ │
+│ │   22 +  === EXEMPLES DE SORTIE ===                                                                                                                                                           │ │
+│ │   23 +                                                                                                                                                                                       │ │
+│ │   24 +  Exemple 1 (cas complet) :                                                                                                                                                            │ │
+│ │   25    Article 7                                                                                                                                                                            │ │
+│ │   26 -  [En cas d'absence ou d'empêchement de] : Mme Angélique MORIN (épouse LANDAIS), fonction : Non mentionné                                                                              │ │
+│ │   26 +  [En cas d'absence ou d'empêchement de] : Mme Angélique MORIN (épouse LANDAIS), fonction : Directrice de l'aide et de la diffusion                                                    │ │
+│ │   27    [Délégation est donnée à] : Mme Stéphanie BROUSSOLLE, fonction : responsable de l'Unité achats et marchés au sein de la Direction des achats et des finances                         │ │
+│ │   28                                                                                                                                                                                         │ │
+│ │   29 +  Exemple 2 (cas avec informations manquantes) :                                                                                                                                       │ │
+│ │   30 +  Article 12                                                                                                                                                                           │ │
+│ │   31 +  [En cas d'absence ou d'empêchement de] : Non mentionné                                                                                                                               │ │
+│ │   32 +  [Délégation est donnée à] : M. Pierre MARTIN, fonction : Non mentionné                                                                                                               │ │
+│ │   33 +                                                                                                                                                                                       │ │
+│ │   34 +  Exemple 3 (cas avec délégations multiples) :                                                                                                                                         │ │
+│ │   35 +  Article 15                                                                                                                                                                           │ │
+│ │   36 +  [En cas d'absence ou d'empêchement de] : Mme Claire DUBOIS, fonction : Chef de service                                                                                               │ │
+│ │   37 +  [Délégation est donnée à] : M. Jean DUPONT, fonction : Adjoint au chef de service ; Mme Marie BERNARD, fonction : Responsable administrative                                         │ │
+│ │   38 +                                                                                                                                                                                       │ │
+│ │   39 +  === INSTRUCTIONS SPÉCIALES ===                                                                                                                                                       │ │
+│ │   40 +                                                                                                                                                                                       │ │
+│ │   41 +  - Ignore tout texte qui n'est pas lié aux délégations de pouvoir                                                                                                                     │ │
+│ │   42 +  - Conserve les titres de civilité (M., Mme, Dr, etc.)                                                                                                                                │ │
+│ │   43 +  - Respecte l'orthographe exacte des noms                                                                                                                                             │ │
+│ │   44 +  - Si un article ne contient aucune information pertinente, ne l'inclus pas dans la sortie                                                                                            │ │
+│ │   45 +  - Traite chaque article séparément avec une ligne vide entre chaque                                                                                                                  │ │
+│ │   46 +                                                                                                                                                                                       │ │
+│ │   47 +  === CONTENU À TRAITER ===                                                                                                                                                            │ │
+│ │   48 +                                                                                
