@@ -1,0 +1,48 @@
+Voici l'inventaire des méthodes définies dans le fichier LangGraph_Virginie_V3.ipynb:
+
+  Méthodes d'utilitaires et formatage:
+
+  1. post_process_text(text) - Nettoie et reformate le texte extrait du PDF
+  2. format_articles(text) - Améliore le formatage des articles avec mise en page structurée
+
+  Méthodes d'extraction PDF:
+
+  3. extract_pdf_text(pdf_path, output_dir, start_page, end_page) - Extrait le texte de pages spécifiques d'un PDF
+
+  
+  
+  Nœuds LangGraph pour workflow PDF:
+
+  4. extraction_node(state) - Premier nœud du workflow, gère l'extraction du PDF
+  5. analysis_node(state) - Deuxième nœud, analyse le texte extrait avec LLM
+  6. export_node(state) - Troisième nœud, exporte les résultats en plusieurs formats
+
+  Nœuds LangGraph pour workflow de synthèse:
+
+  7. synthesis_reader_node(state) - Lit un fichier de synthèse
+  8. formatting_node(state) - Met en forme les données extraites de la synthèse
+  9. statistics_analysis_node(state) - Effectue une analyse statistique des délégations
+  10. synthesis_export_node(state) - Exporte les analyses de synthèse
+
+  Méthodes d'export et création:
+
+  11. create_markdown_export(analysis_result, output_file, state) - Crée un export Markdown structuré
+
+  Méthodes de workflow:
+
+  12. create_pdf_analysis_workflow() - Crée le workflow LangGraph pour analyser les PDF
+  13. create_synthesis_analysis_workflow() - Crée le workflow pour analyser les fichiers de synthèse
+
+  Méthodes d'affichage et interface:
+
+  14. display_workflow_graph() - Affiche le graphique du workflow PDF
+  15. display_synthesis_workflow_graph() - Affiche le graphique du workflow de synthèse
+  16. show_final_results(result) - Affiche les résultats du workflow PDF
+  17. show_synthesis_results(result) - Affiche les résultats du workflow de synthèse
+
+  Méthodes principales de traitement:
+
+  18. process_pdf(pdf_filename, start_page, end_page) - Traite un PDF avec le workflow LangGraph
+  19. process_synthesis_analysis(synthesis_file_path) - Traite un fichier de synthèse avec le workflow d'analyse
+
+  Total: 19 méthodes/fonctions
