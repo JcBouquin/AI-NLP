@@ -161,7 +161,7 @@ active_prompt_template = ChatPromptTemplate.from_messages([
 premiere question est il bien représentatif selon toi de la technique de prompt Active Prompting
 
 
-parfait alors maintenant j'aimerais que tu m'adaptes le meme type de prompt mais pour la technique de prompte suivante 
+j'aimerais que tu m'adaptes le meme type de prompt mais pour la technique de prompte suivante 
 
 Self-Generated In-Context Learning (SG-ICL)
 (Kim et al., 2022) leverages a GenAI to automatically generate exemplars. While better than zeroshot scenarios when training data is unavailable,
@@ -192,7 +192,7 @@ GenAI (rather than performing gradient-based updates). Assume that this prompt c
 
 elle n'est pas référérencé comme chains of thoughs dans sa structure step by step 
 par exemple dans l'exemple du prompt de l'active prompting y a une phrase qui dit 
-"Please structure your response in the following format:" tu peux conserver cette phrase mais en aucun caseécrire des 
+"Please structure your response in the following format:" tu peux conserver cette phrase mais en aucun caseécrire les 
 steps puis que ces derniers sont réprésentatifs du mode de pensée CoT 
 
 peux tu donc en t'inspirant du prompt de l'active prompt me faire un prompt d'expert de  :
@@ -203,6 +203,7 @@ the generated samples are not as effective as actual
 data.
 
 Technique référencé comme appartenant à la famille des  Few-Shot Prompting Techniques
+
 
 
 
