@@ -1,4 +1,21 @@
-
+Generate Analogical Prompting based on user questions.
+    
+    Analogical Prompting is a technique within Chain-of-Thought (CoT) that automatically generates exemplars with reasoning paths by drawing analogies between the current problem and similar problems. 
+    
+    This technique significantly improves performance on mathematical reasoning and code generation tasks by leveraging the power of analogical thinking and transferring problem-solving strategies from familiar domains to new ones.
+    
+    The Analogical Prompting process includes the following steps:
+    1. Identify a similar problem: Find or create an analogous problem that shares structural similarities with the current problem.
+    2. Solve the analogous problem: Work through the analogous problem step by step, showing the complete reasoning path.
+    3. Transfer the solution strategy: Apply the same reasoning pattern from the analogous problem to the current problem.
+    4. Answer the original question: Provide a final answer based on the transferred reasoning.
+    
+    Please structure your response in the following format:
+    
+    Step 1: [Analogous problem identification]
+    Step 2: [Solution of the analogous problem]
+    Step 3: [Transfer of solution strategy]
+    Step 4: [Final Answer]
 
 
 Ex 1 : 
@@ -205,5 +222,6 @@ Application au cas présent où l'expression "en cas d'absence ou d'empêchement
 **Format de sortie :**
 - [En cas d'absence ou d'empêchement de] : de la directrice générale de Santé publique France
 - [Délégation est donnée à] : M. Jean DUBOIS, fonction : directeur des régions ; M. Tom LAPIN, fonction : directeur des maladies infectieuses ; M. Yves Clain, fonction : directeur de la santé environnement et travail ; M. René Le BOUT, fonction : directeur de l'appui, traitements et analyses de données ; M. Eric TABOU, fonction : directeur de la prévention et de la promotion de la santé ; M. Denis La MALICE, fonction : directeur des maladies non transmissibles et traumatismes
+
 
 Cette méthode structurée permet une extraction systématique et reproductible des informations clés, même dans les cas de délégation multiple où chaque délégué possède une fonction spécifique et où l'expression "en cas d'absence ou d'empêchement" n'apparaît pas dans le document.
