@@ -47,7 +47,7 @@ def analyser_titre_avec_llm_semantique(titre: str) -> dict:
         
          try:
          1. Lecture du prompt depuis le fichier
-        with open("Prompt_depot_json_sharepoint.txt.txt", "r", encoding="utf-8") as file:
+        with open("Prompt_depot_json_sharepoint.txt", "r", encoding="utf-8") as file:
             human_prompt = file.read()
 
          2. Remplacement de l'ancien prompt par le contenu du fichier
@@ -664,4 +664,5 @@ def main():
         raise
 
 if __name__ == "__main__":
+
     main()
