@@ -1,0 +1,266 @@
+
+
+A partir d'un titre du va extraire les informations suivante en respectant toujours le format JSON suivant 
+
+{
+    "contexte_principal": "clinique/recherche/commercial/reglementaire/formation/client/base_donnees/autre",
+    "domaine_medical": "oncologie/cardiologie/neurologie/diabetologie/pneumologie/dermatologie/pharmacovigilance/business/client/base_donnees/aucun",
+    "type_document": "formation/etude/rapport/suivi/presentation/protocole/guide/autre",
+    "population_cible": "patients/professionnels/equipes_vente/chercheurs/regulateurs/clients/mixte",
+    "maladies_detectees": ["terme1", "terme2"],
+    "clients_detectes": ["client1", "client2"],
+    "bases_detectees": ["base1", "base2"],
+    "client_principal": "nom_client_principal_ou_null",
+    "base_principale": "nom_base_principale_ou_null",
+    "contient_maladie": true,
+    "confiance": "haute/moyenne/faible",
+    "score_semantique": 0.8,
+    "justification": "Explication courte du contexte détecté",
+    "titre_normalise": "{titre}"
+}
+
+voici une liste d'exemple sur lesquels tu peux t'appuyer 
+
+Exemple 1 : 
+
+Je commence par lire attentivement le titre pour en comprendre le contexte et la structure.
+"3225553 - Proposition commerciale pour ABBVIE - LTD Immunologie oncologie"
+
+Je comprends que le terme ABBVIE est le nom d'un client. J'en déduis que "clients_detectes" = ["ABBVIE"] et "client_principal" = "ABBVIE".
+Je comprends que le document est une "Proposition commerciale". C'est le type de document le plus pertinent. Par conséquent, "type_document" = "proposition".
+Je comprends que les termes "Immunologie" et "oncologie" sont des domaines médicaux. J'en déduis que "domaine_medical" = "oncologie" et que "maladies_detectees" doit contenir un terme médical. Comme l'oncologie se rapporte à des maladies, "contient_maladie" = true.
+Je comprends qu'il n'y a aucune référence à une base de données. J'en déduis que "bases_detectees" = [] et "base_principale" = "null".
+
+Json Généré :  
+
+{
+  "contexte_principal": "commercial",
+  "domaine_medical": "oncologie",
+  "type_document": "proposition",
+  "population_cible": "clients",
+  "maladies_detectees": [
+    "cancer"
+  ],
+  "clients_detectes": [
+    "ABBVIE"
+  ],
+  "bases_detectees": [],
+  "client_principal": "ABBVIE",
+  "base_principale": "null",
+  "contient_maladie": true,
+  "confiance": "haute",
+  "score_semantique": 0.95,
+  "justification": "Document commercial pour le client ABBVIE dans le domaine de l'oncologie.",
+  "titre_normalise": "3225553 - Proposition commerciale pour ABBVIE - LTD Immunologie oncologie"
+}
+
+
+Exemple 2 : 
+
+Je commence par lire attentivement le titre pour en comprendre le contexte et la structure.
+
+- "3181844 _IQVIA pour ABBOTT DC_Suivi national du FSL2 par segment de pat diabétiques 2025" → contient "suivi" mais c'est un rapport, pas une proposition → aucune
+ 
+
+Json Généré : 
+
+{
+  "contexte_principal": "clinique/recherche/commercial/reglementaire/formation/client/base_donnees/autre",
+  "domaine_medical": "diabetologie",
+  "type_document": "suivi",
+  "population_cible": "patients/professionnels/equipes_vente/chercheurs/regulateurs/clients/mixte",
+  "maladies_detectees": [
+    "diabete"
+  ],
+  "clients_detectes": [
+    "ABBOTT"
+  ],
+  "bases_detectees": [],
+  "client_principal": "ABBOTT",
+  "base_principale": "null",
+  "contient_maladie": true,
+  "confiance": "haute/moyenne/faible",
+  "score_semantique": 0.8,
+  "justification": "Explication courte du contexte détecté",
+  "titre_normalise": "3181844 _IQVIA pour ABBOTT DC_Suivi national du FSL2 par segment de pat diabétiques 2025"
+}
+
+
+Exemple 3 : 
+
+ 
+Je commence par lire attentivement le titre pour en comprendre le contexte et la structure.
+ "3252322 - Suivi Xponent std cancer de la prostate 2025"
+ 
+Json Généré : 
+
+{
+  "contexte_principal": "commercial",
+  "domaine_medical": "oncologie",
+  "type_document": "suivi",
+  "population_cible": "clients",
+  "maladies_detectees": [
+    "cancer de la prostate"
+  ],
+  "clients_detectes": [],
+  "bases_detectees": [
+    "Xponent"
+  ],
+  "client_principal": "null",
+  "base_principale": "Xponent",
+  "contient_maladie": true,
+  "confiance": "haute",
+  "score_semantique": 0.95,
+  "justification": "Document de suivi basé sur la base Xponent, centré sur le cancer de la prostate, dans un contexte commercial.",
+  "titre_normalise": "3252322 - Suivi Xponent std cancer de la prostate 2025"
+}
+
+
+Exemple 4 :
+
+Je commence par lire attentivement le titre pour en comprendre le contexte et la structure.
+"3204851 - IQVIA pour AstraZeneca - Xponent EDS Benlysta 2025"
+
+ 
+Json Généré : 
+
+{
+  "contexte_principal": "commercial",
+  "domaine_medical": "immunologie",
+  "type_document": "suivi",
+  "population_cible": "clients",
+  "maladies_detectees": [
+    "lupus"
+  ],
+  "clients_detectes": [
+    "AstraZeneca"
+  ],
+  "bases_detectees": [
+    "Xponent"
+  ],
+  "client_principal": "AstraZeneca",
+  "base_principale": "Xponent",
+  "contient_maladie": true,
+  "confiance": "haute",
+  "score_semantique": 0.95,
+  "justification": "Document de suivi basé sur la base Xponent pour le médicament Benlysta (traitement du lupus), destiné au client AstraZeneca dans un contexte commercial.",
+  "titre_normalise": "3204851 - IQVIA pour AstraZeneca - Xponent EDS Benlysta 2025"
+}
+
+
+Exemple 5 : 
+
+Je commence par lire attentivement le titre pour en comprendre le contexte et la structure.
+"PO-7101455030_v1_20241212"
+
+ 
+Json Généré : 
+
+{
+  "contexte_principal": "autre",
+  "domaine_medical": "null",
+  "type_document": "inconnu",
+  "population_cible": "null",
+  "maladies_detectees": [],
+  "clients_detectes": [],
+  "bases_detectees": [],
+  "client_principal": "null",
+  "base_principale": "null",
+  "contient_maladie": false,
+  "confiance": "faible",
+  "score_semantique": 0.2,
+  "justification": "Le titre est un identifiant technique sans indication explicite de client, maladie, base de données ou type de document. Impossible de déterminer un contexte clair.",
+  "titre_normalise": "PO-7101455030_v1_20241212"
+}
+
+
+Exemple 6 : 
+
+Je commence par lire attentivement le titre pour en comprendre le contexte et la structure.
+"3204288_IQTOP pour AZ - RNW 2025 - PMR Asthme BPCO"
+
+ 
+
+Json Généré : 
+
+{
+  "contexte_principal": "commercial",
+  "domaine_medical": "pneumologie",
+  "type_document": "suivi",
+  "population_cible": "clients",
+  "maladies_detectees": [
+    "asthme",
+    "BPCO"
+  ],
+  "clients_detectes": [
+    "AstraZeneca"
+  ],
+  "bases_detectees": [],
+  "client_principal": "AstraZeneca",
+  "base_principale": "null",
+  "contient_maladie": true,
+  "confiance": "haute",
+  "score_semantique": 0.95,
+  "justification": "Document de suivi pour le client AstraZeneca, centré sur les pathologies respiratoires (asthme et BPCO), dans un contexte commercial.",
+  "titre_normalise": "3204288_IQTOP pour AZ - RNW 2025 - PMR Asthme BPCO"
+}
+
+
+Exemple 7 
+
+ Je commence par lire attentivement le titre pour en comprendre le contexte et la structure.
+"3184694_IQVIA_pour_AZ_PMR_Split_indications_Lynparza_V2"
+ 
+
+
+Json Généré : 
+
+{
+  "contexte_principal": "commercial",
+  "domaine_medical": "oncologie",
+  "type_document": "suivi",
+  "population_cible": "clients",
+  "maladies_detectees": [
+    "cancer"
+  ],
+  "clients_detectes": [
+    "AstraZeneca"
+  ],
+  "bases_detectees": [],
+  "client_principal": "AstraZeneca",
+  "base_principale": "null",
+  "contient_maladie": true,
+  "confiance": "haute",
+  "score_semantique": 0.95,
+  "justification": "Document de suivi commercial pour AstraZeneca, centré sur le médicament Lynparza (traitement de plusieurs cancers), avec une analyse par indications.",
+  "titre_normalise": "3184694_IQVIA_pour_AZ_PMR_Split_indications_Lynparza_V2"
+}
+
+Exemple 8 : 
+
+Je commence par lire attentivement le titre pour en comprendre le contexte et la structure.
+"20250428 IQVIA pour AZ_Placement consultant renfort Lokelma V2"
+ 
+
+Json Généré 
+
+{
+  "contexte_principal": "commercial",
+  "domaine_medical": "néphrologie",
+  "type_document": "autre",
+  "population_cible": "clients",
+  "maladies_detectees": [
+    "hyperkaliémie"
+  ],
+  "clients_detectes": [
+    "AstraZeneca"
+  ],
+  "bases_detectees": [],
+  "client_principal": "AstraZeneca",
+  "base_principale": "null",
+  "contient_maladie": true,
+  "confiance": "moyenne",
+  "score_semantique": 0.85,
+  "justification": "Mission de renfort opérationnel pour le médicament Lokelma (traitement de l'hyperkaliémie) chez le client AstraZeneca, sans référence à une base de données ni à un format documentaire standard.",
+  "titre_normalise": "20250428 IQVIA pour AZ_Placement consultant renfort Lokelma V2"
+}
