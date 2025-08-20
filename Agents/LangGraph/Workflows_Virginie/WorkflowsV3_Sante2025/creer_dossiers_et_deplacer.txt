@@ -1,0 +1,110 @@
+def creer_dossiers_et_deplacer(analyses: list) -> dict:
+    """
+    Phase 4: Crée les dossiers de classification et déplace les fichiers.
+
+    Args:
+        analyses: Une liste de dictionnaires d'analyse pour chaque fichier.
+    """
+    print(f"\n📁 PHASE 4: Création dossiers et déplacement...")
+    print("-" * 50)
+    
+    # Mapping des catégories vers les noms de dossiers
+    mapping_dossiers = {
+        'oncologie': 'ONCOLOGIE',
+        'cardiologie': 'CARDIOLOGIE',
+        'neurologie': 'NEUROLOGIE',
+        'diabetologie': 'DIABETOLOGIE',
+        'pneumologie': 'PNEUMOLOGIE',
+        'dermatologie': 'DERMATOLOGIE',
+        'pharmacovigilance': 'PHARMACOVIGILANCE',
+        'formation': 'FORMATION',
+        'commercial': 'COMMERCIAL',
+        'recherche': 'RECHERCHE',
+        'reglementaire': 'REGLEMENTAIRE',
+        'client': 'CLIENTS',
+        'base_donnees': 'BASES_DONNEES',
+        'autre': 'AUTRES',
+        'aucun': 'AUTRES',
+        'null': 'AUTRES',
+        'inconnu': 'AUTRES',
+        'autres': 'AUTRES'
+    }
+    
+    # Créer tous les dossiers nécessaires en utilisant les valeurs du mapping
+    dossiers_crees = set()
+    for categorie in mapping_dossiers.values():
+        dossier_path = os.path.join(CHEMIN_DEPOTS, categorie)
+        os.makedirs(dossier_path, exist_ok=True)
+        dossiers_crees.add(categorie)
+    
+    print(f"✅ {len(dossiers_crees)} dossiers de classification créés.")
+
+    # Logique pour déterminer le dossier cible à partir de l'analyse LLM
+    def get_dossier_cible(analyse: dict) -> str:
+        """Détermine le dossier cible en fonction des résultats de l'analyse."""
+        # 1. Priorité aux bases de données
+        if analyse.get('base_principale') and analyse.get('base_principale') != 'null':
+            return mapping_dossiers.get('base_donnees', 'AUTRES')
+        
+        # 2. Priorité aux clients
+        if analyse.get('client_principal') and analyse.get('client_principal') != 'null':
+            return mapping_dossiers.get('client', 'AUTRES')
+        
+        # 3. Priorité aux domaines médicaux
+        domaine_medical = analyse.get('domaine_medical')
+        if domaine_medical and domaine_medical not in ['business', 'client', 'base_donnees', 'aucun', 'null']:
+            return mapping_dossiers.get(domaine_medical, 'AUTRES')
+        
+        # 4. Priorité aux contextes principaux
+        contexte_principal = analyse.get('contexte_principal')
+        if contexte_principal and contexte_principal not in ['client', 'base_donnees', 'autre', 'null']:
+            return mapping_dossiers.get(contexte_principal, 'AUTRES')
+        
+        # 5. Repli par défaut
+        return mapping_dossiers.get('autres', 'AUTRES')
+    
+    # Déplacer les fichiers
+    stats_deplacement = {}
+    erreurs_deplacement = []
+    
+    for analyse in analyses:
+        file_name = analyse['nom_fichier']
+        
+        # ⭐️ Ligne modifiée pour utiliser la nouvelle logique de classification
+        dossier_cible = get_dossier_cible(analyse)
+        
+        source_path = os.path.join(CHEMIN_DEPOTS, file_name)
+        destination_path = os.path.join(CHEMIN_DEPOTS, dossier_cible, file_name)
+        
+        try:
+            if os.path.exists(source_path):
+                # Gérer les doublons
+                if os.path.exists(destination_path):
+                    base, ext = os.path.splitext(file_name)
+                    counter = 1
+                    while os.path.exists(destination_path):
+                        new_name = f"{base}_({counter}){ext}"
+                        destination_path = os.path.join(CHEMIN_DEPOTS, dossier_cible, new_name)
+                        counter += 1
+                
+                shutil.move(source_path, destination_path)
+                stats_deplacement[dossier_cible] = stats_deplacement.get(dossier_cible, 0) + 1
+        
+        except Exception as e:
+            erreurs_deplacement.append(f"{file_name}: {str(e)}")
+            print(f"❌ Erreur déplacement {file_name}: {e}")
+    
+    print(f"\n📊 RÉSULTATS DE DÉPLACEMENT:")
+    total_deplaces = sum(stats_deplacement.values())
+    for dossier, count in sorted(stats_deplacement.items()):
+        pct = (count / total_deplaces * 100) if total_deplaces > 0 else 0
+        print(f"   • {dossier}: {count} fichiers ({pct:.1f}%)")
+    
+    if erreurs_deplacement:
+        print(f"\n❌ ERREURS DE DÉPLACEMENT ({len(erreurs_deplacement)}):")
+        for erreur in erreurs_deplacement[:5]:
+            print(f"   • {erreur}")
+        if len(erreurs_deplacement) > 5:
+            print(f"   • ... et {len(erreurs_deplacement) - 5} autres erreurs")
+    
+    return stats_deplacement
