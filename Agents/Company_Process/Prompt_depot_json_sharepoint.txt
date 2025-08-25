@@ -1,0 +1,87 @@
+"""
+Analyse sémantique COMPLÈTE du titre : "{titre}"
+
+Ne te contente pas de chercher des mots-clés ! Analyse le CONTEXTE :
+
+Je commence par lire attentivement le titre pour en comprendre le contexte et la structure.
+
+Exemple 1 :
+
+- "3181844   pour ABBOTT DC_Suivi national du FSL2 par segment de pat diabétiques 2025"
+
+Je comprends que le terme ABBOTT est le nom d'un client , "clients_detectes" = ABBOTT
+Je comprends que le terme diabétique est médical , "maladies_detectees" = diabete
+Je comprends qu'il s'agit d'un document de type suivi , "type_document" = suivi
+
+
+Json Généré :
+
+{{
+  "contexte_principal": "Data"
+  "domaine_medical": "diabetologie",
+  "type_document": "suivi",
+  "client_detectees": "ABBOTT",
+  "base_detectees": "null",
+  "contient_maladie": true,
+  "confiance": "haute/moyenne/faible",
+  "score_semantique": 0.8,
+  "titre_normalise": "3181844 _ pour ABBOTT DC_Suivi national du FSL2 par segment de pat diabétiques 2025",
+  "justification": "document de suivi pour le client ABBOT"
+}}
+
+Exemple 2 :
+
+Je commence par lire attentivement le titre pour en comprendre le contexte et la structure.
+"3204851  pour AstraZeneca - Xponent EDS Benlysta 2025"
+
+
+Json Généré :
+
+{{
+  "contexte_principal": "Data",
+  "domaine_medical": "immunologie",
+  "type_document": "suivi",
+  "clients_detectes": "AstraZeneca",
+  "bases_detectees": "Xponent",
+  "contient_maladie": true,
+  "confiance": "haute",
+  "score_semantique": 0.95,
+  "titre_normalise": "3204851   pour AstraZeneca - Xponent EDS Benlysta 2025",
+  "justification": "Document de suivi basé sur la base Xponent pour le médicament Benlysta (traitement du lupus), destiné au client AstraZeneca dans un contexte commercial."
+}}
+
+Exemple 3 :
+
+Je commence par lire attentivement le titre pour en comprendre le contexte et la structure.
+"PO-7101455030_v1_20241212"
+
+
+Json Généré :
+
+{{
+  "contexte_principal": "autre",
+  "domaine_medical": "null",
+  "type_document": "inconnu",
+  "clients_detectes": "null",
+  "bases_detectees": "null",
+  "contient_maladie": false,
+  "confiance": "faible",
+  "score_semantique": 0.2,
+  "titre_normalise": "PO-7101455030_v1_20241212",
+  "justification": "Le titre est un identifiant technique sans indication explicite de client, maladie, base de données ou type de document. Impossible de déterminer un contexte clair."
+}}
+
+Réponds UNIQUEMENT en JSON valide :
+{{
+    "contexte_principal": "Data si client , base données ou domaine medical , autre si non ";
+    "domaine_medical": "tous termes ou expression autour de la maladie ou null",
+    "type_document": "formation/etude/rapport/suivi/presentation/protocole/guide/autre",
+    "clients_detectes": "nom_client_principal_ou_null",
+    "bases_detectees": "Si IQVIA alors null ou nom_base_principale_ou_null Si IQVIA alors null: xponent/PubMed/BDPM",
+    "contient_maladie": true,
+    "confiance": "haute/moyenne/faible",
+    "score_semantique": 0.8,
+    "titre_normalise": "{titre}",
+    "justification": "Explication courte du contexte détecté"
+}}
+            """
