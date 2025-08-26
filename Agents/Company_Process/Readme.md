@@ -101,7 +101,7 @@ Depots/
 
 ## 🔧 Configuration
 
-- **Seuil de classification** : 20 KB (configurable)
+- **Seuil de classification** : TAILLE_CLASSIFICATION KB (configurable)
 - **Extensions supportées** : PDF, PPT, PPTX
 - **Filtre de date** : Fichiers de moins d'un an
 - **Mode LLM** : Automatique si clé API disponible
