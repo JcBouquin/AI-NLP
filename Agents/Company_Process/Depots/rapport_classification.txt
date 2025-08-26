@@ -1,0 +1,26 @@
+================================================================================
+RAPPORT DE CLASSIFICATION MÉDICALE AUTOMATIQUE
+================================================================================
+
+📅 Date d'exécution: 26/08/2025 06:26:49
+🔧 Mode: LLM Sémantique
+📁 Dossier source: /content/drive/MyDrive/Colab/Iqvia_process/ProcessEx
+📁 Dossier dépôt: /content/drive/MyDrive/Colab/Iqvia_process/Depots
+
+📊 STATISTIQUES GLOBALES
+----------------------------------------
+Total fichiers traités: 18
+Fichiers médicaux: 11
+Fichiers clients: 18
+Fichiers bases données: 18
+Score sémantique moyen: 0.694
+
+📁 RÉPARTITION PAR DOSSIERS
+----------------------------------------
+BASES_DONNEES: 3 fichiers (16.7%)
+CLIENTS: 3 fichiers (16.7%)
+MALADIES: 12 fichiers (66.7%)
+
+📂 CONSOLIDATION GLOBALE
+----------------------------------------
+RESULTS_GLOBAL: 18 fichiers consolidés
