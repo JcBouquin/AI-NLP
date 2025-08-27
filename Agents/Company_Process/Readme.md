@@ -1,4 +1,4 @@
-## 📝 **README.md - Classificateur Médical avec LLM**
+## 📝 **README.md - Classificateur avec LLM**
 
 ```markdown
 # �� Classificateur Médical - Analyse Sémantique
