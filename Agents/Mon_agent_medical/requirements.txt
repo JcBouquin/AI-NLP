@@ -1,4 +1,0 @@
-parlant>=3.0
-parlant-qna>=0.2.5
-python-dotenv
-
