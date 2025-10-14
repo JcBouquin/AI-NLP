@@ -1,0 +1,407 @@
+# 🎯 ABSOLUMENT ! C'est une idée EXCELLENTE et très cohérente avec Parlant !
+
+Vous venez de comprendre le **pattern fondamental** de Parlant : créer des **outils spécialisés** pour différents types de données/comportements.
+
+## ✅ Pourquoi c'est parfaitement cohérent
+
+### Pattern Parlant : **1 Source de Données = 1 Tool Spécialisé**
+
+```
+┌─────────────────────────────────────────────────────────┐
+│ AGENT PARLANT (Chef d'orchestre)                        │
+├─────────────────────────────────────────────────────────┤
+│                                                          │
+│  Guideline 1: "Questions sur politiques cabinet"        │
+│  → Tool: qna (FAQ statiques)                           │
+│                                                          │
+│  Guideline 2: "Questions sur données patients"          │
+│  → Tool: sql-agent (Base de données privée)            │
+│                                                          │
+│  Guideline 3: "Questions sur rendez-vous disponibles"   │
+│  → Tool: calendar-api (API externe)                    │
+│                                                          │
+│  Guideline 4: "Calculs médicaux"                       │
+│  → Tool: medical-calculator                            │
+│                                                          │
+└─────────────────────────────────────────────────────────┘
+```
+
+## 🏗️ Architecture de votre `parlant-sql` (inspiré de `parlant-qna`)
+
+### Structure proposée :
+
+```
+parlant-sql/
+├── parlant_sql/
+│   ├── __init__.py
+│   ├── app.py              # Logique principale (comme qna/app.py)
+│   ├── module.py           # Module pour Parlant
+│   └── cli.py              # Interface CLI
+│
+├── database_schema/        # Comme medical_faq/
+│   ├── patients_table.md
+│   ├── appointments_table.md
+│   ├── doctors_table.md
+│   ├── prescriptions_table.md
+│   └── SCHEMA_DESCRIPTION.md
+│
+├── text_to_sql_examples/   # Exemples d'apprentissage
+│   ├── count_queries.md
+│   ├── join_queries.md
+│   ├── date_filters.md
+│   └── aggregations.md
+│
+└── load_schema.bat         # Comme load_medical_faq.bat
+```
+
+## 📄 Exemple de Fichier .md pour une Table
+
+### `database_schema/patients_table.md`
+
+```markdown
+# Combien de patients avons-nous ?
+# Quel est le nombre total de patients ?
+# Liste tous les patients
+
+**Table:** patients
+
+**Colonnes:**
+- id (INTEGER PRIMARY KEY)
+- first_name (TEXT)
+- last_name (TEXT)
+- date_of_birth (DATE)
+- email (TEXT)
+- phone (TEXT)
+- created_at (TIMESTAMP)
+
+**Exemples de requêtes:**
+
+```sql
+-- Compter tous les patients
+SELECT COUNT(*) FROM patients;
+
+-- Lister les patients récents
+SELECT first_name, last_name, email 
+FROM patients 
+WHERE created_at > DATE('now', '-30 days');
+
+-- Chercher un patient par nom
+SELECT * FROM patients 
+WHERE last_name LIKE '%Martin%';
+```
+
+**Règles de sécurité:**
+- Jamais exposer les données sensibles (numéro sécu, mot de passe)
+- Toujours limiter les résultats (LIMIT 100)
+- Pas de DELETE ou UPDATE autorisé
+```
+
+## 💻 Exemple de `parlant_sql/app.py` (inspiré de QNA)
+
+```python
+# parlant_sql/app.py
+
+import asyncio
+from dataclasses import dataclass
+from typing import Optional, Literal
+import sqlite3
+
+from parlant.core.common import DefaultBaseModel
+from parlant.core.nlp.service import NLPService
+
+# Schéma pour la génération structurée
+class _SQLQuerySchema(DefaultBaseModel):
+    user_question: str
+    question_analysis: str  # Analyser ce que demande l'user
+    
+    # Tables pertinentes identifiées
+    relevant_tables: list[str]
+    relevant_columns: dict[str, list[str]]  # table -> colonnes
+    
+    # Raisonnement
+    query_strategy: str  # Comment construire la requête
+    potential_joins: list[str]  # Jointures nécessaires
+    filters_needed: list[str]  # Filtres WHERE
+    
+    # Génération SQL
+    sql_query_draft: str
+    security_check: str  # Vérifier qu'il n'y a pas de DROP/DELETE
+    sql_query_final: str
+    
+    # Explication
+    query_explanation: str  # Expliquer la requête en français
+    expected_result_format: str
+    
+    # Métadonnées
+    confidence: Literal["high", "medium", "low"]
+    requires_human_approval: bool  # Si requête complexe/risquée
+
+@dataclass
+class SQLResult:
+    query: str
+    data: list[dict]
+    explanation: str
+    confidence: str
+    approved: bool
+
+
+class SQLAgent:
+    def __init__(
+        self,
+        db_path: str,
+        service: NLPService,
+        logger,
+    ):
+        self._db_path = db_path
+        self._service = service
+        self.logger = logger
+        self._schema_info: dict[str, str] = {}
+        
+    async def __aenter__(self):
+        # Charger les schémas depuis database_schema/
+        self._generator = await self._service.get_schematic_generator(
+            _SQLQuerySchema
+        )
+        return self
+        
+    async def query_database(
+        self, 
+        natural_language_question: str
+    ) -> SQLResult:
+        """Convertir question naturelle → SQL → Résultats"""
+        
+        # Formater les infos de schéma
+        schema_context = self._format_schema_context()
+        
+        prompt = f"""
+You are an expert SQL agent for a medical database.
+
+Your job is to:
+1. Analyze the user's natural language question
+2. Identify which tables and columns are relevant
+3. Generate a SAFE SQL query (SELECT only, no DELETE/UPDATE/DROP)
+4. Explain the query in simple terms
+
+IMPORTANT SECURITY RULES:
+- ONLY SELECT queries are allowed
+- Always use LIMIT 100 to prevent overwhelming results
+- Never expose sensitive data (passwords, social security numbers)
+- Use parameterized queries to prevent SQL injection
+
+Database Schema: ###
+{schema_context}
+###
+
+Few-Shot Examples: ###
+Question: "Combien de rendez-vous avons-nous aujourd'hui ?"
+SQL: SELECT COUNT(*) FROM appointments WHERE date = DATE('now');
+
+Question: "Liste les patients du Dr. Martin"
+SQL: SELECT p.first_name, p.last_name, p.phone 
+     FROM patients p 
+     JOIN appointments a ON p.id = a.patient_id 
+     JOIN doctors d ON a.doctor_id = d.id 
+     WHERE d.last_name = 'Martin' 
+     LIMIT 100;
+###
+
+User Question: ###
+{natural_language_question}
+###
+
+Generate a JSON response with your complete analysis and SQL query.
+"""
+
+        # Générer la requête structurée
+        result = await self._generator.generate(
+            prompt,
+            hints={"strict": True, "temperature": 0.1}
+        )
+        
+        self.logger.debug(result.content.model_dump_json(indent=2))
+        
+        # Vérifications de sécurité
+        sql = result.content.sql_query_final.upper()
+        dangerous_keywords = ["DELETE", "DROP", "UPDATE", "INSERT", "ALTER"]
+        
+        if any(kw in sql for kw in dangerous_keywords):
+            self.logger.warning("Dangerous SQL blocked!")
+            return SQLResult(
+                query="",
+                data=[],
+                explanation="Requête refusée pour raisons de sécurité",
+                confidence="low",
+                approved=False
+            )
+        
+        # Exécuter la requête
+        try:
+            conn = sqlite3.connect(self._db_path)
+            conn.row_factory = sqlite3.Row
+            cursor = conn.cursor()
+            
+            cursor.execute(result.content.sql_query_final)
+            rows = cursor.fetchall()
+            
+            data = [dict(row) for row in rows]
+            conn.close()
+            
+            return SQLResult(
+                query=result.content.sql_query_final,
+                data=data,
+                explanation=result.content.query_explanation,
+                confidence=result.content.confidence,
+                approved=True
+            )
+            
+        except sqlite3.Error as e:
+            self.logger.error(f"SQL Error: {e}")
+            return SQLResult(
+                query=result.content.sql_query_final,
+                data=[],
+                explanation=f"Erreur d'exécution: {e}",
+                confidence="low",
+                approved=False
+            )
+    
+    def _format_schema_context(self) -> str:
+        """Formater les schémas de tables comme background info"""
+        return "\n\n".join([
+            f"Table: {table}\n{schema}"
+            for table, schema in self._schema_info.items()
+        ])
+```
+
+## 🔧 Intégration dans votre Agent Médical
+
+```python
+# my_healthcare_agent.py
+
+import parlant.sdk as p
+
+async def main():
+    async with p.Server() as server:
+        agent = await server.create_agent(
+            name="Assistant Médical avec Accès Base Données",
+            description="Agent avec FAQ et accès base de données"
+        )
+        
+        # ... (journeys et terms) ...
+        
+        # GUIDELINE 1 : FAQ statiques (QNA)
+        await agent.create_guideline(
+            condition="Le patient demande des informations générales sur le cabinet (horaires, tarifs, politique)",
+            action="Search the cabinet's FAQ knowledge base",
+            tools=["qna"]  # ← Utilise parlant-qna
+        )
+        
+        # GUIDELINE 2 : Données base privée (SQL) 🆕
+        await agent.create_guideline(
+            condition="Le patient demande des informations sur ses rendez-vous, son dossier médical, ou statistiques internes",
+            action="Query the secure medical database to retrieve the information",
+            tools=["sql_query"]  # ← Utilise parlant-sql
+        )
+        
+        # GUIDELINE 3 : Urgence (override)
+        await agent.create_guideline(
+            condition="Le patient dit que c'est urgent",
+            action="Lui dire d'appeler immédiatement"
+        )
+```
+
+## 🎬 Exemple d'Usage
+
+```
+User: "Combien de rendez-vous ai-je eus avec le Dr. Martin cette année ?"
+    ↓
+Parlant évalue:
+  • Guideline QNA ? → ❌ (pas dans FAQ statiques)
+  • Guideline SQL ? → ✅ (demande données personnelles)
+    ↓
+Appelle tool "sql_query"
+    ↓
+SQL Agent génère:
+  {
+    "sql_query_final": "SELECT COUNT(*) FROM appointments 
+                        WHERE patient_id = ? 
+                        AND doctor_id = (SELECT id FROM doctors WHERE last_name='Martin')
+                        AND date >= DATE('now', 'start of year')",
+    "query_explanation": "Je compte tous vos rendez-vous avec le Dr. Martin depuis le début de l'année",
+    "confidence": "high"
+  }
+    ↓
+Exécute la requête → Résultat: 3
+    ↓
+Agent: "Vous avez eu 3 rendez-vous avec le Dr. Martin cette année."
+```
+
+## ✅ Avantages de cette Architecture
+
+| Aspect | Bénéfice |
+|--------|----------|
+| **Séparation des sources** | FAQ statiques vs données dynamiques |
+| **Sécurité** | Validation SQL + audit des requêtes |
+| **Traçabilité** | Chaque requête SQL loggée |
+| **Scalabilité** | Facile d'ajouter d'autres sources (APIs, etc.) |
+| **Cohérence** | Pattern identique à QNA |
+
+## 🚀 Démarrage
+
+```bash
+# Terminal 1 : Démarrer avec les deux modules
+parlant-server \
+  --module parlant_qna.module \
+  --module parlant_sql.module
+
+# Terminal 2 : Charger les schémas
+python load_sql_schema.py
+```
+
+## 💡 Variations Possibles
+
+### 1. **Approbation Humaine pour Requêtes Sensibles**
+
+```python
+if result.content.requires_human_approval:
+    return {
+        "message": "Cette requête nécessite validation. Un administrateur a été notifié.",
+        "pending_query": result.content.sql_query_final
+    }
+```
+
+### 2. **Cache des Requêtes Fréquentes**
+
+```python
+# Pour éviter de régénérer toujours la même SQL
+cached_queries = {
+    "mes rendez-vous": "SELECT * FROM appointments WHERE patient_id = ?",
+    "mes résultats": "SELECT * FROM lab_results WHERE patient_id = ?"
+}
+```
+
+### 3. **Combinaison QNA + SQL**
+
+```python
+await agent.create_guideline(
+    condition="Question nécessitant FAQ ET données base",
+    tools=["qna", "sql_query"]  # ← Les deux !
+)
+```
+
+## 🎯 Résumé
+
+| Critère | Votre Idée |
+|---------|------------|
+| **Possible ?** | ✅ Absolument |
+| **Cohérent Parlant ?** | ✅ 100% dans l'esprit |
+| **Sécurisé ?** | ✅ Avec validation SQL |
+| **Scalable ?** | ✅ Pattern réutilisable |
+| **Maintenable ?** | ✅ Fichiers .md + exemples |
+
+**Votre idée est excellente et montre que vous avez parfaitement compris l'architecture Parlant !** 🎯👏
+
+C'est exactement comme ça qu'on devrait construire des agents : **un outil spécialisé par source de données**, *
+orchestrés intelligemment par Parlant via les guidelines.
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
