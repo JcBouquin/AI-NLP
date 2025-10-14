@@ -1,0 +1,213 @@
+================================================================================
+    FRONTEND WEB PARLANT - GUIDE DE DÉMARRAGE RAPIDE
+================================================================================
+
+🎯 Ce guide vous permet de lancer le frontend web en 5 étapes.
+
+================================================================================
+📋 PRÉREQUIS
+================================================================================
+
+✅ Python 3.10+ installé
+✅ Parlant framework installé (pip install parlant)
+✅ OpenAI API key configurée
+✅ Modules QNA et SQL disponibles
+
+================================================================================
+🚀 ÉTAPE 1 : CRÉER L'AGENT PARLANT
+================================================================================
+
+cd web_frontend
+python setup_agent.py
+
+📝 IMPORTANT : Notez l'Agent ID affiché !
+Exemple: abc123-def456-ghi789
+
+================================================================================
+🔧 ÉTAPE 2 : CONFIGURER LE FRONTEND
+================================================================================
+
+1. Ouvrez le fichier: chat.js
+
+2. Trouvez la ligne (environ ligne 3):
+   AGENT_ID: 'YOUR_AGENT_ID',
+
+3. Remplacez par votre ID:
+   AGENT_ID: 'abc123-def456-ghi789',
+
+4. Sauvegardez le fichier
+
+================================================================================
+📦 ÉTAPE 3 : CHARGER LES DONNÉES
+================================================================================
+
+Si pas déjà fait, chargez les données QNA et SQL :
+
+# FAQ Statiques
+cd ../../mon_agent_medical
+load_medical_faq.bat
+
+# Schémas SQL
+cd ../parlant-sql
+load_schemas.bat
+
+# Base de données de démo
+python create_demo_database.py
+
+================================================================================
+🖥️  ÉTAPE 4 : DÉMARRER PARLANT SERVER
+================================================================================
+
+Ouvrez un NOUVEAU TERMINAL et exécutez :
+
+parlant-server --module parlant_qna.module --module parlant_sql.module --host 0.0.0.0 --port 8000
+
+⏳ Attendez le message: "Server started on http://0.0.0.0:8000"
+
+================================================================================
+🌐 ÉTAPE 5 : LANCER LE FRONTEND
+================================================================================
+
+Ouvrez un AUTRE TERMINAL et exécutez :
+
+cd web_frontend
+python -m http.server 8080
+
+⏳ Attendez le message: "Serving HTTP on ..."
+
+================================================================================
+🎉 ÉTAPE 6 : TESTER !
+================================================================================
+
+1. Ouvrez votre navigateur
+
+2. Allez sur : http://localhost:8080
+
+3. Testez ces questions :
+
+   📚 FAQ (Tool QNA):
+   ✓ "Quels sont vos horaires ?"
+   ✓ "Où êtes-vous situés ?"
+   ✓ "Qui sont les médecins ?"
+
+   🗄️ Base de données (Tool SQL):
+   ✓ "Combien de patients avons-nous ?"
+   ✓ "Rendez-vous d'aujourd'hui ?"
+   ✓ "Quel médecin est le plus sollicité ?"
+
+   🗺️ Journey:
+   ✓ "Je voudrais prendre rendez-vous"
+
+================================================================================
+✅ VÉRIFICATION
+================================================================================
+
+Si tout fonctionne, vous devriez voir :
+
+• Status: "🟢 Connecté" en haut du chat
+• Message de bienvenue de l'agent
+• Bulles de chat qui s'affichent
+• Badges d'outils (📚 FAQ ou 🗄️ Base de données)
+
+================================================================================
+🐛 PROBLÈMES COURANTS
+================================================================================
+
+❌ "Impossible de se connecter au serveur"
+   → Vérifiez que Parlant Server est démarré (Terminal 1)
+   → URL correcte dans chat.js (ligne 2)
+
+❌ "Agent non trouvé"
+   → Vérifiez l'Agent ID dans chat.js
+   → Relancez setup_agent.py si nécessaire
+
+❌ Page blanche
+   → Vérifiez la console du navigateur (F12)
+   → Assurez-vous que index.html et chat.js sont dans le même dossier
+
+❌ "Module not found"
+   → Vérifiez que les modules sont installés
+   → Chemins corrects dans la commande parlant-server
+
+================================================================================
+📖 ARCHITECTURE FINALE
+================================================================================
+
+Terminal 1: Parlant Server (port 8000)
+    ↓
+Terminal 2: HTTP Server Frontend (port 8080)
+    ↓
+Navigateur: http://localhost:8080
+    ↓
+    Chat avec l'agent
+    ↓
+    Guidelines → Tools (QNA / SQL)
+
+================================================================================
+📚 DOCUMENTATION COMPLÈTE
+================================================================================
+
+README.md           → Documentation détaillée
+chat.js             → Code JavaScript commenté
+index.html          → Interface HTML/CSS
+setup_agent.py      → Script de configuration
+
+================================================================================
+🎨 PERSONNALISATION
+================================================================================
+
+Couleurs:        index.html (section <style>)
+Boutons rapides: index.html (class="quick-action-btn")
+Tools:           chat.js (fonction getToolInfo)
+Guidelines:      setup_agent.py (section guidelines)
+
+================================================================================
+🚀 PROCHAINES ÉTAPES
+================================================================================
+
+✅ Tester avec différentes questions
+✅ Personnaliser le design
+✅ Ajouter vos propres guidelines
+✅ Intégrer des tools supplémentaires
+✅ Déployer en production
+
+================================================================================
+💡 CONSEILS
+================================================================================
+
+• Utilisez F12 (DevTools) pour voir les logs JavaScript
+• Consultez les logs Parlant dans le Terminal 1
+• Testez d'abord les tools séparément (parlant-sql query)
+• Rechargez la page (Ctrl+R) après modification de chat.js
+
+================================================================================
+🎯 RÉSUMÉ DES COMMANDES
+================================================================================
+
+# 1. Créer agent
+python setup_agent.py
+
+# 2. Éditer chat.js (ligne 3 : AGENT_ID)
+
+# 3. Terminal 1 - Parlant
+parlant-server --module parlant_qna.module --module parlant_sql.module
+
+# 4. Terminal 2 - Frontend
+python -m http.server 8080
+
+# 5. Navigateur
+http://localhost:8080
+
+================================================================================
+✨ FÉLICITATIONS !
+================================================================================
+
+Votre frontend web Parlant est opérationnel ! 🎉
+
+Vous avez maintenant une interface moderne qui utilise automatiquement
+les tools QNA et SQL via les guidelines Parlant.
+
+Pour toute question, consultez README.md ou la documentation Parlant.
+
+================================================================================
+
