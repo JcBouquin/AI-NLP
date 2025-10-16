@@ -3,7 +3,7 @@
 ## 🎯 Vous Êtes Ici
 
 Votre script `extract_pdf_content_arbo.py` nécessite **Tesseract-OCR** pour fonctionner.
-
+pip install PyMuPDF pdf2image pytesseract opencv-python Pillow
 ```
 Statut actuel :
 ✅ pytesseract (Python) : Installé
@@ -208,4 +208,5 @@ Si vous avez des questions :
 ---
 
 **Créé pour faciliter l'installation de Tesseract-OCR** 🛠️
+
 
