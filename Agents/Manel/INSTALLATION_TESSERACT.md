@@ -11,6 +11,8 @@ Statut actuel :
 ✅ PyMuPDF : Installé
 ✅ pdf2image : Installé
 ❌ Tesseract-OCR (Moteur) : NON INSTALLÉ ← À installer
+
+pip install PyMuPDF pdf2image pytesseract opencv-python Pillow
 ```
 
 ---
@@ -208,5 +210,6 @@ Si vous avez des questions :
 ---
 
 **Créé pour faciliter l'installation de Tesseract-OCR** 🛠️
+
 
 
