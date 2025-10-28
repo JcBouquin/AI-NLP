@@ -1,0 +1,7 @@
+[2m2025-10-28T14:22:31.624441Z[0m [[32m[1minfo     [0m] [1m[<main>] Parlant server version 3.0.3[0m
+[2m2025-10-28T14:22:31.625331Z[0m [[32m[1minfo     [0m] [1m[<main>] Using home directory 'C:\Users\jcbouquin\AI\GenAI\web_frontend\parlant-data'[0m
+[2m2025-10-28T14:22:31.630432Z[0m [[32m[1minfo     [0m] [1m[<main>] No external modules selected[0m
+[2m2025-10-28T14:22:33.142093Z[0m [[32m[1minfo     [0m] [1m[<main>] Initialized OpenAIService[0m
+[2m2025-10-28T14:23:13.586326Z[0m [[32m[1minfo     [0m] [1m[<main>] BackgroundTaskService: Cancelling all remaining tasks (1)[0m
+[2m2025-10-28T14:23:13.587988Z[0m [[32m[1minfo     [0m] [1m[<main>] BackgroundTaskService: Shutting down[0m
+[2m2025-10-28T14:23:13.589133Z[0m [[32m[1minfo     [0m] [1m[<main>] BackgroundTaskService: Waiting for task 'websocket-logger' to finish[0m
