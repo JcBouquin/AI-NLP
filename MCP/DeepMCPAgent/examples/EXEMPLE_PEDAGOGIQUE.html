@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemple Pédagogique : DeepMCPAgent</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        h2 {
+            color: #667eea;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 2em;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #764ba2;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .scenario {
+            background: #f8f9fa;
+            border-left: 5px solid #667eea;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .scenario strong {
+            color: #667eea;
+            font-size: 1.1em;
+        }
+
+        .code-block {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+
+        .code-block.json {
+            background: #2d2d2d;
+        }
+
+        .step {
+            background: #fff;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 25px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .step-number {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+            margin-right: 15px;
+            vertical-align: middle;
+        }
+
+        .arrow {
+            text-align: center;
+            font-size: 2em;
+            color: #667eea;
+            margin: 20px 0;
+        }
+
+        .process-flow {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 30px 0;
+            border: 2px dashed #667eea;
+        }
+
+        .process-box {
+            background: white;
+            border: 2px solid #667eea;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            position: relative;
+        }
+
+        .process-box::before {
+            content: '→';
+            position: absolute;
+            left: -30px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #667eea;
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .process-box:first-child::before {
+            display: none;
+        }
+
+        .highlight {
+            background: #fff3cd;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        .success {
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        .info-box {
+            background: #e7f3ff;
+            border-left: 5px solid #2196F3;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .warning-box {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .summary-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+
+        .summary-box h3 {
+            color: white;
+            margin-top: 0;
+        }
+
+        .summary-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .summary-box li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .summary-box li:last-child {
+            border-bottom: none;
+        }
+
+        .summary-box li::before {
+            content: '✅ ';
+            margin-right: 10px;
+        }
+
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .comparison-item {
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .comparison-item.bad {
+            background: #fee;
+            border: 2px solid #fcc;
+        }
+
+        .comparison-item.good {
+            background: #efe;
+            border: 2px solid #cfc;
+        }
+
+        .comparison-item h4 {
+            margin-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table th, table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        table th {
+            background: #667eea;
+            color: white;
+        }
+
+        table tr:hover {
+            background: #f5f5f5;
+        }
+
+        .emoji {
+            font-size: 1.2em;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎓 Exemple Pédagogique</h1>
+            <p>Comment DeepMCPAgent Utilise les Outils Automatiquement</p>
+        </header>
+
+        <div class="content">
+            <section>
+                <h2>📝 Scénario : Question Simple</h2>
+                <div class="scenario">
+                    <strong>Question de l'utilisateur :</strong>
+                    <div style="margin-top: 10px; font-style: italic; font-size: 1.1em;">
+                        "Crée une tâche pour préparer ma présentation de demain, avec priorité haute"
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>🔄 Processus Complet (Étape par Étape)</h2>
+
+                <div class="step">
+                    <h3><span class="step-number">1</span> Initialisation (une seule fois au démarrage)</h3>
+                    <p style="margin-left: 55px;">Ce qui se passe dans votre code :</p>
+                    <div class="code-block" style="margin-left: 55px;">
+graph, loader = await build_deep_agent(
+    servers=servers,
+    model=model,
+    instructions="Tu es un assistant pour la gestion de tâches..."
+)
+                    </div>
+
+                    <h3 style="margin-top: 30px;">🧠 Ce qui se passe en interne :</h3>
+
+                    <p><strong>1. DeepMCPAgent se connecte au serveur MCP</strong></p>
+                    <div class="code-block">
+Client HTTP → http://127.0.0.1:8001/mcp
+Requête : GET /mcp (list_tools)
+                    </div>
+
+                    <p><strong>2. Le serveur MCP répond avec la liste des outils</strong></p>
+                    <div class="code-block json">
+[
+  {
+    "name": "create_task",
+    "description": "Créer une nouvelle tâche",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "title": {"type": "string"},
+        "description": {"type": "string"},
+        "priority": {"type": "string", "enum": ["low", "medium", "high"]}
+      },
+      "required": ["title"]
+    }
+  },
+  {
+    "name": "list_tasks",
+    "description": "Lister les tâches",
+    ...
+  }
+  // ... 3 autres outils
+]
+                    </div>
+
+                    <p><strong>3. DeepMCPAgent convertit automatiquement</strong></p>
+                    <ul>
+                        <li>Chaque outil JSON-Schema → Modèle Pydantic → LangChain <code>BaseTool</code></li>
+                        <li>Les 5 outils sont maintenant disponibles pour l'agent</li>
+                        <li><span class="success">✅ Résultat : L'agent "connaît" maintenant les 5 outils disponibles</span></li>
+                    </ul>
+                </div>
+
+                <div class="arrow">↓</div>
+
+                <div class="step">
+                    <h3><span class="step-number">2</span> L'Utilisateur Pose sa Question</h3>
+                    <div class="code-block">
+# Votre code :
+result = await graph.ainvoke({
+    "messages": [{"role": "user", "content": "Crée une tâche pour préparer ma présentation de demain, avec priorité haute"}]
+})
+                    </div>
+                    <div class="process-flow">
+                        <strong>Message envoyé à l'agent :</strong><br>
+                        "Crée une tâche pour préparer ma présentation de demain, avec priorité haute"
+                    </div>
+                </div>
+
+                <div class="arrow">↓</div>
+
+                <div class="step">
+                    <h3><span class="step-number">3</span> Le LLM Analyse et Décide</h3>
+                    <p>L'agent (LangGraph ReAct ou DeepAgents) envoie au modèle LLM :</p>
+
+                    <p><strong>📤 Input au LLM :</strong></p>
+                    <div class="code-block">
+System Prompt: "Tu es un assistant intelligent pour la gestion de tâches. 
+                Utilise les outils MCP disponibles..."
+
+Outils disponibles:
+- create_task: Créer une nouvelle tâche. Paramètres: title (string, requis), 
+               description (string, optionnel), priority (string: low/medium/high)
+- list_tasks: Lister les tâches...
+- update_task: Modifier une tâche...
+- delete_task: Supprimer une tâche...
+- get_task_stats: Obtenir des statistiques...
+
+Message utilisateur: "Crée une tâche pour préparer ma présentation de demain, 
+                      avec priorité haute"
+                    </div>
+
+                    <p><strong>🤖 Réponse du LLM (décision intelligente) :</strong></p>
+                    <div class="code-block json">
+{
+  "tool_calls": [
+    {
+      "name": "create_task",
+      "args": {
+        "title": "Préparer ma présentation de demain",
+        "description": "Présentation prévue pour demain",
+        "priority": "high"
+      }
+    }
+  ],
+  "reasoning": "L'utilisateur demande de créer une tâche avec priorité haute. 
+                Je dois utiliser l'outil create_task avec les paramètres appropriés."
+}
+                    </div>
+
+                    <div class="success">
+                        ✅ Le LLM a intelligemment :<br>
+                        • Identifié qu'il faut créer une tâche<br>
+                        • Extrait les informations : titre, priorité<br>
+                        • Choisi l'outil <span class="highlight">create_task</span><br>
+                        • Préparé les arguments corrects
+                    </div>
+                </div>
+
+                <div class="arrow">↓</div>
+
+                <div class="step">
+                    <h3><span class="step-number">4</span> Exécution de l'Outil (Automatique)</h3>
+
+                    <p><strong>📥 DeepMCPAgent intercepte l'appel d'outil :</strong></p>
+                    <div class="code-block">
+# Dans tools.py (_FastMCPTool._arun)
+→ Invoking tool: create_task with {
+    'title': 'Préparer ma présentation de demain',
+    'description': 'Présentation prévue pour demain',
+    'priority': 'high'
+}
+                    </div>
+
+                    <p><strong>🌐 Communication avec le serveur MCP :</strong></p>
+                    <div class="process-flow">
+                        <div class="process-box">
+                            <strong>1. DeepMCPAgent → FastMCP Client</strong><br>
+                            POST http://127.0.0.1:8001/mcp<br>
+                            Body: {<br>
+                            &nbsp;&nbsp;"method": "tools/call",<br>
+                            &nbsp;&nbsp;"params": {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;"name": "create_task",<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;"arguments": {...}<br>
+                            &nbsp;&nbsp;}<br>
+                            }
+                        </div>
+                        <div class="process-box">
+                            <strong>2. Serveur MCP → Exécute la fonction Python</strong><br>
+                            <div class="code-block" style="background: #2d4a22; color: #a8d8a8;">
+@mcp.tool()
+def create_task(title: str, description: str = "", priority: str = "medium"):
+    # Code du serveur s'exécute ici
+    task = {"id": 1, "title": title, "priority": priority, ...}
+    tasks_db.append(task)
+    return {"success": True, "task": task, ...}
+                            </div>
+                        </div>
+                        <div class="process-box">
+                            <strong>3. Serveur MCP → Réponse HTTP</strong><br>
+                            Status: 200 OK<br>
+                            Body: {<br>
+                            &nbsp;&nbsp;"content": [{<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;"type": "text",<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;"text": {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"success": true,<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"task": {...}<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                            &nbsp;&nbsp;}]<br>
+                            }
+                        </div>
+                    </div>
+
+                    <p><strong>✅ Résultat capturé :</strong></p>
+                    <div class="code-block">
+✔ Tool result from create_task: {
+    'success': True,
+    'task': {
+        'id': 1,
+        'title': 'Préparer ma présentation de demain',
+        'priority': 'high',
+        'status': 'pending'
+    },
+    'message': 'Tâche créée avec succès (ID: 1)'
+}
+                    </div>
+                </div>
+
+                <div class="arrow">↓</div>
+
+                <div class="step">
+                    <h3><span class="step-number">5</span> Le LLM Génère la Réponse Finale</h3>
+                    <p>L'agent envoie le résultat de l'outil au LLM :</p>
+
+                    <p><strong>📤 Input au LLM (suite de la conversation) :</strong></p>
+                    <div class="code-block">
+System: "Tu es un assistant..."
+User: "Crée une tâche pour préparer ma présentation de demain, avec priorité haute"
+Assistant: [appel à create_task avec les paramètres]
+Tool Result: {
+    "success": true,
+    "task": {
+        "id": 1,
+        "title": "Préparer ma présentation de demain",
+        "priority": "high",
+        "status": "pending"
+    },
+    "message": "Tâche créée avec succès (ID: 1)"
+}
+                    </div>
+
+                    <p><strong>🤖 Réponse finale du LLM :</strong></p>
+                    <div class="info-box" style="font-size: 1.1em;">
+                        "Parfait ! J'ai créé votre tâche avec succès :<br><br>
+                        📋 <strong>Tâche #1</strong> : Préparer ma présentation de demain<br>
+                        ⚡ Priorité : Haute<br>
+                        📊 Statut : En attente<br><br>
+                        La tâche a été enregistrée et est prête à être suivie."
+                    </div>
+
+                    <p><strong>📤 Réponse à l'utilisateur :</strong></p>
+                    <div class="code-block json">
+{
+  "messages": [
+    {"role": "user", "content": "Crée une tâche..."},
+    {"role": "assistant", "tool_calls": [...]},
+    {"role": "tool", "content": "{'success': True, ...}"},
+    {"role": "assistant", "content": "Parfait ! J'ai créé votre tâche..."}
+  ]
+}
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>🎯 Résumé : Le Cycle Complet</h2>
+                <div class="process-flow">
+                    <div class="process-box">
+                        <strong>UTILISATEUR</strong><br>
+                        "Crée une tâche pour préparer ma présentation..."
+                    </div>
+                    <div class="process-box">
+                        <strong>AGENT (DeepMCPAgent)</strong><br>
+                        1. Reçoit le message<br>
+                        2. Analyse avec le LLM<br>
+                        3. LLM décide : "Je dois utiliser create_task"
+                    </div>
+                    <div class="process-box">
+                        <strong>DÉCOUVERTE AUTOMATIQUE (fait 1 fois)</strong><br>
+                        • DeepMCPAgent sait qu'il a 5 outils disponibles<br>
+                        • create_task est l'un d'eux<br>
+                        • Connaît les paramètres requis (title, priority, ...)
+                    </div>
+                    <div class="process-box">
+                        <strong>APPEL AUTOMATIQUE À L'OUTIL</strong><br>
+                        DeepMCPAgent → HTTP → Serveur MCP<br>
+                        POST /mcp avec {"name": "create_task", "args": {...}}
+                    </div>
+                    <div class="process-box">
+                        <strong>SERVEUR MCP</strong><br>
+                        Exécute la fonction Python @mcp.tool()<br>
+                        Crée la tâche dans la base de données<br>
+                        Retourne le résultat JSON
+                    </div>
+                    <div class="process-box">
+                        <strong>RETOUR AU LLM</strong><br>
+                        "L'outil a retourné : tâche créée avec ID 1"<br>
+                        LLM génère une réponse naturelle et amicale
+                    </div>
+                    <div class="process-box">
+                        <strong>UTILISATEUR</strong><br>
+                        Reçoit : "Parfait ! J'ai créé votre tâche #1..."
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>🔑 Points Clés à Retenir</h2>
+
+                <h3>✅ <strong>Automatique = Vous ne codez RIEN pour les outils</strong></h3>
+                
+                <div class="comparison">
+                    <div class="comparison-item bad">
+                        <h4>❌ Sans DeepMCPAgent (approche manuelle)</h4>
+                        <div class="code-block" style="font-size: 0.85em;">
+# Vous devriez faire TOUT ça manuellement :
+tools = [
+    Tool(name="create_task", func=create_task_func, ...),
+    Tool(name="list_tasks", func=list_tasks_func, ...),
+    # ... créer chaque outil un par un
+    # ... définir les schémas
+    # ... gérer les erreurs
+    # ... convertir les types
+]
+agent = create_agent(tools=tools, ...)
+                        </div>
+                    </div>
+                    <div class="comparison-item good">
+                        <h4>✅ Avec DeepMCPAgent (automatique)</h4>
+                        <div class="code-block" style="font-size: 0.85em;">
+# Vous dites juste : "voici mon serveur MCP"
+servers = {"task_manager": HTTPServerSpec(url="...")}
+graph, _ = await build_deep_agent(servers=servers, model=model)
+
+# Les 5 outils sont automatiquement disponibles !
+# Le LLM les découvre, les comprend, et les utilise intelligemment
+                        </div>
+                    </div>
+                </div>
+
+                <div class="summary-box">
+                    <h3>✅ Le LLM Décide Tout Seul</h3>
+                    <ul>
+                        <li>Il choisit QUEL outil utiliser</li>
+                        <li>Il extrait les informations de votre phrase naturelle</li>
+                        <li>Il formate les paramètres correctement</li>
+                        <li>Il gère les erreurs et réessaie si nécessaire</li>
+                    </ul>
+                </div>
+
+                <div class="info-box">
+                    <h3>✅ Ajouter un Outil = Rien à Changer dans l'Agent</h3>
+                    <p>Si vous ajoutez un 6ème outil au serveur MCP :</p>
+                    <div class="code-block">
+@mcp.tool()
+def search_tasks(query: str) -> dict:
+    """Rechercher des tâches par mots-clés."""
+    ...
+                    </div>
+                    <p><strong>✅ L'agent le découvrira automatiquement au prochain démarrage !</strong></p>
+                    <p><strong>✅ Aucune modification nécessaire dans votre code d'agent !</strong></p>
+                </div>
+            </section>
+
+            <section>
+                <h2>🧪 Pour Tester</h2>
+                <ol style="margin-left: 20px; font-size: 1.1em; line-height: 2;">
+                    <li>Démarrez le serveur : <code>python examples/servers/task_manager_server.py</code></li>
+                    <li>Lancez l'exemple : <code>python examples/example_task_manager.py</code></li>
+                    <li>Observez dans la console les traces (<code>trace_tools=True</code>) :<br>
+                        <div class="code-block" style="margin-top: 10px;">
+→ Invoking tool: create_task with {...}
+✔ Tool result from create_task: {...}
+                        </div>
+                    </li>
+                </ol>
+                <div class="warning-box" style="margin-top: 20px;">
+                    <strong>Vous verrez exactement ce processus en action ! 🎯</strong>
+                </div>
+            </section>
+
+            <section>
+                <h2>📊 Résumé Visuel Rapide</h2>
+                <div class="process-flow" style="text-align: center; font-size: 1.2em; font-weight: bold;">
+                    Question → Agent → LLM analyse → Décide d'utiliser un outil →<br>
+                    Appel automatique au serveur MCP → Résultat retourné →<br>
+                    LLM génère réponse naturelle → Réponse à l'utilisateur
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <p>DeepMCPAgent - Découvrez les outils automatiquement ! 🚀</p>
+        </footer>
+    </div>
+</body>
+</html>
+

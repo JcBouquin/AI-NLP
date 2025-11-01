@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Où se trouve le System Prompt et l'Envoi au LLM</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        h2 {
+            color: #667eea;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 2em;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #764ba2;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .code-block {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            line-height: 1.5;
+            position: relative;
+        }
+
+        .code-block::before {
+            content: attr(data-file);
+            display: block;
+            background: #667eea;
+            color: white;
+            padding: 5px 10px;
+            margin: -20px -20px 15px -20px;
+            font-size: 0.85em;
+            font-weight: bold;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .step {
+            background: #fff;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 25px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .step-number {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+            margin-right: 15px;
+            vertical-align: middle;
+        }
+
+        .arrow {
+            text-align: center;
+            font-size: 2em;
+            color: #667eea;
+            margin: 20px 0;
+        }
+
+        .info-box {
+            background: #e7f3ff;
+            border-left: 5px solid #2196F3;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .warning-box {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .success-box {
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .comparison-item {
+            padding: 20px;
+            border-radius: 8px;
+            border: 2px solid #e0e0e0;
+        }
+
+        .comparison-item h4 {
+            margin-bottom: 10px;
+            color: #667eea;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table th, table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        table th {
+            background: #667eea;
+            color: white;
+        }
+
+        table tr:hover {
+            background: #f5f5f5;
+        }
+
+        .file-path {
+            background: #f8f9fa;
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: #667eea;
+            font-weight: bold;
+            display: inline-block;
+            margin: 10px 0;
+        }
+
+        .flow-diagram {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 30px 0;
+            border: 2px dashed #667eea;
+        }
+
+        .flow-box {
+            background: white;
+            border: 2px solid #667eea;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            position: relative;
+        }
+
+        .flow-box::before {
+            content: '→';
+            position: absolute;
+            left: -30px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #667eea;
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .flow-box:first-child::before {
+            display: none;
+        }
+
+        .highlight {
+            background: #fff3cd;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+            color: #856404;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        .line-number {
+            color: #6a9955;
+            margin-right: 15px;
+            user-select: none;
+        }
+
+        .code-line {
+            margin: 2px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔍 Où se trouve le System Prompt et l'Envoi au LLM ?</h1>
+            <p>Guide technique : Localisation dans le code DeepMCPAgent</p>
+        </header>
+
+        <div class="content">
+            <section>
+                <h2>📋 Résumé Rapide</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Élément</th>
+                            <th>Fichier</th>
+                            <th>Ligne(s)</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>System prompt par défaut</strong></td>
+                            <td><code>src/deepmcpagent/prompt.py</code></td>
+                            <td>7-12</td>
+                            <td>Définition du prompt système par défaut</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Passage du prompt</strong></td>
+                            <td><code>src/deepmcpagent/agent.py</code></td>
+                            <td>103, 111 ou 117</td>
+                            <td>Où le prompt est récupéré et passé à l'agent</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Envoi réel au LLM</strong></td>
+                            <td><code>langgraph</code> ou <code>deepagents</code></td>
+                            <td>-</td>
+                            <td>Code externe dans les bibliothèques</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section>
+                <h2>1️⃣ System Prompt - Définition</h2>
+                
+                <div class="step">
+                    <h3>📍 Fichier : <span class="file-path">src/deepmcpagent/prompt.py</span></h3>
+                    
+                    <div class="code-block" data-file="src/deepmcpagent/prompt.py">
+<span class="code-line"><span class="line-number">1</span><span style="color: #569cd6;">"""</span><span style="color: #569cd6;">System prompt definition for deepmcpagent.</span></span>
+<span class="code-line"><span class="line-number">2</span><span style="color: #569cd6;"></span></span>
+<span class="code-line"><span class="line-number">3</span><span style="color: #569cd6;">Edit this file to change the default system behavior of the agent</span></span>
+<span class="code-line"><span class="line-number">4</span><span style="color: #569cd6;">without modifying code in the builder.</span></span>
+<span class="code-line"><span class="line-number">5</span><span style="color: #569cd6;">"""</span></span>
+<span class="code-line"><span class="line-number">6</span></span>
+<span class="code-line"><span class="line-number">7</span><span style="color: #4ec9b0;">DEFAULT_SYSTEM_PROMPT</span>: <span style="color: #4ec9b0;">str</span> = (</span>
+<span class="code-line"><span class="line-number">8</span>    <span style="color: #ce9178;">"You are a capable deep agent. Use available tools from connected MCP servers "</span></span>
+<span class="code-line"><span class="line-number">9</span>    <span style="color: #ce9178;">"to plan and execute tasks. Always inspect tool descriptions and input schemas "</span></span>
+<span class="code-line"><span class="line-number">10</span>   <span style="color: #ce9178;">"before calling them. Be precise and avoid hallucinating tool arguments. "</span></span>
+<span class="code-line"><span class="line-number">11</span>   <span style="color: #ce9178;">"Prefer calling tools rather than guessing, and cite results from tools clearly."</span></span>
+<span class="code-line"><span class="line-number">12</span>)</span>
+                    </div>
+
+                    <div class="info-box">
+                        <strong>💡 Explication :</strong><br>
+                        C'est ici que le <span class="highlight">system prompt par défaut</span> est défini. 
+                        Ce prompt est utilisé si vous ne fournissez pas de paramètre <code>instructions</code> 
+                        lors de la construction de l'agent.
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>2️⃣ Passage du System Prompt au LLM</h2>
+                
+                <div class="step">
+                    <h3>📍 Fichier : <span class="file-path">src/deepmcpagent/agent.py</span></h3>
+                    
+                    <h4>Étape A : Récupération du prompt (lignes 102-103)</h4>
+                    <div class="code-block" data-file="src/deepmcpagent/agent.py">
+<span class="code-line"><span class="line-number">102</span>    <span style="color: #4ec9b0;">chat</span>: <span style="color: #4ec9b0;">Runnable</span>[<span style="color: #4ec9b0;">Any</span>, <span style="color: #4ec9b0;">Any</span>] = <span style="color: #dcdcaa;">_normalize_model</span>(model)</span>
+<span class="code-line"><span class="line-number">103</span>    <span style="color: #4ec9b0;">sys_prompt</span> = <span style="color: #569cd6;">instructions</span> <span style="color: #d4d4d4;">or</span> <span style="color: #4ec9b0;">DEFAULT_SYSTEM_PROMPT</span></span>
+                    </div>
+
+                    <div class="info-box">
+                        <strong>🔑 Logique :</strong><br>
+                        • Si vous fournissez <code>instructions</code> lors de <code>build_deep_agent()</code>, 
+                          il est utilisé<br>
+                        • Sinon, <code>DEFAULT_SYSTEM_PROMPT</code> (de <code>prompt.py</code>) est utilisé
+                    </div>
+
+                    <h4>Étape B : Passage à l'agent (lignes 105-118)</h4>
+                    <div class="code-block" data-file="src/deepmcpagent/agent.py">
+<span class="code-line"><span class="line-number">105</span>    <span style="color: #c586c0;">try</span>:</span>
+<span class="code-line"><span class="line-number">106</span>        <span style="color: #569cd6;"># Optional deep agent loop if the extra is installed.</span></span>
+<span class="code-line"><span class="line-number">107</span>        <span style="color: #c586c0;">from</span> <span style="color: #4ec9b0;">deepagents</span> <span style="color: #c586c0;">import</span> <span style="color: #dcdcaa;">create_deep_agent</span>  <span style="color: #569cd6;"># type: ignore</span></span>
+<span class="code-line"><span class="line-number">108</span></span>
+<span class="code-line"><span class="line-number">109</span>        <span style="color: #4ec9b0;">graph</span> = <span style="color: #dcdcaa;">cast</span>(</span>
+<span class="code-line"><span class="line-number">110</span>            <span style="color: #4ec9b0;">Runnable</span>[<span style="color: #4ec9b0;">Any</span>, <span style="color: #4ec9b0;">Any</span>],</span>
+<span class="code-line"><span class="line-number">111</span>            <span style="color: #dcdcaa;">create_deep_agent</span>(<span style="color: #4ec9b0;">tools</span>=<span style="color: #4ec9b0;">tools</span>, <span style="color: #4ec9b0;">instructions</span>=<span style="color: #4ec9b0;">sys_prompt</span>, <span style="color: #4ec9b0;">model</span>=<span style="color: #4ec9b0;">chat</span>),</span>
+<span class="code-line"><span class="line-number">112</span>        )</span>
+<span class="code-line"><span class="line-number">113</span>    <span style="color: #c586c0;">except</span> <span style="color: #4ec9b0;">ImportError</span>:</span>
+<span class="code-line"><span class="line-number">114</span>        <span style="color: #569cd6;"># Solid fallback with LangGraph's ReAct agent.</span></span>
+<span class="code-line"><span class="line-number">115</span>        <span style="color: #4ec9b0;">graph</span> = <span style="color: #dcdcaa;">cast</span>(</span>
+<span class="code-line"><span class="line-number">116</span>            <span style="color: #4ec9b0;">Runnable</span>[<span style="color: #4ec9b0;">Any</span>, <span style="color: #4ec9b0;">Any</span>],</span>
+<span class="code-line"><span class="line-number">117</span>            <span style="color: #dcdcaa;">create_react_agent</span>(<span style="color: #4ec9b0;">model</span>=<span style="color: #4ec9b0;">chat</span>, <span style="color: #4ec9b0;">tools</span>=<span style="color: #4ec9b0;">tools</span>, <span style="color: #4ec9b0;">state_modifier</span>=<span style="color: #4ec9b0;">sys_prompt</span>),</span>
+<span class="code-line"><span class="line-number">118</span>        )</span>
+                    </div>
+
+                    <div class="comparison">
+                        <div class="comparison-item">
+                            <h4>Option 1 : DeepAgents</h4>
+                            <p><strong>Ligne 111 :</strong></p>
+                            <code>create_deep_agent(instructions=sys_prompt, ...)</code>
+                            <p style="margin-top: 10px;">Le prompt est passé via le paramètre <code>instructions</code></p>
+                        </div>
+                        <div class="comparison-item">
+                            <h4>Option 2 : LangGraph ReAct</h4>
+                            <p><strong>Ligne 117 :</strong></p>
+                            <code>create_react_agent(state_modifier=sys_prompt, ...)</code>
+                            <p style="margin-top: 10px;">Le prompt est passé via le paramètre <code>state_modifier</code></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>3️⃣ Où l'Envoi au LLM se fait RÉELLEMENT</h2>
+                
+                <div class="warning-box">
+                    <strong>⚠️ Important :</strong><br>
+                    L'envoi réel au LLM se fait dans des <strong>bibliothèques externes</strong>, 
+                    pas dans le code de DeepMCPAgent directement.
+                </div>
+
+                <div class="step">
+                    <h3>Option A : LangGraph ReAct (fallback par défaut)</h3>
+                    <p><strong>Bibliothèque :</strong> <code>langgraph.prebuilt.create_react_agent</code></p>
+                    
+                    <div class="info-box">
+                        <strong>🧠 Ce qui se passe :</strong><br>
+                        1. <code>create_react_agent</code> construit un graphe d'agent (StateGraph)<br>
+                        2. Le graphe contient des <strong>nœuds</strong> :
+                           <ul style="margin-left: 30px; margin-top: 10px;">
+                               <li>Un nœud pour le LLM</li>
+                               <li>Un nœud pour exécuter les outils</li>
+                           </ul>
+                        3. Le <code>state_modifier</code> (votre system prompt) est injecté comme message système<br>
+                        4. Quand le nœud LLM s'exécute, il fait :<br>
+                           <code>model.ainvoke([SystemMessage(...), HumanMessage(...), ...])</code>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <h3>Option B : DeepAgents (si installé)</h3>
+                    <p><strong>Bibliothèque :</strong> <code>deepagents.create_deep_agent</code></p>
+                    
+                    <div class="info-box">
+                        <strong>🧠 Ce qui se passe :</strong><br>
+                        1. <code>create_deep_agent</code> crée une boucle d'agent DeepAgents<br>
+                        2. Le paramètre <code>instructions</code> est utilisé comme system prompt<br>
+                        3. DeepAgents gère la logique d'appel au LLM avec le prompt et les outils<br>
+                        4. Similaire à LangGraph, mais avec une logique de boucle différente
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>4️⃣ Flux Complet Visuel</h2>
+                
+                <div class="flow-diagram">
+                    <div class="flow-box">
+                        <strong>1. prompt.py (ligne 7-12)</strong><br>
+                        → Définit <code>DEFAULT_SYSTEM_PROMPT</code>
+                    </div>
+                    <div class="flow-box">
+                        <strong>2. agent.py (ligne 103)</strong><br>
+                        → Récupère : <code>sys_prompt = instructions or DEFAULT_SYSTEM_PROMPT</code>
+                    </div>
+                    <div class="flow-box">
+                        <strong>3. agent.py (lignes 111 ou 117)</strong><br>
+                        → Passe <code>sys_prompt</code> à <code>create_deep_agent()</code> ou <code>create_react_agent()</code>
+                    </div>
+                    <div class="flow-box">
+                        <strong>4. Dans LangGraph/DeepAgents (code externe)</strong><br>
+                        → Construit le message système avec les descriptions des outils<br>
+                        → Appelle <code>model.invoke()</code> ou <code>model.ainvoke()</code> avec :
+                        <div class="code-block" style="margin-top: 10px; background: #2d2d2d;">
+                            [
+                              SystemMessage(content=sys_prompt + descriptions outils),
+                              HumanMessage(content="question utilisateur"),
+                              ... historique ...
+                            ]
+                        </div>
+                    </div>
+                    <div class="flow-box">
+                        <strong>5. Le LLM reçoit tout ça et répond</strong><br>
+                        → Retourne une réponse ou des appels d'outils
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>5️⃣ Visualisation dans le Code</h2>
+                
+                <div class="step">
+                    <h3>Quand vous appelez :</h3>
+                    <div class="code-block">
+result = await graph.ainvoke({
+    "messages": [{"role": "user", "content": "Crée une tâche..."}]
+})
+                    </div>
+
+                    <h3 style="margin-top: 30px;">En interne, LangGraph/DeepAgents fait :</h3>
+                    <div class="code-block" style="background: #2d2d2d;">
+<span style="color: #569cd6;"># Code simplifié de ce qui se passe dans LangGraph</span>
+<span style="color: #4ec9b0;">messages</span> = [
+    <span style="color: #4ec9b0;">SystemMessage</span>(<span style="color: #4ec9b0;">content</span>=<span style="color: #4ec9b0;">sys_prompt</span> + <span style="color: #ce9178;">"\n\nOutils disponibles:\n"</span> + <span style="color: #4ec9b0;">tool_descriptions</span>),
+    <span style="color: #4ec9b0;">HumanMessage</span>(<span style="color: #4ec9b0;">content</span>=<span style="color: #ce9178;">"Crée une tâche..."</span>)
+]
+
+<span style="color: #4ec9b0;">llm_response</span> = <span style="color: #c586c0;">await</span> <span style="color: #4ec9b0;">model</span>.<span style="color: #dcdcaa;">ainvoke</span>(<span style="color: #4ec9b0;">messages</span>)
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>📚 Résumé Final</h2>
+                
+                <div class="success-box">
+                    <h3>✅ Points Clés à Retenir</h3>
+                    <ul style="margin-left: 20px; margin-top: 15px; line-height: 2;">
+                        <li><strong>System prompt par défaut :</strong> Défini dans <code>src/deepmcpagent/prompt.py</code></li>
+                        <li><strong>Passage du prompt :</strong> Fait dans <code>src/deepmcpagent/agent.py</code></li>
+                        <li><strong>Envoi au LLM :</strong> Géré par LangGraph ou DeepAgents (bibliothèques externes)</li>
+                        <li><strong>Vous pouvez personnaliser :</strong> Passez <code>instructions="..."</code> à <code>build_deep_agent()</code></li>
+                    </ul>
+                </div>
+
+                <div class="info-box" style="margin-top: 30px;">
+                    <strong>💡 Astuce :</strong><br>
+                    Si vous voulez modifier le system prompt par défaut pour tous vos agents, 
+                    éditez <code>src/deepmcpagent/prompt.py</code>. Si vous voulez un prompt 
+                    spécifique pour un agent, passez-le via le paramètre <code>instructions</code>.
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <p>DeepMCPAgent - Documentation Technique 📚</p>
+        </footer>
+    </div>
+</body>
+</html>
+
