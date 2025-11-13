@@ -169,8 +169,8 @@ class PharmacyGraph:
 
         # Initialiser le text splitter avec tiktoken
         text_splitter = RecursiveCharacterTextSplitter.from_tiktoken_encoder(
-            chunk_size=1000,  # Chunks plus petits pour la pharmacie
-            chunk_overlap=200,  # Overlap pour maintenir le contexte
+            chunk_size=300,  # Chunks plus petits pour la pharmacie
+            chunk_overlap=20,  # Overlap pour maintenir le contexte
         )
 
         # Découper les documents
@@ -436,3 +436,4 @@ FORMAT DE SORTIE: Réponse complète et précise à la question, rédigée de ma
         }
 
         return stats
+
