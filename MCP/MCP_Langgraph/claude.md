@@ -16,7 +16,7 @@ Le système utilise un graphe de traitement avec trois nodes spécialisés qui c
 1. **Vectorstore (SKLearn)** : Stocke les embeddings des documents pour la recherche sémantique rapide
    - Format : Parquet (`sklearn_vectorstore.parquet`)
    - Embeddings : OpenAI `text-embedding-3-small`
-   - Chunks : 1000 tokens avec overlap de 200
+   - Chunks : 300 tokens avec overlap de 20
 
 2. **LangGraph Workflow** : Orchestration séquentielle des agents
    ```
@@ -122,7 +122,7 @@ OPENAI_API_KEY=votre-clé-api-openai
 ### 1. Initialisation (première utilisation)
 Au premier lancement, le système :
 1. Charge tous les documents `.txt` du dossier `pharmacy_docs/`
-2. Découpe les documents en chunks de 1000 tokens
+2. Découpe les documents en chunks de 300 tokens
 3. Crée les embeddings avec OpenAI
 4. Sauvegarde le vectorstore dans `sklearn_vectorstore.parquet`
 
@@ -185,8 +185,8 @@ self.retriever = self.vectorstore.as_retriever(
 Dans `pharmacy_graph_RAG.py` ligne 145-148 :
 ```python
 text_splitter = RecursiveCharacterTextSplitter.from_tiktoken_encoder(
-    chunk_size=1000,    # Taille des chunks
-    chunk_overlap=200,  # Overlap entre chunks
+    chunk_size=300,    # Taille des chunks
+    chunk_overlap=20,  # Overlap entre chunks
 )
 ```
 
@@ -289,3 +289,4 @@ Cela garantit que le vectorstore est toujours créé au bon endroit, peu importe
 **Version** : 1.0.0
 **Auteur** : Serveur MCP LangGraph RAG Pharmaceutique
 **Licence** : MIT
+
