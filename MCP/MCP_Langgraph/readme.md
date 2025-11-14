@@ -38,7 +38,7 @@ Le système utilise **SKLearnVectorStore** pour stocker et rechercher les docume
 
 ```
 Documents (.txt)  ──>  Chunking  ──>  Embeddings  ──>  sklearn_vectorstore.parquet
-                      (1000 tokens)   (OpenAI)          (Vectorstore persistant)
+                      (300 tokens)   (OpenAI)          (Vectorstore persistant)
 ```
 
 ---
@@ -78,7 +78,7 @@ documents = loader.load()  # Depuis pharmacy_docs/
 
 # 2. Découpe en chunks
 splits = text_splitter.split_documents(documents)  
-# → Chunks de 1000 tokens avec overlap de 200
+# → Chunks de 300 tokens avec overlap de 20
 
 # 3. Crée les embeddings et le vectorstore
 vectorstore = SKLearnVectorStore.from_documents(
@@ -263,8 +263,8 @@ Question posée par l'utilisateur
 
 - **Modèle LLM** : `gpt-4o-mini` (via OpenAI)
 - **Modèle d'Embeddings** : `text-embedding-3-small` (OpenAI)
-- **Taille des Chunks** : 1000 tokens
-- **Overlap des Chunks** : 200 tokens
+- **Taille des Chunks** : 300 tokens
+- **Overlap des Chunks** : 20 tokens
 - **Nombre de résultats RAG** : 5 documents les plus similaires
 - **Format Vectorstore** : Parquet (via SKLearnVectorStore)
 
@@ -338,5 +338,6 @@ Pour améliorer le système :
 3. Tester les nouvelles capacités de recherche
 
 ---
+
 
 **Développé avec ❤️ pour optimiser l'analyse de documents pharmaceutiques**
