@@ -1,0 +1,133 @@
+╔═══════════════════════════════════════════════════════════════╗
+║                                                               ║
+║           LIGHTRAG - ANALYSE DE VOTRE DOCUMENT                ║
+║         "Présentation association mairie.docx"                 ║
+║                                                               ║
+╚═══════════════════════════════════════════════════════════════╝
+
+ETAPE 1 : OBTENIR UNE CLE API OPENAI
+=====================================
+
+1. Allez sur : https://platform.openai.com/api-keys
+2. Créez un compte (si nécessaire)
+3. Cliquez sur "Create new secret key"
+4. Copiez la clé (commence par sk-proj-...)
+
+
+ETAPE 2 : CONFIGURER LA CLE
+============================
+
+1. Ouvrez le fichier : .env
+2. Remplacez "sk-votre-cle-api" par votre vraie clé
+3. Sauvegardez le fichier
+
+
+ETAPE 3 : VERIFIER L'INSTALLATION
+==================================
+
+Dans un terminal, tapez :
+
+    python verifier_installation.py
+
+Vous devez voir "[OK]" partout
+
+
+ETAPE 4 : LANCER L'ANALYSE
+===========================
+
+Dans le terminal, tapez :
+
+    python mon_premier_test.py
+
+Attendez 1-3 minutes pour l'analyse initiale.
+
+
+CE QUI VA SE PASSER
+===================
+
+1. Lecture de votre document Word
+2. Analyse par l'intelligence artificielle
+3. Création d'un graphe de connaissances
+4. 4 questions automatiques
+5. Mode interactif pour vos questions
+
+
+EXEMPLES DE QUESTIONS
+======================
+
+- Quel est l'objectif de cette présentation ?
+- Résume-moi le document en 3 points
+- Quelles sont les activités de l'association ?
+- Y a-t-il un budget mentionné ?
+- Quelles sont les dates importantes ?
+
+
+POUR QUITTER
+============
+
+Tapez : quit  ou  q  ou  Ctrl+C
+
+
+COUTS
+=====
+
+Environ 0,10 à 0,25 € pour :
+- 1 analyse complète du document
+- 10 questions
+
+
+FICHIERS IMPORTANTS
+===================
+
+mon_premier_test.py      → Programme principal
+verifier_installation.py → Vérifier que tout marche
+.env                     → Votre clé API (À CONFIGURER !)
+
+GUIDE_RAPIDE.md         → Instructions détaillées
+claude-debutant.md      → Pour apprendre les bases
+claude.md               → Documentation technique complète
+README_KOSMO.md         → Résumé de l'installation
+
+
+BESOIN D'AIDE ?
+===============
+
+Lisez : GUIDE_RAPIDE.md
+ou
+Lisez : claude-debutant.md
+
+
+PROBLEMES COURANTS
+==================
+
+Erreur "Invalid API key" ?
+  → Vérifiez votre fichier .env
+
+Document introuvable ?
+  → Vérifiez qu'il est dans le bon dossier
+
+Module manquant ?
+  → Lancez : python verifier_installation.py
+
+
+ALTERNATIVE GRATUITE
+====================
+
+Au lieu d'OpenAI, vous pouvez utiliser Ollama (gratuit mais plus lent) :
+
+1. Installez Ollama : https://ollama.ai/
+2. Téléchargez les modèles :
+   ollama pull qwen2
+   ollama pull nomic-embed-text
+3. Modifiez le code (voir claude-debutant.md)
+
+
+═══════════════════════════════════════════════════════════════
+
+VOUS ETES PRET !
+
+1. Configurez votre clé API dans .env
+2. Lancez : python verifier_installation.py
+3. Lancez : python mon_premier_test.py
+
+═══════════════════════════════════════════════════════════════

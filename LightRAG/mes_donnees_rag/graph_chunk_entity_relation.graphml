@@ -1,0 +1,2945 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d13" for="edge" attr.name="truncate" attr.type="string"/>
+<key id="d12" for="edge" attr.name="created_at" attr.type="long"/>
+<key id="d11" for="edge" attr.name="file_path" attr.type="string"/>
+<key id="d10" for="edge" attr.name="source_id" attr.type="string"/>
+<key id="d9" for="edge" attr.name="keywords" attr.type="string"/>
+<key id="d8" for="edge" attr.name="description" attr.type="string"/>
+<key id="d7" for="edge" attr.name="weight" attr.type="double"/>
+<key id="d6" for="node" attr.name="truncate" attr.type="string"/>
+<key id="d5" for="node" attr.name="created_at" attr.type="long"/>
+<key id="d4" for="node" attr.name="file_path" attr.type="string"/>
+<key id="d3" for="node" attr.name="source_id" attr.type="string"/>
+<key id="d2" for="node" attr.name="description" attr.type="string"/>
+<key id="d1" for="node" attr.name="entity_type" attr.type="string"/>
+<key id="d0" for="node" attr.name="entity_id" attr.type="string"/>
+<graph edgedefault="undirected"><node id="Appendix 7.3.2">
+  <data key="d0">Appendix 7.3.2</data>
+  <data key="d1">concept</data>
+  <data key="d2">Appendix 7.3.2 contains details about the prompt templates and specific settings for text indexing in the given context.</data>
+  <data key="d3">chunk-a4bfe3834a3a1fae1b473b574f4f8b49</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714346</data>
+  <data key="d6"></data>
+</node>
+<node id="Cardiologists">
+  <data key="d0">Cardiologists</data>
+  <data key="d1">person</data>
+  <data key="d2">Cardiologists are medical professionals who assess symptoms to diagnose heart-related issues.</data>
+  <data key="d3">chunk-a4bfe3834a3a1fae1b473b574f4f8b49</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714346</data>
+  <data key="d6"></data>
+</node>
+<node id="Heart Disease">
+  <data key="d0">Heart Disease</data>
+  <data key="d1">concept</data>
+  <data key="d2">Heart disease represents various cardiovascular conditions that can be diagnosed by medical professionals like cardiologists.</data>
+  <data key="d3">chunk-a4bfe3834a3a1fae1b473b574f4f8b49</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714346</data>
+  <data key="d6"></data>
+</node>
+<node id="3D Graph">
+  <data key="d0">3D Graph</data>
+  <data key="d1">concept</data>
+  <data key="d2">A 3D graph structure enhances understanding and retrieval of information within a complex dataset.</data>
+  <data key="d3">chunk-a4bfe3834a3a1fae1b473b574f4f8b49</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714347</data>
+  <data key="d6"></data>
+</node>
+<node id="Graph Structures">
+  <data key="d0">Graph Structures</data>
+  <data key="d1">concept</data>
+  <data key="d2">Graph structures are used to represent entities and their relationships in a manner that facilitates efficient retrieval and understanding.</data>
+  <data key="d3">chunk-a4bfe3834a3a1fae1b473b574f4f8b49</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714347</data>
+  <data key="d6"></data>
+</node>
+<node id="Incremental Knowledge Base">
+  <data key="d0">Incremental Knowledge Base</data>
+  <data key="d1">concept</data>
+  <data key="d2">The incremental knowledge base is a system feature that allows for updates without fully reprocessing data, ensuring accuracy and resource efficiency.</data>
+  <data key="d3">chunk-a4bfe3834a3a1fae1b473b574f4f8b49</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714347</data>
+  <data key="d6"></data>
+</node>
+<node id="D">
+  <data key="d0">D</data>
+  <data key="d1">data</data>
+  <data key="d2">D represents the raw text data that is segmented for processing within the text indexing paradigm.</data>
+  <data key="d3">chunk-a4bfe3834a3a1fae1b473b574f4f8b49</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714347</data>
+  <data key="d6"></data>
+</node>
+<node id="Di">
+  <data key="d0">Di</data>
+  <data key="d1">data</data>
+  <data key="d2">Di refers to the multiple chunks into which the raw text D is segmented for efficiency in processing.</data>
+  <data key="d3">chunk-a4bfe3834a3a1fae1b473b574f4f8b49</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714348</data>
+  <data key="d6"></data>
+</node>
+<node id="K,V">
+  <data key="d0">K,V</data>
+  <data key="d1">concept</data>
+  <data key="d2">K,V denotes the key-value pair generated for each entity node and relation edge during text processing.</data>
+  <data key="d3">chunk-a4bfe3834a3a1fae1b473b574f4f8b49</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714348</data>
+  <data key="d6"></data>
+</node>
+<node id="P(·)">
+  <data key="d0">P(·)</data>
+  <data key="d1">method</data>
+  <data key="d2">P(·) is a function used to generate text key-value pairs for each entity node and relation edge in the graph-based indexing process.</data>
+  <data key="d3">chunk-a4bfe3834a3a1fae1b473b574f4f8b49</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714349</data>
+  <data key="d6"></data>
+</node>
+<node id="R(·)">
+  <data key="d0">R(·)</data>
+  <data key="d1">method</data>
+  <data key="d2">R(·) is a function that prompts an LLM to identify entities and their relationships within the text data.</data>
+  <data key="d3">chunk-a4bfe3834a3a1fae1b473b574f4f8b49</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714349</data>
+  <data key="d6"></data>
+</node>
+<node id="Retrieval-Augmented Generation">
+  <data key="d0">Retrieval-Augmented Generation</data>
+  <data key="d1">concept</data>
+  <data key="d2">Retrieval-Augmented Generation (RAG) combines user queries with relevant document collections from an external knowledge database to generate contextually relevant responses.&lt;SEP&gt;Retrieval-Augmented Generation (RAG) refers to a generative model that integrates retrieved information for improved answer generation.&lt;SEP&gt;Retrieval-Augmented Generation is a system that enhances LLM inputs by retrieving relevant information from external sources to ground responses in factual knowledge.&lt;SEP&gt;Retrieval-Augmented Generation refers to the integration of traditional retrieval techniques with generative models to enhance information processing and output accuracy.</data>
+  <data key="d3">chunk-e721c558783dbd23774614190d304ec4&lt;SEP&gt;chunk-fd676ea25004fcc9cfc7f86a04f71fad&lt;SEP&gt;chunk-e9f27034d9712faa74c3195b10f7b76e&lt;SEP&gt;chunk-5670b97cac4fa5638ba7afec771b74a8</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714349</data>
+  <data key="d6"></data>
+</node>
+<node id="GraphRAG">
+  <data key="d0">GraphRAG</data>
+  <data key="d1">method</data>
+  <data key="d2">GraphRAG is another graph-based retrieval-augmented generation system that is compared with LightRAG regarding performance in handling complex language contexts.&lt;SEP&gt;GraphRAG is a graph-enhanced RAG system using an LLM to extract entities and relationships from text, representing them as nodes and edges.&lt;SEP&gt;GraphRAG is a competitive baseline method used for comparing machine learning metrics against LightRAG in the context of movie recommendations.&lt;SEP&gt;GraphRAG is a baseline model for RAG that exhibits inefficiencies in handling newly added data and requires substantial token costs during community reconstruction.</data>
+  <data key="d3">chunk-e721c558783dbd23774614190d304ec4&lt;SEP&gt;chunk-a2f1a956b437fd5cdafc179f99aba025&lt;SEP&gt;chunk-292b2c4e27f94c258f6dfc74c228920f&lt;SEP&gt;chunk-cb4558101a7d0732e0b0f406c610255c</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714349</data>
+  <data key="d6"></data>
+</node>
+<node id="Large Language Models">
+  <data key="d0">Large Language Models</data>
+  <data key="d1">concept</data>
+  <data key="d2">Large Language Models are advanced AI systems designed to understand and generate human-like text, increasingly focused on graph-structured data interpretation.</data>
+  <data key="d3">chunk-e721c558783dbd23774614190d304ec4</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714349</data>
+  <data key="d6"></data>
+</node>
+<node id="Token Overhead">
+  <data key="d0">Token Overhead</data>
+  <data key="d1">data</data>
+  <data key="d2">Token overhead represents the number of tokens used in the process of entity and relationship extraction.</data>
+  <data key="d3">chunk-e721c558783dbd23774614190d304ec4</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714349</data>
+  <data key="d6"></data>
+</node>
+<node id="Dynamic Environments">
+  <data key="d0">Dynamic Environments</data>
+  <data key="d1">concept</data>
+  <data key="d2">Dynamic environments refer to changing real-world scenarios that require flexible management of data and models.</data>
+  <data key="d3">chunk-e721c558783dbd23774614190d304ec4</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714349</data>
+  <data key="d6"></data>
+</node>
+<node id="Community Structure">
+  <data key="d0">Community Structure</data>
+  <data key="d1">concept</data>
+  <data key="d2">Community structure in the context of graph models refers to the organization of nodes into groups that reflect relationships or similarities.</data>
+  <data key="d3">chunk-e721c558783dbd23774614190d304ec4</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714349</data>
+  <data key="d6"></data>
+</node>
+<node id="Cost Analysis">
+  <data key="d0">Cost Analysis</data>
+  <data key="d1">concept</data>
+  <data key="d2">Cost analysis evaluates the token and API call expenditures associated with different retrieval and processing methods in RAG systems.</data>
+  <data key="d3">chunk-e721c558783dbd23774614190d304ec4</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714350</data>
+  <data key="d6"></data>
+</node>
+<node id="Graph Neural Networks">
+  <data key="d0">Graph Neural Networks</data>
+  <data key="d1">method</data>
+  <data key="d2">Graph Neural Networks are a type of neural network designed to process graph-structured data and enhance the interpretation of relationships within the data.&lt;SEP&gt;Graph Neural Networks are a type of neural network designed to process graph data, utilized within GNNs as Prefix.</data>
+  <data key="d3">chunk-e721c558783dbd23774614190d304ec4&lt;SEP&gt;chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714350</data>
+  <data key="d6"></data>
+</node>
+<node id="Figure 2">
+  <data key="d0">Figure 2</data>
+  <data key="d1">artifact</data>
+  <data key="d2">Figure 2 is a visual representation comparing cost in terms of tokens and API calls for GraphRAG and LightRAG on the legal dataset.</data>
+  <data key="d3">chunk-e721c558783dbd23774614190d304ec4</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714350</data>
+  <data key="d6"></data>
+</node>
+<node id="Legal Dataset">
+  <data key="d0">Legal Dataset</data>
+  <data key="d1">data</data>
+  <data key="d2">The Legal Dataset is a large dataset used for evaluating the performance of various retrieval systems, showing significant disparities in win rates for different methods.&lt;SEP&gt;The Legal Dataset is used to evaluate the performance of retrieval methods, including GraphRAG and LightRAG, in terms of cost and efficiency.</data>
+  <data key="d3">chunk-e721c558783dbd23774614190d304ec4&lt;SEP&gt;chunk-292b2c4e27f94c258f6dfc74c228920f</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714350</data>
+  <data key="d6"></data>
+</node>
+<node id="Naive RAG">
+  <data key="d0">Naive RAG</data>
+  <data key="d1">method</data>
+  <data key="d2">Naive RAG is a baseline method in existing retrieval-augmented generation systems, utilizing vector databases for efficient query matching.&lt;SEP&gt;Naive RAG is a model that serves as a standard baseline in existing RAG systems, segmenting texts and storing them in a vector database using text embeddings.</data>
+  <data key="d3">chunk-a2f1a956b437fd5cdafc179f99aba025&lt;SEP&gt;chunk-e9f27034d9712faa74c3195b10f7b76e</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714350</data>
+  <data key="d6"></data>
+</node>
+<node id="RQ-RAG">
+  <data key="d0">RQ-RAG</data>
+  <data key="d1">method</data>
+  <data key="d2">RQ-RAG is a method that leverages the LLM for enhanced retrieval-augmented generation tasks.&lt;SEP&gt;RQ-RAG is an approach that uses an LLM to decompose input queries into sub-queries to enhance search accuracy.</data>
+  <data key="d3">chunk-a2f1a956b437fd5cdafc179f99aba025&lt;SEP&gt;chunk-e9f27034d9712faa74c3195b10f7b76e</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714351</data>
+  <data key="d6"></data>
+</node>
+<node id="HyDE">
+  <data key="d0">HyDE</data>
+  <data key="d1">method</data>
+  <data key="d2">HyDE is a method that utilizes an LLM to generate a hypothetical document based on an input query for information retrieval.</data>
+  <data key="d3">chunk-a2f1a956b437fd5cdafc179f99aba025</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714351</data>
+  <data key="d6"></data>
+</node>
+<node id="GPT-4o-mini">
+  <data key="d0">GPT-4o-mini</data>
+  <data key="d1">method</data>
+  <data key="d2">GPT-4o-mini is a robust LLM used for various operations in LightRAG and ranking baseline methods.</data>
+  <data key="d3">chunk-a2f1a956b437fd5cdafc179f99aba025</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714351</data>
+  <data key="d6"></data>
+</node>
+<node id="Nano Vector Database">
+  <data key="d0">Nano Vector Database</data>
+  <data key="d1">data</data>
+  <data key="d2">The nano vector database is used for managing and accessing vector data in the experiments described.</data>
+  <data key="d3">chunk-a2f1a956b437fd5cdafc179f99aba025</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714351</data>
+  <data key="d6"></data>
+</node>
+<node id="Evaluation Dimensions">
+  <data key="d0">Evaluation Dimensions</data>
+  <data key="d1">concept</data>
+  <data key="d2">Evaluation dimensions refer to the criteria used to assess the performance of various RAG methods, including comprehensiveness, diversity, empowerment, and overall performance.</data>
+  <data key="d3">chunk-a2f1a956b437fd5cdafc179f99aba025</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714352</data>
+  <data key="d6"></data>
+</node>
+<node id="Win Rates">
+  <data key="d0">Win Rates</data>
+  <data key="d1">data</data>
+  <data key="d2">Win rates are statistical results reflecting the comparative performance of LightRAG against each baseline across different datasets and evaluation dimensions.</data>
+  <data key="d3">chunk-a2f1a956b437fd5cdafc179f99aba025</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714352</data>
+  <data key="d6"></data>
+</node>
+<node id="Edge et al.">
+  <data key="d0">Edge et al.</data>
+  <data key="d1">person</data>
+  <data key="d2">Edge et al. refers to the authors who contributed to the work that supports the comparison method in RAG queries.</data>
+  <data key="d3">chunk-a2f1a956b437fd5cdafc179f99aba025</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714352</data>
+  <data key="d6"></data>
+</node>
+<node id="Appendix 7.3.4">
+  <data key="d0">Appendix 7.3.4</data>
+  <data key="d1">content</data>
+  <data key="d2">Appendix 7.3.4 contains the details of the evaluation prompt used in the experiments for baseline comparison.</data>
+  <data key="d3">chunk-a2f1a956b437fd5cdafc179f99aba025</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714352</data>
+  <data key="d6"></data>
+</node>
+<node id="NaiveRAG">
+  <data key="d0">NaiveRAG</data>
+  <data key="d1">concept</data>
+  <data key="d2">NaiveRAG is a baseline retrieval method referenced for its performance compared to graph-based systems like LightRAG and GraphRAG.</data>
+  <data key="d3">chunk-292b2c4e27f94c258f6dfc74c228920f</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714352</data>
+  <data key="d6"></data>
+</node>
+<node id="RQRAG">
+  <data key="d0">RQRAG</data>
+  <data key="d1">concept</data>
+  <data key="d2">RQRAG is a retrieval method that is compared to graph-based systems in the context of performance metrics.</data>
+  <data key="d3">chunk-292b2c4e27f94c258f6dfc74c228920f</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714352</data>
+  <data key="d6"></data>
+</node>
+<node id="Agriculture Dataset">
+  <data key="d0">Agriculture Dataset</data>
+  <data key="d1">data</data>
+  <data key="d2">The Agriculture Dataset is one of the datasets used in experiments to analyze the performance of LightRAG and other retrieval methods.</data>
+  <data key="d3">chunk-292b2c4e27f94c258f6dfc74c228920f</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714352</data>
+  <data key="d6"></data>
+</node>
+<node id="CS Dataset">
+  <data key="d0">CS Dataset</data>
+  <data key="d1">data</data>
+  <data key="d2">The CS Dataset is included in evaluations of LightRAG's effectiveness alongside other datasets.</data>
+  <data key="d3">chunk-292b2c4e27f94c258f6dfc74c228920f</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714353</data>
+  <data key="d6"></data>
+</node>
+<node id="Empowerment">
+  <data key="d0">Empowerment</data>
+  <data key="d1">concept</data>
+  <data key="d2">Empowerment is a metric evaluated within the context of LightRAG and GraphRAG, showing performance differences in retrieval-augmented generation systems.</data>
+  <data key="d3">chunk-292b2c4e27f94c258f6dfc74c228920f</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714353</data>
+  <data key="d6"></data>
+</node>
+<node id="Comprehensiveness">
+  <data key="d0">Comprehensiveness</data>
+  <data key="d1">concept</data>
+  <data key="d2">Comprehensiveness is a performance metric indicating the ability of systems like LightRAG and GraphRAG to retrieve complete and detailed information.</data>
+  <data key="d3">chunk-292b2c4e27f94c258f6dfc74c228920f</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714353</data>
+  <data key="d6"></data>
+</node>
+<node id="Diversity">
+  <data key="d0">Diversity</data>
+  <data key="d1">concept</data>
+  <data key="d2">Diversity is a key metric that measures the range of responses generated by retrieval systems such as LightRAG and GraphRAG.</data>
+  <data key="d3">chunk-292b2c4e27f94c258f6dfc74c228920f</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714353</data>
+  <data key="d6"></data>
+</node>
+<node id="Overall">
+  <data key="d0">Overall</data>
+  <data key="d1">concept</data>
+  <data key="d2">Overall is a performance category that summarizes the combined effectiveness of metrics like Comprehensiveness, Diversity, and Empowerment for retrieval systems.</data>
+  <data key="d3">chunk-292b2c4e27f94c258f6dfc74c228920f</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714353</data>
+  <data key="d6"></data>
+</node>
+<node id="LightRAG">
+  <data key="d0">LightRAG</data>
+  <data key="d1">concept</data>
+  <data key="d2">LightRAG is a comprehensive framework designed to enhance information retrieval through the integration of graph structures and advanced algorithms. It utilizes an incremental update algorithm that allows for the efficient assimilation of new data, thereby providing a cost-effective means of retrieving relevant information in dynamic environments.
+
+The framework is particularly focused on retrieval-augmented generation (RAG), leveraging a large language model to bolster both information retrieval and answer generation. LightRAG employs a graph-based text indexing paradigm that facilitates the effective extraction of entities and relationships while adapting seamlessly to changing datasets. This innovative method improves not just the retrieval process but also enhances the diversity of generated responses, making it well-suited for applications requiring the understanding of large-scale corpora.
+
+LightRAG's effectiveness extends to various machine learning contexts, as it has been shown to outperform traditional baseline methods in evaluating metrics for systems such as movie recommendations. Additionally, it utilizes the GPT-4o-mini LLM for assessing RAG methodologies across multiple dimensions. The system is designed to maintain high operational efficiency and comprehension in information retrieval, quickly adapting to new information without necessitating a complete reconstruction of knowledge graphs. Overall, LightRAG represents a significant advancement in graph-based approaches to data retrieval and generation.</data>
+  <data key="d3">chunk-a4bfe3834a3a1fae1b473b574f4f8b49&lt;SEP&gt;chunk-e721c558783dbd23774614190d304ec4&lt;SEP&gt;chunk-a2f1a956b437fd5cdafc179f99aba025&lt;SEP&gt;chunk-292b2c4e27f94c258f6dfc74c228920f&lt;SEP&gt;chunk-fd676ea25004fcc9cfc7f86a04f71fad&lt;SEP&gt;chunk-dc4869b2865a9a053d992bbbdd8111e3&lt;SEP&gt;chunk-e9f27034d9712faa74c3195b10f7b76e&lt;SEP&gt;chunk-cb4558101a7d0732e0b0f406c610255c&lt;SEP&gt;chunk-5670b97cac4fa5638ba7afec771b74a8</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714353</data>
+  <data key="d6"></data>
+</node>
+<node id="GNNs as Prefix">
+  <data key="d0">GNNs as Prefix</data>
+  <data key="d1">concept</data>
+  <data key="d2">GNNs as Prefix refers to the use of Graph Neural Networks in the initial processing layer for graph data to create structure-aware tokens for LLMs.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714353</data>
+  <data key="d6"></data>
+</node>
+<node id="GraphGPT">
+  <data key="d0">GraphGPT</data>
+  <data key="d1">content</data>
+  <data key="d2">GraphGPT is an example of a system that employs GNNs as Prefix, as referenced by Tang et al. (2024).</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714353</data>
+  <data key="d6"></data>
+</node>
+<node id="LLaGA">
+  <data key="d0">LLaGA</data>
+  <data key="d1">content</data>
+  <data key="d2">LLaGA is another example of a system utilizing GNNs as Prefix, cited by Chen et al. (2024).</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714354</data>
+  <data key="d6"></data>
+</node>
+<node id="LLMs as Prefix">
+  <data key="d0">LLMs as Prefix</data>
+  <data key="d1">concept</data>
+  <data key="d2">LLMs as Prefix involves large language models processing graph data enriched with textual information to create node embeddings or labels.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714354</data>
+  <data key="d6"></data>
+</node>
+<node id="GALM">
+  <data key="d0">GALM</data>
+  <data key="d1">content</data>
+  <data key="d2">GALM is a system that exemplifies the LLMs as Prefix approach, as discussed by Xie et al. (2023).</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714354</data>
+  <data key="d6"></data>
+</node>
+<node id="OFA">
+  <data key="d0">OFA</data>
+  <data key="d1">content</data>
+  <data key="d2">OFA is a system that implements LLMs as Prefix, mentioned by Liu et al. (2024).</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714354</data>
+  <data key="d6"></data>
+</node>
+<node id="LLMs-Graphs Integration">
+  <data key="d0">LLMs-Graphs Integration</data>
+  <data key="d1">concept</data>
+  <data key="d2">LLMs-Graphs Integration focuses on seamless interactions between LLMs and graph data using techniques like fusion training and GNN alignment.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714354</data>
+  <data key="d6"></data>
+</node>
+<node id="William Brannon">
+  <data key="d0">William Brannon</data>
+  <data key="d1">person</data>
+  <data key="d2">William Brannon is an author of the paper on self-supervised contrastive pretraining for joint graph and text embeddings.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714354</data>
+  <data key="d6"></data>
+</node>
+<node id="Suyash Fulay">
+  <data key="d0">Suyash Fulay</data>
+  <data key="d1">person</data>
+  <data key="d2">Suyash Fulay is a contributor to the research on self-supervised contrastive pretraining alongside William Brannon.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714355</data>
+  <data key="d6"></data>
+</node>
+<node id="Hang Jiang">
+  <data key="d0">Hang Jiang</data>
+  <data key="d1">person</data>
+  <data key="d2">Hang Jiang is an author involved in the research on joint graph and text embeddings.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714355</data>
+  <data key="d6"></data>
+</node>
+<node id="Wonjune Kang">
+  <data key="d0">Wonjune Kang</data>
+  <data key="d1">person</data>
+  <data key="d2">Wonjune Kang is part of the author team researching self-supervised contrastive pretraining.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714355</data>
+  <data key="d6"></data>
+</node>
+<node id="Brandon Roy">
+  <data key="d0">Brandon Roy</data>
+  <data key="d1">person</data>
+  <data key="d2">Brandon Roy is one of the contributors to the paper on joint graph and text embeddings authored by William Brannon and others.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714355</data>
+  <data key="d6"></data>
+</node>
+<node id="Jad Kabbara">
+  <data key="d0">Jad Kabbara</data>
+  <data key="d1">person</data>
+  <data key="d2">Jad Kabbara is a co-author of the research on self-supervised contrastive pretraining.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714355</data>
+  <data key="d6"></data>
+</node>
+<node id="Deb Roy">
+  <data key="d0">Deb Roy</data>
+  <data key="d1">person</data>
+  <data key="d2">Deb Roy is listed as an author of the paper discussing self-supervised contrastive pretraining.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714355</data>
+  <data key="d6"></data>
+</node>
+<node id="Chi-Min Chan">
+  <data key="d0">Chi-Min Chan</data>
+  <data key="d1">person</data>
+  <data key="d2">Chi-Min Chan is an author of a paper on refining queries for retrieval augmented generation.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714356</data>
+  <data key="d6"></data>
+</node>
+<node id="Chunpu Xu">
+  <data key="d0">Chunpu Xu</data>
+  <data key="d1">person</data>
+  <data key="d2">Chunpu Xu is a co-author of the research focused on enhancing queries for retrieval augmented generation.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714356</data>
+  <data key="d6"></data>
+</node>
+<node id="Ruibin Yuan">
+  <data key="d0">Ruibin Yuan</data>
+  <data key="d1">person</data>
+  <data key="d2">Ruibin Yuan is part of the author team working on retrieval augmented generation refinements.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714356</data>
+  <data key="d6"></data>
+</node>
+<node id="Hongyin Luo">
+  <data key="d0">Hongyin Luo</data>
+  <data key="d1">person</data>
+  <data key="d2">Hongyin Luo is a contributing author to the research on retrieval augmented generation.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714356</data>
+  <data key="d6"></data>
+</node>
+<node id="Wei Xue">
+  <data key="d0">Wei Xue</data>
+  <data key="d1">person</data>
+  <data key="d2">Wei Xue is an author involved in enhancing query refinement for retrieval augmented generation.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714356</data>
+  <data key="d6"></data>
+</node>
+<node id="Yike Guo">
+  <data key="d0">Yike Guo</data>
+  <data key="d1">person</data>
+  <data key="d2">Yike Guo is part of the authorship team for the paper on learning query refinements in retrieval augmented generation.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714356</data>
+  <data key="d6"></data>
+</node>
+<node id="Jie Fu">
+  <data key="d0">Jie Fu</data>
+  <data key="d1">person</data>
+  <data key="d2">Jie Fu is among the authors contributing to the research on retrieval augmented generation.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714356</data>
+  <data key="d6"></data>
+</node>
+<node id="Runjin Chen">
+  <data key="d0">Runjin Chen</data>
+  <data key="d1">person</data>
+  <data key="d2">Runjin Chen is an author of a paper focused on the interaction of large language and graph assistants.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714357</data>
+  <data key="d6"></data>
+</node>
+<node id="Tong Zhao">
+  <data key="d0">Tong Zhao</data>
+  <data key="d1">person</data>
+  <data key="d2">Tong Zhao is a co-author who collaborated on the research of large language and graph assistants.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714357</data>
+  <data key="d6"></data>
+</node>
+<node id="AJAY KUMAR JAISWAL">
+  <data key="d0">AJAY KUMAR JAISWAL</data>
+  <data key="d1">person</data>
+  <data key="d2">AJAY KUMAR JAISWAL is listed as a contributing author in the research on large language and graph assistants.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714357</data>
+  <data key="d6"></data>
+</node>
+<node id="Neil Shah">
+  <data key="d0">Neil Shah</data>
+  <data key="d1">person</data>
+  <data key="d2">Neil Shah is part of the author team for the large language and graph assistant research.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714357</data>
+  <data key="d6"></data>
+</node>
+<node id="Zhangyang Wang">
+  <data key="d0">Zhangyang Wang</data>
+  <data key="d1">person</data>
+  <data key="d2">Zhangyang Wang is an author in the paper discussing large language and graph assistants.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714357</data>
+  <data key="d6"></data>
+</node>
+<node id="Darren Edge">
+  <data key="d0">Darren Edge</data>
+  <data key="d1">person</data>
+  <data key="d2">Darren Edge is a co-author involved in research on graph approaches for query-focused summarization.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714358</data>
+  <data key="d6"></data>
+</node>
+<node id="Ha Trinh">
+  <data key="d0">Ha Trinh</data>
+  <data key="d1">person</data>
+  <data key="d2">Ha Trinh is one of the contributors to the research on query-focused summarization.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714358</data>
+  <data key="d6"></data>
+</node>
+<node id="Newman Cheng">
+  <data key="d0">Newman Cheng</data>
+  <data key="d1">person</data>
+  <data key="d2">Newman Cheng is part of the author team researching graph approaches to summarization.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714358</data>
+  <data key="d6"></data>
+</node>
+<node id="Joshua Bradley">
+  <data key="d0">Joshua Bradley</data>
+  <data key="d1">person</data>
+  <data key="d2">Joshua Bradley is a co-author working on query-focused summarization research.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714358</data>
+  <data key="d6"></data>
+</node>
+<node id="Alex Chao">
+  <data key="d0">Alex Chao</data>
+  <data key="d1">person</data>
+  <data key="d2">Alex Chao is one of the contributors to the research examining graph approaches for summarization.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714358</data>
+  <data key="d6"></data>
+</node>
+<node id="Apurva Mody">
+  <data key="d0">Apurva Mody</data>
+  <data key="d1">person</data>
+  <data key="d2">Apurva Mody is listed as a co-author involved in summarization research.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714358</data>
+  <data key="d6"></data>
+</node>
+<node id="Steven Truitt">
+  <data key="d0">Steven Truitt</data>
+  <data key="d1">person</data>
+  <data key="d2">Steven Truitt is among the authors researching query-focused summarization.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714358</data>
+  <data key="d6"></data>
+</node>
+<node id="Jonathan Larson">
+  <data key="d0">Jonathan Larson</data>
+  <data key="d1">person</data>
+  <data key="d2">Jonathan Larson is part of the author team for the research on graph-focused summarization.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714358</data>
+  <data key="d6"></data>
+</node>
+<node id="Shahul Es">
+  <data key="d0">Shahul Es</data>
+  <data key="d1">person</data>
+  <data key="d2">Shahul Es is an author involved in the automation of evaluation for retrieval augmented generation.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714359</data>
+  <data key="d6"></data>
+</node>
+<node id="Jithin James">
+  <data key="d0">Jithin James</data>
+  <data key="d1">person</data>
+  <data key="d2">Jithin James is a co-author of the paper evaluating automated methods for retrieval augmented generation.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714359</data>
+  <data key="d6"></data>
+</node>
+<node id="Luis Espinosa Anke">
+  <data key="d0">Luis Espinosa Anke</data>
+  <data key="d1">person</data>
+  <data key="d2">Luis Espinosa Anke contributed to the research on automated evaluation for retrieval augmented generation.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714359</data>
+  <data key="d6"></data>
+</node>
+<node id="Steven Schockaert">
+  <data key="d0">Steven Schockaert</data>
+  <data key="d1">person</data>
+  <data key="d2">Steven Schockaert is a co-author working on the automated evaluation of retrieval augmented generation.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714359</data>
+  <data key="d6"></data>
+</node>
+<node id="Wenqi Fan">
+  <data key="d0">Wenqi Fan</data>
+  <data key="d1">person</data>
+  <data key="d2">Wenqi Fan is an author of the survey covering retrieval-augmented large language models.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714360</data>
+  <data key="d6"></data>
+</node>
+<node id="Yujuan Ding">
+  <data key="d0">Yujuan Ding</data>
+  <data key="d1">person</data>
+  <data key="d2">Yujuan Ding is a co-author contributing to the survey on retrieval-augmented large language models.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714360</data>
+  <data key="d6"></data>
+</node>
+<node id="Liangbo Ning">
+  <data key="d0">Liangbo Ning</data>
+  <data key="d1">person</data>
+  <data key="d2">Liangbo Ning is involved as an author in the retrieval-augmented large language models survey.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714360</data>
+  <data key="d6"></data>
+</node>
+<node id="Shijie Wang">
+  <data key="d0">Shijie Wang</data>
+  <data key="d1">person</data>
+  <data key="d2">Shijie Wang is contributing to the survey discussing retrieval-augmented large language models.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714360</data>
+  <data key="d6"></data>
+</node>
+<node id="Hengyun Li">
+  <data key="d0">Hengyun Li</data>
+  <data key="d1">person</data>
+  <data key="d2">Hengyun Li is part of the author team for the survey on retrieval-augmented large language models.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714360</data>
+  <data key="d6"></data>
+</node>
+<node id="Dawei Yin">
+  <data key="d0">Dawei Yin</data>
+  <data key="d1">person</data>
+  <data key="d2">Dawei Yin is a researcher contributing to the study of large language models.&lt;SEP&gt;Dawei Yin is a co-author of the survey regarding retrieval-augmented large language models.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad&lt;SEP&gt;chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714360</data>
+  <data key="d6"></data>
+</node>
+<node id="Tat-Seng Chua">
+  <data key="d0">Tat-Seng Chua</data>
+  <data key="d1">person</data>
+  <data key="d2">Tat-Seng Chua is involved in the research regarding retrieval-augmented large language models.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714361</data>
+  <data key="d6"></data>
+</node>
+<node id="Qing Li">
+  <data key="d0">Qing Li</data>
+  <data key="d1">person</data>
+  <data key="d2">Qing Li is a co-author participating in the survey on retrieval-augmented large language models.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714361</data>
+  <data key="d6"></data>
+</node>
+<node id="Yichuan Li">
+  <data key="d0">Yichuan Li</data>
+  <data key="d1">person</data>
+  <data key="d2">Yichuan Li is an author of a paper discussing self-supervised representation learning on text-attributed graphs.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714361</data>
+  <data key="d6"></data>
+</node>
+<node id="Kaize Ding">
+  <data key="d0">Kaize Ding</data>
+  <data key="d1">person</data>
+  <data key="d2">Kaize Ding is a co-author contributing to the paper on self-supervised representation learning.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714361</data>
+  <data key="d6"></data>
+</node>
+<node id="Kyumin Lee">
+  <data key="d0">Kyumin Lee</data>
+  <data key="d1">person</data>
+  <data key="d2">Kyumin Lee is part of the author team that focuses on self-supervised representation learning on graphs.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714361</data>
+  <data key="d6"></data>
+</node>
+<node id="Hao Liu">
+  <data key="d0">Hao Liu</data>
+  <data key="d1">person</data>
+  <data key="d2">Hao Liu is listed as a contributor to the research on training graph models for all classification tasks.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714361</data>
+  <data key="d6"></data>
+</node>
+<node id="Jiarui Feng">
+  <data key="d0">Jiarui Feng</data>
+  <data key="d1">person</data>
+  <data key="d2">Jiarui Feng is an author involved in the research on training a unified graph model for multiple classification tasks.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714361</data>
+  <data key="d6"></data>
+</node>
+<node id="Lecheng Kong">
+  <data key="d0">Lecheng Kong</data>
+  <data key="d1">person</data>
+  <data key="d2">Lecheng Kong is a co-author of the paper focusing on training a single graph model for various tasks.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714361</data>
+  <data key="d6"></data>
+</node>
+<node id="Ningyue Liang">
+  <data key="d0">Ningyue Liang</data>
+  <data key="d1">person</data>
+  <data key="d2">Ningyue Liang is among the authors researching a single graph model for diverse classification tasks.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714362</data>
+  <data key="d6"></data>
+</node>
+<node id="Dacheng Tao">
+  <data key="d0">Dacheng Tao</data>
+  <data key="d1">person</data>
+  <data key="d2">Dacheng Tao is a co-author in research examining universal graph models for classification purposes.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714362</data>
+  <data key="d6"></data>
+</node>
+<node id="Yixin Chen">
+  <data key="d0">Yixin Chen</data>
+  <data key="d1">person</data>
+  <data key="d2">Yixin Chen is involved as an author in research on unified graph models for classification tasks.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714362</data>
+  <data key="d6"></data>
+</node>
+<node id="Muhan Zhang">
+  <data key="d0">Muhan Zhang</data>
+  <data key="d1">person</data>
+  <data key="d2">Muhan Zhang is a contributor to the research on comprehensive graph models for all classification tasks.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714362</data>
+  <data key="d6"></data>
+</node>
+<node id="Yuanjie Lyu">
+  <data key="d0">Yuanjie Lyu</data>
+  <data key="d1">person</data>
+  <data key="d2">Yuanjie Lyu is an author contributing to the comprehensive benchmark for retrieval-augmented generation.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714363</data>
+  <data key="d6"></data>
+</node>
+<node id="Zhiyu Li">
+  <data key="d0">Zhiyu Li</data>
+  <data key="d1">person</data>
+  <data key="d2">Zhiyu Li is a co-author of the benchmark aimed at retrieval-augmented generation.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714363</data>
+  <data key="d6"></data>
+</node>
+<node id="Simin Niu">
+  <data key="d0">Simin Niu</data>
+  <data key="d1">person</data>
+  <data key="d2">Simin Niu is involved in the research contributing to the comprehensive benchmark for retrieval-augmented generation.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714363</data>
+  <data key="d6"></data>
+</node>
+<node id="Feiyu Xiong">
+  <data key="d0">Feiyu Xiong</data>
+  <data key="d1">person</data>
+  <data key="d2">Feiyu Xiong is a co-author of a benchmark project related to retrieval-augmented generation for large language models.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714363</data>
+  <data key="d6"></data>
+</node>
+<node id="Bo Tang">
+  <data key="d0">Bo Tang</data>
+  <data key="d1">person</data>
+  <data key="d2">Bo Tang is part of the author team for the comprehensive benchmark of retrieval-augmented generation.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714363</data>
+  <data key="d6"></data>
+</node>
+<node id="Wenjin Wang">
+  <data key="d0">Wenjin Wang</data>
+  <data key="d1">person</data>
+  <data key="d2">Wenjin Wang is involved as a co-author in the benchmark focusing on retrieval-augmented generation.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714364</data>
+  <data key="d6"></data>
+</node>
+<node id="Hao Wu">
+  <data key="d0">Hao Wu</data>
+  <data key="d1">person</data>
+  <data key="d2">Hao Wu is an author contributing to the research on the retrieval-augmented generation benchmark.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714364</data>
+  <data key="d6"></data>
+</node>
+<node id="Huanyong Liu">
+  <data key="d0">Huanyong Liu</data>
+  <data key="d1">person</data>
+  <data key="d2">Huanyong Liu is among the authors involved in the comprehensive retrieval-augmented generation benchmark.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714364</data>
+  <data key="d6"></data>
+</node>
+<node id="Tong Xu">
+  <data key="d0">Tong Xu</data>
+  <data key="d1">person</data>
+  <data key="d2">Tong Xu is a co-author of the benchmark project for retrieval-augmented generation.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714364</data>
+  <data key="d6"></data>
+</node>
+<node id="Enhong Chen">
+  <data key="d0">Enhong Chen</data>
+  <data key="d1">person</data>
+  <data key="d2">Enhong Chen is listed as a contributing author to the comprehensive benchmark in retrieval-augmented generation.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714364</data>
+  <data key="d6"></data>
+</node>
+<node id="Hongjin Qian">
+  <data key="d0">Hongjin Qian</data>
+  <data key="d1">person</data>
+  <data key="d2">Hongjin Qian is part of the author team researching memory-inspired knowledge discovery for next-gen RAG.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714364</data>
+  <data key="d6"></data>
+</node>
+<node id="Peitian Zhang">
+  <data key="d0">Peitian Zhang</data>
+  <data key="d1">person</data>
+  <data key="d2">Peitian Zhang is a co-author contributing to the research on next-gen retrieval-augmented generation.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714364</data>
+  <data key="d6"></data>
+</node>
+<node id="Zheng Liu">
+  <data key="d0">Zheng Liu</data>
+  <data key="d1">person</data>
+  <data key="d2">Zheng Liu is involved in the research focused on next-generation retrieval-augmented generation.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714364</data>
+  <data key="d6"></data>
+</node>
+<node id="Kelong Mao">
+  <data key="d0">Kelong Mao</data>
+  <data key="d1">person</data>
+  <data key="d2">Kelong Mao is an author contributing to the research on retrieval-augmented generation innovations.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714365</data>
+  <data key="d6"></data>
+</node>
+<node id="Zhicheng Dou">
+  <data key="d0">Zhicheng Dou</data>
+  <data key="d1">person</data>
+  <data key="d2">Zhicheng Dou is listed as a co-author of the memory-inspired knowledge discovery research.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714365</data>
+  <data key="d6"></data>
+</node>
+<node id="graph-based indexing">
+  <data key="d0">graph-based indexing</data>
+  <data key="d1">method</data>
+  <data key="d2">Graph-based indexing is a method that improves information retrieval efficiency and comprehension by indexing data in the form of graphs.</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714365</data>
+  <data key="d6"></data>
+</node>
+<node id="Retrieval-Augmented Generation (RAG)">
+  <data key="d0">Retrieval-Augmented Generation (RAG)</data>
+  <data key="d1">concept</data>
+  <data key="d2">Retrieval-Augmented Generation (RAG) refers to systems that enhance large language models by integrating external knowledge sources for improved response accuracy.</data>
+  <data key="d3">chunk-dc4869b2865a9a053d992bbbdd8111e3</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714365</data>
+  <data key="d6"></data>
+</node>
+<node id="Large Language Models (LLMs)">
+  <data key="d0">Large Language Models (LLMs)</data>
+  <data key="d1">concept</data>
+  <data key="d2">Large Language Models (LLMs) are advanced AI systems designed to understand and generate human-like text based on extensive training data.</data>
+  <data key="d3">chunk-dc4869b2865a9a053d992bbbdd8111e3</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714366</data>
+  <data key="d6"></data>
+</node>
+<node id="Chunking">
+  <data key="d0">Chunking</data>
+  <data key="d1">method</data>
+  <data key="d2">Chunking is a technique that involves breaking down a large text corpus into smaller segments to facilitate targeted and effective information retrieval.</data>
+  <data key="d3">chunk-dc4869b2865a9a053d992bbbdd8111e3</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714366</data>
+  <data key="d6"></data>
+</node>
+<node id="Graph-Based Knowledge Structures">
+  <data key="d0">Graph-Based Knowledge Structures</data>
+  <data key="d1">concept</data>
+  <data key="d2">Graph-Based Knowledge Structures effectively represent interdependencies among different entities and enhance coherent response generation.</data>
+  <data key="d3">chunk-dc4869b2865a9a053d992bbbdd8111e3</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714366</data>
+  <data key="d6"></data>
+</node>
+<node id="Incremental Update Algorithm">
+  <data key="d0">Incremental Update Algorithm</data>
+  <data key="d1">method</data>
+  <data key="d2">The Incremental Update Algorithm is designed to ensure timely integration of new data into retrieval systems, maintaining their effectiveness in dynamic environments.</data>
+  <data key="d3">chunk-dc4869b2865a9a053d992bbbdd8111e3</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714366</data>
+  <data key="d6"></data>
+</node>
+<node id="Huang and Yu (2024)">
+  <data key="d0">Huang and Yu (2024)</data>
+  <data key="d1">person</data>
+  <data key="d2">Huang and Yu are cited as corresponding authors in the context of the advancements related to Retrieval-Augmented Generation systems.</data>
+  <data key="d3">chunk-dc4869b2865a9a053d992bbbdd8111e3</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714366</data>
+  <data key="d6"></data>
+</node>
+<node id="Rampášek et al. (2022)">
+  <data key="d0">Rampášek et al. (2022)</data>
+  <data key="d1">person</data>
+  <data key="d2">Rampášek et al. are referenced for their research on the effectiveness of graphs in capturing interdependencies among various entities.</data>
+  <data key="d3">chunk-dc4869b2865a9a053d992bbbdd8111e3</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714366</data>
+  <data key="d6"></data>
+</node>
+<node id="Tu et al. (2024)">
+  <data key="d0">Tu et al. (2024)</data>
+  <data key="d1">person</data>
+  <data key="d2">Tu et al. are noted for their contributions to adapting RAG systems to specific domain knowledge needs.</data>
+  <data key="d3">chunk-dc4869b2865a9a053d992bbbdd8111e3</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714367</data>
+  <data key="d6"></data>
+</node>
+<node id="Zhao et al. (2024)">
+  <data key="d0">Zhao et al. (2024)</data>
+  <data key="d1">person</data>
+  <data key="d2">Zhao et al. are mentioned regarding the importance of providing up-to-date information in rapidly evolving fields.</data>
+  <data key="d3">chunk-dc4869b2865a9a053d992bbbdd8111e3</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714367</data>
+  <data key="d6"></data>
+</node>
+<node id="Existing RAG Systems">
+  <data key="d0">Existing RAG Systems</data>
+  <data key="d1">concept</data>
+  <data key="d2">Existing Retrieval-Augmented Generation systems have significant limitations, including reliance on flat data representations and inadequate contextual awareness, affecting their performance.</data>
+  <data key="d3">chunk-dc4869b2865a9a053d992bbbdd8111e3</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714367</data>
+  <data key="d6"></data>
+</node>
+<node id="Rapidly Changing Data Environments">
+  <data key="d0">Rapidly Changing Data Environments</data>
+  <data key="d1">concept</data>
+  <data key="d2">Rapidly Changing Data Environments refer to situations where data updates need quick adaptation for maintaining system relevance and effectiveness.</data>
+  <data key="d3">chunk-dc4869b2865a9a053d992bbbdd8111e3</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714367</data>
+  <data key="d6"></data>
+</node>
+<node id="Large Language Model">
+  <data key="d0">Large Language Model</data>
+  <data key="d1">method</data>
+  <data key="d2">The Large Language Model (LLM) is employed within the LightRAG framework to generate answers and extract entities and relationships from text.</data>
+  <data key="d3">chunk-e9f27034d9712faa74c3195b10f7b76e</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714367</data>
+  <data key="d6"></data>
+</node>
+<node id="Graph-Based Index Phase">
+  <data key="d0">Graph-Based Index Phase</data>
+  <data key="d1">concept</data>
+  <data key="d2">The Graph-Based Index Phase is a component of the LightRAG framework where the LLM extracts entities and relationships from text chunks.</data>
+  <data key="d3">chunk-e9f27034d9712faa74c3195b10f7b76e</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714367</data>
+  <data key="d6"></data>
+</node>
+<node id="Graph-Based Retrieval Phase">
+  <data key="d0">Graph-Based Retrieval Phase</data>
+  <data key="d1">concept</data>
+  <data key="d2">The Graph-Based Retrieval Phase involves using the LLM to generate relevant keywords and retrieve entities and relationships for processing queries.</data>
+  <data key="d3">chunk-e9f27034d9712faa74c3195b10f7b76e</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714367</data>
+  <data key="d6"></data>
+</node>
+<node id="UltraDomain Benchmark">
+  <data key="d0">UltraDomain Benchmark</data>
+  <data key="d1">data</data>
+  <data key="d2">The UltraDomain Benchmark consists of datasets sourced from college textbooks, used to assess the effectiveness of the LightRAG framework across various domains.</data>
+  <data key="d3">chunk-e9f27034d9712faa74c3195b10f7b76e</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714367</data>
+  <data key="d6"></data>
+</node>
+<node id="Agriculture Domain">
+  <data key="d0">Agriculture Domain</data>
+  <data key="d1">concept</data>
+  <data key="d2">The Agriculture Domain focuses on agricultural practices and includes topics such as beekeeping, crop production, and disease prevention.</data>
+  <data key="d3">chunk-e9f27034d9712faa74c3195b10f7b76e</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714368</data>
+  <data key="d6"></data>
+</node>
+<node id="Computer Science Domain">
+  <data key="d0">Computer Science Domain</data>
+  <data key="d1">concept</data>
+  <data key="d2">The Computer Science Domain encompasses key areas of data science and software engineering, focusing particularly on machine learning and big data processing.</data>
+  <data key="d3">chunk-e9f27034d9712faa74c3195b10f7b76e</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714368</data>
+  <data key="d6"></data>
+</node>
+<node id="Legal Domain">
+  <data key="d0">Legal Domain</data>
+  <data key="d1">concept</data>
+  <data key="d2">The Legal Domain addresses corporate legal practices including regulatory compliance and corporate restructuring.</data>
+  <data key="d3">chunk-e9f27034d9712faa74c3195b10f7b76e</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714368</data>
+  <data key="d6"></data>
+</node>
+<node id="Mixed Domain">
+  <data key="d0">Mixed Domain</data>
+  <data key="d1">concept</data>
+  <data key="d2">The Mixed Domain presents a variety of texts across disciplines such as cultural, historical, and philosophical studies.</data>
+  <data key="d3">chunk-e9f27034d9712faa74c3195b10f7b76e</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714369</data>
+  <data key="d6"></data>
+</node>
+<node id="Keyword Matching">
+  <data key="d0">Keyword Matching</data>
+  <data key="d1">method</data>
+  <data key="d2">Keyword Matching is a technique used to align query keywords with candidate entities and relations in retrieval systems.</data>
+  <data key="d3">chunk-e9f27034d9712faa74c3195b10f7b76e</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714369</data>
+  <data key="d6"></data>
+</node>
+<node id="Empirical Evaluations">
+  <data key="d0">Empirical Evaluations</data>
+  <data key="d1">event</data>
+  <data key="d2">Empirical Evaluations are assessments conducted on benchmark data to determine the effectiveness of the LightRAG framework.</data>
+  <data key="d3">chunk-e9f27034d9712faa74c3195b10f7b76e</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714369</data>
+  <data key="d6"></data>
+</node>
+<node id="Research Questions">
+  <data key="d0">Research Questions</data>
+  <data key="d1">concept</data>
+  <data key="d2">Research Questions guide the evaluation of the LightRAG framework's performance and advantages compared to existing methods.</data>
+  <data key="d3">chunk-e9f27034d9712faa74c3195b10f7b76e</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714369</data>
+  <data key="d6"></data>
+</node>
+<node id="Machine Learning Metrics">
+  <data key="d0">Machine Learning Metrics</data>
+  <data key="d1">concept</data>
+  <data key="d2">Machine learning metrics such as precision, recall, and F1 score are used to evaluate the effectiveness of movie recommendation systems.</data>
+  <data key="d3">chunk-cb4558101a7d0732e0b0f406c610255c</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714369</data>
+  <data key="d6"></data>
+</node>
+<node id="Movie Recommendation Systems">
+  <data key="d0">Movie Recommendation Systems</data>
+  <data key="d1">concept</data>
+  <data key="d2">Movie recommendation systems are tools used to suggest films to users, assessed using various metrics for performance analysis.</data>
+  <data key="d3">chunk-cb4558101a7d0732e0b0f406c610255c</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714369</data>
+  <data key="d6"></data>
+</node>
+<node id="User Satisfaction Metrics">
+  <data key="d0">User Satisfaction Metrics</data>
+  <data key="d1">data</data>
+  <data key="d2">User satisfaction metrics are critical for evaluating the performance of movie recommendation systems to ensure they meet user preferences.</data>
+  <data key="d3">chunk-cb4558101a7d0732e0b0f406c610255c</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714369</data>
+  <data key="d6"></data>
+</node>
+<node id="Mean Average Precision at K">
+  <data key="d0">Mean Average Precision at K</data>
+  <data key="d1">data</data>
+  <data key="d2">Mean Average Precision at K is a specific metric used to evaluate the accuracy of recommendations in movie recommendation systems.</data>
+  <data key="d3">chunk-cb4558101a7d0732e0b0f406c610255c</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714370</data>
+  <data key="d6"></data>
+</node>
+<node id="Area Under the Curve">
+  <data key="d0">Area Under the Curve</data>
+  <data key="d1">data</data>
+  <data key="d2">Area Under the Curve is a performance metric used in evaluating recommendation systems' ability to discriminate between positive and negative instances.</data>
+  <data key="d3">chunk-cb4558101a7d0732e0b0f406c610255c</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714370</data>
+  <data key="d6"></data>
+</node>
+<node id="F-Measure">
+  <data key="d0">F-Measure</data>
+  <data key="d1">data</data>
+  <data key="d2">F-Measure is a statistical measure used to evaluate the accuracy of recommendation systems by calculating the balance between precision and recall.</data>
+  <data key="d3">chunk-cb4558101a7d0732e0b0f406c610255c</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714370</data>
+  <data key="d6"></data>
+</node>
+<node id="Case Study">
+  <data key="d0">Case Study</data>
+  <data key="d1">event</data>
+  <data key="d2">Case Study is an analysis within the document comparing LightRAG and GraphRAG through specific examples in evaluating movie recommendation systems.</data>
+  <data key="d3">chunk-cb4558101a7d0732e0b0f406c610255c</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714370</data>
+  <data key="d6"></data>
+</node>
+<node id="Table 3">
+  <data key="d0">Table 3</data>
+  <data key="d1">artifact</data>
+  <data key="d2">Table 3 presents specific case examples comparing machine learning responses between LightRAG and GraphRAG.</data>
+  <data key="d3">chunk-cb4558101a7d0732e0b0f406c610255c</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714370</data>
+  <data key="d6"></data>
+</node>
+<node id="RAG Naive">
+  <data key="d0">RAG Naive</data>
+  <data key="d1">method</data>
+  <data key="d2">RAG Naive is a retrieval method characterized by its performance metrics across various dimensions including comprehensiveness, diversity, and empowerment.</data>
+  <data key="d3">chunk-9ab50d3a732fc9ec76f98f4af89f1844</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714370</data>
+  <data key="d6"></data>
+</node>
+<node id="RAG Light">
+  <data key="d0">RAG Light</data>
+  <data key="d1">method</data>
+  <data key="d2">RAG Light is a method that combines low-level and high-level retrieval strategies to achieve balanced performance in data analysis.</data>
+  <data key="d3">chunk-9ab50d3a732fc9ec76f98f4af89f1844</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714370</data>
+  <data key="d6"></data>
+</node>
+<node id="RAG Comprehensiveness">
+  <data key="d0">RAG Comprehensiveness</data>
+  <data key="d1">concept</data>
+  <data key="d2">RAG Comprehensiveness represents a metric indicating the extent to which the retrieval methods cover relevant information.</data>
+  <data key="d3">chunk-9ab50d3a732fc9ec76f98f4af89f1844</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714371</data>
+  <data key="d6"></data>
+</node>
+<node id="RAG Diversity">
+  <data key="d0">RAG Diversity</data>
+  <data key="d1">concept</data>
+  <data key="d2">RAG Diversity is a measure of how varied the information retrieved is across different datasets and queries.</data>
+  <data key="d3">chunk-9ab50d3a732fc9ec76f98f4af89f1844</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714371</data>
+  <data key="d6"></data>
+</node>
+<node id="RAG Empowerment">
+  <data key="d0">RAG Empowerment</data>
+  <data key="d1">concept</data>
+  <data key="d2">RAG Empowerment refers to the degree of control and context provided to users through the retrieval methods.</data>
+  <data key="d3">chunk-9ab50d3a732fc9ec76f98f4af89f1844</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714371</data>
+  <data key="d6"></data>
+</node>
+<node id="NaiveRAG-High">
+  <data key="d0">NaiveRAG-High</data>
+  <data key="d1">method</data>
+  <data key="d2">NaiveRAG-High is a variant of NaiveRAG that enhances performance metrics related to comprehensiveness, diversity, and empowerment.</data>
+  <data key="d3">chunk-9ab50d3a732fc9ec76f98f4af89f1844</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714371</data>
+  <data key="d6"></data>
+</node>
+<node id="NaiveRAG-Low">
+  <data key="d0">NaiveRAG-Low</data>
+  <data key="d1">method</data>
+  <data key="d2">NaiveRAG-Low focuses on low-level retrieval, affecting its performance metrics and leading to a decline across datasets.</data>
+  <data key="d3">chunk-9ab50d3a732fc9ec76f98f4af89f1844</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714371</data>
+  <data key="d6"></data>
+</node>
+<node id="NaiveRAG-Origin">
+  <data key="d0">NaiveRAG-Origin</data>
+  <data key="d1">method</data>
+  <data key="d2">NaiveRAG-Origin is a variant that eliminates original text usage, maintaining performance without significant declines.</data>
+  <data key="d3">chunk-9ab50d3a732fc9ec76f98f4af89f1844</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714371</data>
+  <data key="d6"></data>
+</node>
+<node id="Hybrid Mode">
+  <data key="d0">Hybrid Mode</data>
+  <data key="d1">method</data>
+  <data key="d2">Hybrid Mode is a retrieval method that integrates features from both low-level and high-level retrieval approaches for a comprehensive data analysis.</data>
+  <data key="d3">chunk-9ab50d3a732fc9ec76f98f4af89f1844</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714371</data>
+  <data key="d6"></data>
+</node>
+<node id="Low-level-only Retrieval">
+  <data key="d0">Low-level-only Retrieval</data>
+  <data key="d1">concept</data>
+  <data key="d2">Low-level-only Retrieval refers to a variant that emphasizes specific information gathering, leading to significant performance declines across datasets and affecting comprehensiveness.</data>
+  <data key="d3">chunk-9ab50d3a732fc9ec76f98f4af89f1844</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714372</data>
+  <data key="d6"></data>
+</node>
+<node id="High-level-only Retrieval">
+  <data key="d0">High-level-only Retrieval</data>
+  <data key="d1">concept</data>
+  <data key="d2">High-level-only Retrieval is a method that captures a broader range of content through entity-wise relationships, at the cost of detailed insights on specific entities.</data>
+  <data key="d3">chunk-9ab50d3a732fc9ec76f98f4af89f1844</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714372</data>
+  <data key="d6"></data>
+</node>
+<node id="Hybrid Mode Performance">
+  <data key="d0">Hybrid Mode Performance</data>
+  <data key="d1">concept</data>
+  <data key="d2">Hybrid Mode Performance represents the balanced retrieval process achieved through both low-level and high-level approaches, ensuring comprehensive analysis.</data>
+  <data key="d3">chunk-9ab50d3a732fc9ec76f98f4af89f1844</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714372</data>
+  <data key="d6"></data>
+</node>
+<node id="Beekeeper">
+  <data key="d0">Beekeeper</data>
+  <data key="d1">person</data>
+  <data key="d2">A Beekeeper is an individual who manages bee colonies and produces honey and related products while employing various methods to maintain hive health.</data>
+  <data key="d3">chunk-5670b97cac4fa5638ba7afec771b74a8</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714372</data>
+  <data key="d6"></data>
+</node>
+<node id="Honey Bees">
+  <data key="d0">Honey Bees</data>
+  <data key="d1">creature</data>
+  <data key="d2">Honey Bees are insects that beekeepers manage for honey production, and they can be negatively impacted by various environmental factors.</data>
+  <data key="d3">chunk-5670b97cac4fa5638ba7afec771b74a8</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714373</data>
+  <data key="d6"></data>
+</node>
+<node id="LightRAG Framework">
+  <data key="d0">LightRAG Framework</data>
+  <data key="d1">concept</data>
+  <data key="d2">The LightRAG framework is a graph-based approach designed for efficient information retrieval by segmenting documents for easier access to relevant data.</data>
+  <data key="d3">chunk-5670b97cac4fa5638ba7afec771b74a8</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714373</data>
+  <data key="d6"></data>
+</node>
+<node id="External Knowledge Database">
+  <data key="d0">External Knowledge Database</data>
+  <data key="d1">data</data>
+  <data key="d2">The External Knowledge Database serves as a source for pertinent documents and information to support the RAG system in generating responses.</data>
+  <data key="d3">chunk-5670b97cac4fa5638ba7afec771b74a8</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714373</data>
+  <data key="d6"></data>
+</node>
+<node id="BEEKEEPER Practices">
+  <data key="d0">BEEKEEPER Practices</data>
+  <data key="d1">concept</data>
+  <data key="d2">BEEKEEPER practices involve methods and strategies employed by beekeepers to manage bee colonies and ensure their health and productivity.</data>
+  <data key="d3">chunk-5670b97cac4fa5638ba7afec771b74a8</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714373</data>
+  <data key="d6"></data>
+</node>
+<node id="Data Indexer">
+  <data key="d0">Data Indexer</data>
+  <data key="d1">method</data>
+  <data key="d2">Data Indexer is a function involved in building specific data structures based on the external database for efficient information retrieval.</data>
+  <data key="d3">chunk-5670b97cac4fa5638ba7afec771b74a8</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714373</data>
+  <data key="d6"></data>
+</node>
+<node id="Data Retriever">
+  <data key="d0">Data Retriever</data>
+  <data key="d1">method</data>
+  <data key="d2">Data Retriever is responsible for obtaining relevant documents by comparing input queries against indexed data.</data>
+  <data key="d3">chunk-5670b97cac4fa5638ba7afec771b74a8</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714373</data>
+  <data key="d6"></data>
+</node>
+<node id="Ori Ram">
+  <data key="d0">Ori Ram</data>
+  <data key="d1">person</data>
+  <data key="d2">Ori Ram is a researcher mentioned in the context of retrieval-augmented language models.</data>
+  <data key="d3">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714373</data>
+  <data key="d6"></data>
+</node>
+<node id="Yoav Levine">
+  <data key="d0">Yoav Levine</data>
+  <data key="d1">person</data>
+  <data key="d2">Yoav Levine is a researcher associated with the study of retrieval-augmented language models.</data>
+  <data key="d3">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714374</data>
+  <data key="d6"></data>
+</node>
+<node id="Itay Dalmedigos">
+  <data key="d0">Itay Dalmedigos</data>
+  <data key="d1">person</data>
+  <data key="d2">Itay Dalmedigos is one of the researchers contributing to the topic of retrieval-augmented language models.</data>
+  <data key="d3">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714374</data>
+  <data key="d6"></data>
+</node>
+<node id="Dor Muhlgay">
+  <data key="d0">Dor Muhlgay</data>
+  <data key="d1">person</data>
+  <data key="d2">Dor Muhlgay is a researcher involved in retrieval-augmented language models.</data>
+  <data key="d3">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714374</data>
+  <data key="d6"></data>
+</node>
+<node id="Amnon Shashua">
+  <data key="d0">Amnon Shashua</data>
+  <data key="d1">person</data>
+  <data key="d2">Amnon Shashua is a researcher who participated in the retrieval-augmented language models research.</data>
+  <data key="d3">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714374</data>
+  <data key="d6"></data>
+</node>
+<node id="Kevin Leyton-Brown">
+  <data key="d0">Kevin Leyton-Brown</data>
+  <data key="d1">person</data>
+  <data key="d2">Kevin Leyton-Brown is a researcher cited in relation to retrieval-augmented language models.</data>
+  <data key="d3">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714374</data>
+  <data key="d6"></data>
+</node>
+<node id="Yoav Shoham">
+  <data key="d0">Yoav Shoham</data>
+  <data key="d1">person</data>
+  <data key="d2">Yoav Shoham is a contributor to the research on retrieval-augmented language models.</data>
+  <data key="d3">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714374</data>
+  <data key="d6"></data>
+</node>
+<node id="Ladislav Rampášek">
+  <data key="d0">Ladislav Rampášek</data>
+  <data key="d1">person</data>
+  <data key="d2">Ladislav Rampášek is a researcher associated with a graph transformer recipe.</data>
+  <data key="d3">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714374</data>
+  <data key="d6"></data>
+</node>
+<node id="Michael Galkin">
+  <data key="d0">Michael Galkin</data>
+  <data key="d1">person</data>
+  <data key="d2">Michael Galkin is a researcher who worked on a general graph transformer.</data>
+  <data key="d3">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714374</data>
+  <data key="d6"></data>
+</node>
+<node id="Vijay Prakash Dwivedi">
+  <data key="d0">Vijay Prakash Dwivedi</data>
+  <data key="d1">person</data>
+  <data key="d2">Vijay Prakash Dwivedi is involved in the research concerning graph transformers.</data>
+  <data key="d3">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714375</data>
+  <data key="d6"></data>
+</node>
+<node id="Anh Tuan Luu">
+  <data key="d0">Anh Tuan Luu</data>
+  <data key="d1">person</data>
+  <data key="d2">Anh Tuan Luu is a researcher contributing to the study of graph transformers.</data>
+  <data key="d3">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714375</data>
+  <data key="d6"></data>
+</node>
+<node id="Guy Wolf">
+  <data key="d0">Guy Wolf</data>
+  <data key="d1">person</data>
+  <data key="d2">Guy Wolf is involved in the work regarding graph transformers.</data>
+  <data key="d3">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714376</data>
+  <data key="d6"></data>
+</node>
+<node id="Dominique Beaini">
+  <data key="d0">Dominique Beaini</data>
+  <data key="d1">person</data>
+  <data key="d2">Dominique Beaini is part of the research team focusing on graph transformers.</data>
+  <data key="d3">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714376</data>
+  <data key="d6"></data>
+</node>
+<node id="Alireza Salemi">
+  <data key="d0">Alireza Salemi</data>
+  <data key="d1">person</data>
+  <data key="d2">Alireza Salemi is a researcher evaluating retrieval quality in retrieval-augmented generation.</data>
+  <data key="d3">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714376</data>
+  <data key="d6"></data>
+</node>
+<node id="Hamed Zamani">
+  <data key="d0">Hamed Zamani</data>
+  <data key="d1">person</data>
+  <data key="d2">Hamed Zamani is associated with the evaluation of retrieval quality in retrieval-augmented generation.</data>
+  <data key="d3">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714376</data>
+  <data key="d6"></data>
+</node>
+<node id="Viju Sudhi">
+  <data key="d0">Viju Sudhi</data>
+  <data key="d1">person</data>
+  <data key="d2">Viju Sudhi is a researcher working on frameworks for explaining retrieval augmented generation.</data>
+  <data key="d3">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714376</data>
+  <data key="d6"></data>
+</node>
+<node id="Sinchana Ramakanth Bhat">
+  <data key="d0">Sinchana Ramakanth Bhat</data>
+  <data key="d1">person</data>
+  <data key="d2">Sinchana Ramakanth Bhat is a researcher contributing to the explanation of retrieval augmented generation.</data>
+  <data key="d3">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714376</data>
+  <data key="d6"></data>
+</node>
+<node id="Max Rudat">
+  <data key="d0">Max Rudat</data>
+  <data key="d1">person</data>
+  <data key="d2">Max Rudat is involved in research regarding retrieval augmented generation frameworks.</data>
+  <data key="d3">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714377</data>
+  <data key="d6"></data>
+</node>
+<node id="Roman Teucher">
+  <data key="d0">Roman Teucher</data>
+  <data key="d1">person</data>
+  <data key="d2">Roman Teucher is associated with the research on explaining retrieval augmented generation.</data>
+  <data key="d3">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714378</data>
+  <data key="d6"></data>
+</node>
+<node id="Jiabin Tang">
+  <data key="d0">Jiabin Tang</data>
+  <data key="d1">person</data>
+  <data key="d2">Jiabin Tang is involved in graph instruction tuning for large language models.</data>
+  <data key="d3">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714378</data>
+  <data key="d6"></data>
+</node>
+<node id="Yuhao Yang">
+  <data key="d0">Yuhao Yang</data>
+  <data key="d1">person</data>
+  <data key="d2">Yuhao Yang is a researcher contributing to the study of graph instruction tuning.</data>
+  <data key="d3">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714378</data>
+  <data key="d6"></data>
+</node>
+<node id="Wei Wei">
+  <data key="d0">Wei Wei</data>
+  <data key="d1">person</data>
+  <data key="d2">Wei Wei is associated with the research on large language model tuning.</data>
+  <data key="d3">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714378</data>
+  <data key="d6"></data>
+</node>
+<node id="Lei Shi">
+  <data key="d0">Lei Shi</data>
+  <data key="d1">person</data>
+  <data key="d2">Lei Shi is a researcher involved in graph instruction tuning for language models.</data>
+  <data key="d3">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714379</data>
+  <data key="d6"></data>
+</node>
+<node id="Lixin Su">
+  <data key="d0">Lixin Su</data>
+  <data key="d1">person</data>
+  <data key="d2">Lixin Su is part of the study regarding large language models and graph instruction tuning.</data>
+  <data key="d3">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714379</data>
+  <data key="d6"></data>
+</node>
+<node id="Suqi Cheng">
+  <data key="d0">Suqi Cheng</data>
+  <data key="d1">person</data>
+  <data key="d2">Suqi Cheng is engaged in research on graph instruction tuning for large language models.</data>
+  <data key="d3">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714379</data>
+  <data key="d6"></data>
+</node>
+<node id="Chao Huang">
+  <data key="d0">Chao Huang</data>
+  <data key="d1">person</data>
+  <data key="d2">Chao Huang is involved in the research surrounding graph instruction tuning for language models.</data>
+  <data key="d3">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714380</data>
+  <data key="d6"></data>
+</node>
+<node id="International Conference on Neural Information Processing Systems">
+  <data key="d0">International Conference on Neural Information Processing Systems</data>
+  <data key="d1">event</data>
+  <data key="d2">The International Conference on Neural Information Processing Systems (NeurIPS) is an academic conference focusing on neural information processing.</data>
+  <data key="d3">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714380</data>
+  <data key="d6"></data>
+</node>
+<node id="Transactions of the Association for Computational Linguistics">
+  <data key="d0">Transactions of the Association for Computational Linguistics</data>
+  <data key="d1">content</data>
+  <data key="d2">The Transactions of the Association for Computational Linguistics (TACL) is a scholarly journal publishing research in computational linguistics.</data>
+  <data key="d3">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714380</data>
+  <data key="d6"></data>
+</node>
+<node id="ACM International Conference on Research and Development in Information Retrieval">
+  <data key="d0">ACM International Conference on Research and Development in Information Retrieval</data>
+  <data key="d1">event</data>
+  <data key="d2">The ACM International Conference on Research and Development in Information Retrieval (SIGIR) is a conference focused on information retrieval research.</data>
+  <data key="d3">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714381</data>
+  <data key="d6"></data>
+</node>
+<node id="Congrat">
+  <data key="d0">Congrat</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d2">William Brannon is a co-author on the Congrat paper focusing on joint graph and text embeddings.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714394</data>
+  <data key="d6"></data>
+</node>
+<node id="Rq-rag">
+  <data key="d0">Rq-rag</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d2">Chi-Min Chan is an author discussing the learning to refine queries in retrieval augmented generation.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714395</data>
+  <data key="d6"></data>
+</node>
+<node id="self-supervised contrastive pretraining">
+  <data key="d0">self-supervised contrastive pretraining</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d2">William Brannon's research involves self-supervised contrastive pretraining for embedding generation.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714397</data>
+  <data key="d6"></data>
+</node>
+<node id="graph rag">
+  <data key="d0">graph rag</data>
+  <data key="d3">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d2">Darren Edge's research involves a graph rag approach to summarization focusing on queries.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714397</data>
+  <data key="d6"></data>
+</node>
+<node id="High-Order Relatedness">
+  <data key="d0">High-Order Relatedness</data>
+  <data key="d3">chunk-e9f27034d9712faa74c3195b10f7b76e</data>
+  <data key="d2">High-Order Relatedness is incorporated into LightRAG to enhance query relevance and depth by gathering neighboring nodes.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714408</data>
+  <data key="d6"></data>
+</node>
+<node id="NA">
+  <data key="d0">NA</data>
+  <data key="d3">chunk-9ab50d3a732fc9ec76f98f4af89f1844</data>
+  <data key="d2">Hybrid Mode combines both low-level and high-level retrieval methods for more thorough data analysis.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714410</data>
+  <data key="d6"></data>
+</node>
+<node id="Bee">
+  <data key="d0">Bee</data>
+  <data key="d3">chunk-5670b97cac4fa5638ba7afec771b74a8</data>
+  <data key="d2">Beekeepers manage bees but do not develop individual relationships with them due to limited interaction time with each hive.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714411</data>
+  <data key="d6"></data>
+</node>
+<node id="In-Context Retrieval-Augmented Language Models">
+  <data key="d0">In-Context Retrieval-Augmented Language Models</data>
+  <data key="d3">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d2">Ori Ram contributed research on in-context retrieval-augmented language models.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714412</data>
+  <data key="d6"></data>
+</node>
+<node id="Recipe for a General, Powerful, Scalable Graph Transformer">
+  <data key="d0">Recipe for a General, Powerful, Scalable Graph Transformer</data>
+  <data key="d3">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d2">Ladislav Rampášek contributed to the development of a general graph transformer.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714415</data>
+  <data key="d6"></data>
+</node>
+<node id="Evaluating Retrieval Quality in Retrieval-Augmented Generation">
+  <data key="d0">Evaluating Retrieval Quality in Retrieval-Augmented Generation</data>
+  <data key="d3">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d2">Alireza Salemi participated in research evaluating retrieval quality for generation.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714417</data>
+  <data key="d6"></data>
+</node>
+<node id="Rag-Ex: A Generic Framework for Explaining Retrieval Augmented Generation">
+  <data key="d0">Rag-Ex: A Generic Framework for Explaining Retrieval Augmented Generation</data>
+  <data key="d3">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d2">Viju Sudhi contributed to the Rag-ex framework for explaining retrieval augmented generation.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714418</data>
+  <data key="d6"></data>
+</node>
+<node id="Graphgpt: Graph Instruction Tuning for Large Language Models">
+  <data key="d0">Graphgpt: Graph Instruction Tuning for Large Language Models</data>
+  <data key="d3">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d2">Jiabin Tang was involved in developing graph instruction tuning for large language models.</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">unknown_source</data>
+  <data key="d5">1765714420</data>
+  <data key="d6"></data>
+</node>
+<edge source="Cardiologists" target="Heart Disease">
+  <data key="d7">1.0</data>
+  <data key="d8">Cardiologists diagnose heart disease based on assessed symptoms.</data>
+  <data key="d9">diagnosis,medical relationship</data>
+  <data key="d10">chunk-a4bfe3834a3a1fae1b473b574f4f8b49</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714381</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Cardiologists" target="R(·)">
+  <data key="d7">1.0</data>
+  <data key="d8">R(·) prompts the extraction of entities like cardiologists by identifying relationships with heart disease.</data>
+  <data key="d9">entity extraction,relationship identification</data>
+  <data key="d10">chunk-a4bfe3834a3a1fae1b473b574f4f8b49</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714382</data>
+  <data key="d13"></data>
+</edge>
+<edge source="3D Graph" target="LightRAG">
+  <data key="d7">1.0</data>
+  <data key="d8">LightRAG integrates 3D graph structures for enhanced data retrieval performance.</data>
+  <data key="d9">integration,retrieval performance</data>
+  <data key="d10">chunk-a4bfe3834a3a1fae1b473b574f4f8b49</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714384</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Graph Structures" target="LightRAG">
+  <data key="d7">1.0</data>
+  <data key="d8">LightRAG utilizes graph structures to optimize data indexing and retrieval processes.</data>
+  <data key="d9">data indexing,efficiency</data>
+  <data key="d10">chunk-a4bfe3834a3a1fae1b473b574f4f8b49</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714381</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Graph Structures" target="Incremental Knowledge Base">
+  <data key="d7">1.0</data>
+  <data key="d8">Graph structures preserve information integrity within the incremental knowledge base.</data>
+  <data key="d9">data structure,information integrity</data>
+  <data key="d10">chunk-a4bfe3834a3a1fae1b473b574f4f8b49</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714384</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Incremental Knowledge Base" target="LightRAG">
+  <data key="d7">1.0</data>
+  <data key="d8">LightRAG adapts to changes in data within the incremental knowledge base without complete reprocessing.</data>
+  <data key="d9">data adaptation,efficiency</data>
+  <data key="d10">chunk-a4bfe3834a3a1fae1b473b574f4f8b49</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714382</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Retrieval-Augmented Generation" target="LightRAG">
+  <data key="d7">3.0</data>
+  <data key="d8">LightRAG enhances the Retrieval-Augmented Generation process by providing comprehensive and efficient data handling capabilities.&lt;SEP&gt;LightRAG is a specific approach to Retrieval-Augmented Generation that enhances information retrieval and answer generation.&lt;SEP&gt;Retrieval-Augmented Generation is enhanced by LightRAG, which adapts the system for more efficient information retrieval.</data>
+  <data key="d9">data integration,framework component,information retrieval,method improvement,system enhancement</data>
+  <data key="d10">chunk-e721c558783dbd23774614190d304ec4&lt;SEP&gt;chunk-e9f27034d9712faa74c3195b10f7b76e&lt;SEP&gt;chunk-5670b97cac4fa5638ba7afec771b74a8</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714385</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Retrieval-Augmented Generation" target="Keyword Matching">
+  <data key="d7">1.0</data>
+  <data key="d8">Keyword Matching is a technique employed in Retrieval-Augmented Generation to facilitate the matching of query and candidate entities.</data>
+  <data key="d9">information retrieval,technique</data>
+  <data key="d10">chunk-e9f27034d9712faa74c3195b10f7b76e</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714404</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Retrieval-Augmented Generation" target="External Knowledge Database">
+  <data key="d7">1.0</data>
+  <data key="d8">The External Knowledge Database supplies data for the Retrieval-Augmented Generation to respond to user queries.</data>
+  <data key="d9">data sourcing,response generation</data>
+  <data key="d10">chunk-5670b97cac4fa5638ba7afec771b74a8</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714411</data>
+  <data key="d13"></data>
+</edge>
+<edge source="GraphRAG" target="Token Overhead">
+  <data key="d7">1.0</data>
+  <data key="d8">GraphRAG incurs significant token overhead during the extraction of entities and relationships.</data>
+  <data key="d9">inefficiency,resource management</data>
+  <data key="d10">chunk-e721c558783dbd23774614190d304ec4</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714382</data>
+  <data key="d13"></data>
+</edge>
+<edge source="GraphRAG" target="Legal Dataset">
+  <data key="d7">2.0</data>
+  <data key="d8">GraphRAG's performance is analyzed within the context of the Legal Dataset.&lt;SEP&gt;GraphRAG's performance is evaluated using the Legal Dataset to compare its effectiveness against LightRAG.</data>
+  <data key="d9">baseline comparison,data evaluation,performance context,performance evaluation</data>
+  <data key="d10">chunk-e721c558783dbd23774614190d304ec4&lt;SEP&gt;chunk-292b2c4e27f94c258f6dfc74c228920f</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714383</data>
+  <data key="d13"></data>
+</edge>
+<edge source="GraphRAG" target="Naive RAG">
+  <data key="d7">1.0</data>
+  <data key="d8">Naive RAG serves as a baseline in comparison with the graph-enhanced method GraphRAG.</data>
+  <data key="d9">baseline,method comparison</data>
+  <data key="d10">chunk-a2f1a956b437fd5cdafc179f99aba025</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714384</data>
+  <data key="d13"></data>
+</edge>
+<edge source="GraphRAG" target="RQ-RAG">
+  <data key="d7">1.0</data>
+  <data key="d8">RQ-RAG is compared against GraphRAG for assessing improvements in query decomposition techniques.</data>
+  <data key="d9">baseline,method comparison</data>
+  <data key="d10">chunk-a2f1a956b437fd5cdafc179f99aba025</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714386</data>
+  <data key="d13"></data>
+</edge>
+<edge source="GraphRAG" target="Community Structure">
+  <data key="d7">1.0</data>
+  <data key="d8">GraphRAG's inefficiency in managing newly added data is illustrated through its struggle with community structure reconstruction.</data>
+  <data key="d9">data handling,reconstruction inefficiency</data>
+  <data key="d10">chunk-e721c558783dbd23774614190d304ec4</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714387</data>
+  <data key="d13"></data>
+</edge>
+<edge source="GraphRAG" target="LightRAG">
+  <data key="d7">2.0</data>
+  <data key="d8">LightRAG consistently outperforms GraphRAG, especially in larger datasets with complex language contexts.&lt;SEP&gt;LightRAG is compared against GraphRAG to demonstrate superior performance in evaluating machine learning metrics for movie recommendations.</data>
+  <data key="d9">comparison,performance,performance evaluation</data>
+  <data key="d10">chunk-292b2c4e27f94c258f6dfc74c228920f&lt;SEP&gt;chunk-cb4558101a7d0732e0b0f406c610255c</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714393</data>
+  <data key="d13"></data>
+</edge>
+<edge source="GraphRAG" target="Case Study">
+  <data key="d7">1.0</data>
+  <data key="d8">Case Study evaluates GraphRAG's performance against LightRAG for analyzing machine learning metrics.</data>
+  <data key="d9">comparison,evaluation</data>
+  <data key="d10">chunk-cb4558101a7d0732e0b0f406c610255c</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714414</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Large Language Models" target="Graph Neural Networks">
+  <data key="d7">1.0</data>
+  <data key="d8">Large Language Models are enhanced by Graph Neural Networks that process graph data to interpret relationships better.</data>
+  <data key="d9">data processing,relationship interpretation</data>
+  <data key="d10">chunk-e721c558783dbd23774614190d304ec4</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714383</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Dynamic Environments" target="LightRAG">
+  <data key="d7">1.0</data>
+  <data key="d8">LightRAG effectively adapts to changes in dynamic environments without the need for complete reconstruction.</data>
+  <data key="d9">adaptability,efficiency</data>
+  <data key="d10">chunk-e721c558783dbd23774614190d304ec4</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714386</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Dynamic Environments" target="Community Structure">
+  <data key="d7">1.0</data>
+  <data key="d8">Community structure needs to adapt in dynamic environments to accurately reflect evolving relationships.</data>
+  <data key="d9">data organization,relationship reflection</data>
+  <data key="d10">chunk-e721c558783dbd23774614190d304ec4</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714386</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Graph Neural Networks" target="GNNs as Prefix">
+  <data key="d7">1.0</data>
+  <data key="d8">GNNs as Prefix utilizes Graph Neural Networks for initial processing of graph data.</data>
+  <data key="d9">application,processing technique</data>
+  <data key="d10">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714391</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Legal Dataset" target="LightRAG">
+  <data key="d7">2.0</data>
+  <data key="d8">The Legal Dataset is used to assess LightRAG's dominance over baseline methods like NaiveRAG.&lt;SEP&gt;LightRAG's effectiveness is assessed through its use on the Legal Dataset, allowing for comparison with GraphRAG.</data>
+  <data key="d9">baseline comparison,data utilization,performance analysis,performance evaluation</data>
+  <data key="d10">chunk-e721c558783dbd23774614190d304ec4&lt;SEP&gt;chunk-292b2c4e27f94c258f6dfc74c228920f</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714386</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Naive RAG" target="LightRAG">
+  <data key="d7">2.0</data>
+  <data key="d8">Naive RAG serves as a baseline for comparison against the LightRAG framework in retrieval-augmented generation assessments.&lt;SEP&gt;Naive RAG is compared with LightRAG to evaluate performance across statistical dimensions.</data>
+  <data key="d9">baseline,baseline method,comparative evaluation,method comparison</data>
+  <data key="d10">chunk-a2f1a956b437fd5cdafc179f99aba025&lt;SEP&gt;chunk-e9f27034d9712faa74c3195b10f7b76e</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714389</data>
+  <data key="d13"></data>
+</edge>
+<edge source="RQ-RAG" target="LightRAG">
+  <data key="d7">2.0</data>
+  <data key="d8">RQ-RAG is compared to LightRAG to analyze the performance of various retrieval-augmented generation approaches.&lt;SEP&gt;RQ-RAG is compared to LightRAG to assess performance improvements in search accuracy.</data>
+  <data key="d9">baseline,comparative evaluation,method analysis,method comparison</data>
+  <data key="d10">chunk-a2f1a956b437fd5cdafc179f99aba025&lt;SEP&gt;chunk-e9f27034d9712faa74c3195b10f7b76e</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714388</data>
+  <data key="d13"></data>
+</edge>
+<edge source="HyDE" target="LightRAG">
+  <data key="d7">1.0</data>
+  <data key="d8">HyDE is evaluated against LightRAG for enhancements in information retrieval.</data>
+  <data key="d9">baseline,method comparison</data>
+  <data key="d10">chunk-a2f1a956b437fd5cdafc179f99aba025</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714388</data>
+  <data key="d13"></data>
+</edge>
+<edge source="GPT-4o-mini" target="LightRAG">
+  <data key="d7">1.0</data>
+  <data key="d8">GPT-4o-mini is employed in LightRAG for various evaluations of RAG methods.</data>
+  <data key="d9">LLM usage,evaluation</data>
+  <data key="d10">chunk-a2f1a956b437fd5cdafc179f99aba025</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714389</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Evaluation Dimensions" target="Win Rates">
+  <data key="d7">1.0</data>
+  <data key="d8">Win rates are calculated based on evaluation dimensions to measure the performance of RAG methods.</data>
+  <data key="d9">assessment,performance metrics</data>
+  <data key="d10">chunk-a2f1a956b437fd5cdafc179f99aba025</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714386</data>
+  <data key="d13"></data>
+</edge>
+<edge source="NaiveRAG" target="LightRAG">
+  <data key="d7">1.0</data>
+  <data key="d8">LightRAG is evaluated against NaiveRAG, demonstrating superior performance metrics in several categories.</data>
+  <data key="d9">benchmark,performance evaluation</data>
+  <data key="d10">chunk-292b2c4e27f94c258f6dfc74c228920f</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714390</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Agriculture Dataset" target="LightRAG">
+  <data key="d7">1.0</data>
+  <data key="d8">LightRAG is tested on the Agriculture Dataset to gauge its effectiveness in diverse information understanding.</data>
+  <data key="d9">data utilization,performance analysis</data>
+  <data key="d10">chunk-292b2c4e27f94c258f6dfc74c228920f</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714391</data>
+  <data key="d13"></data>
+</edge>
+<edge source="CS Dataset" target="LightRAG">
+  <data key="d7">1.0</data>
+  <data key="d8">LightRAG is evaluated using the CS Dataset to highlight its capabilities in information retrieval.</data>
+  <data key="d9">data utilization,performance analysis</data>
+  <data key="d10">chunk-292b2c4e27f94c258f6dfc74c228920f</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714392</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Empowerment" target="LightRAG">
+  <data key="d7">1.0</data>
+  <data key="d8">Empowerment is evaluated for LightRAG, showing significant performance metrics in response generation.</data>
+  <data key="d9">evaluation,performance metric</data>
+  <data key="d10">chunk-292b2c4e27f94c258f6dfc74c228920f</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714394</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Comprehensiveness" target="LightRAG">
+  <data key="d7">1.0</data>
+  <data key="d8">Comprehensiveness metrics are used to assess LightRAG's effectiveness in information retrieval.</data>
+  <data key="d9">evaluation,performance metric</data>
+  <data key="d10">chunk-292b2c4e27f94c258f6dfc74c228920f</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714395</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Diversity" target="LightRAG">
+  <data key="d7">1.0</data>
+  <data key="d8">Diversity is measured for LightRAG, highlighting its advantage in generating a wider range of responses.</data>
+  <data key="d9">evaluation,performance metric</data>
+  <data key="d10">chunk-292b2c4e27f94c258f6dfc74c228920f</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714396</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Overall" target="LightRAG">
+  <data key="d7">1.0</data>
+  <data key="d8">The Overall metric summarizes the performance of LightRAG across various categories, including Comprehensiveness, Diversity, and Empowerment.</data>
+  <data key="d9">evaluation,performance summary</data>
+  <data key="d10">chunk-292b2c4e27f94c258f6dfc74c228920f</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714398</data>
+  <data key="d13"></data>
+</edge>
+<edge source="LightRAG" target="LLMs-Graphs Integration">
+  <data key="d7">1.0</data>
+  <data key="d8">LLMs-Graphs Integration aims to achieve interaction between LLMs and LightRAG for enhanced data processing.</data>
+  <data key="d9">integration,system focus</data>
+  <data key="d10">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714399</data>
+  <data key="d13"></data>
+</edge>
+<edge source="LightRAG" target="graph-based indexing">
+  <data key="d7">1.0</data>
+  <data key="d8">LightRAG enhances information retrieval through a graph-based indexing approach, improving efficiency.</data>
+  <data key="d9">efficiency,system approach</data>
+  <data key="d10">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714400</data>
+  <data key="d13"></data>
+</edge>
+<edge source="LightRAG" target="Retrieval-Augmented Generation (RAG)">
+  <data key="d7">1.0</data>
+  <data key="d8">LightRAG is proposed as an innovative approach to enhance Retrieval-Augmented Generation processes with graph structures.</data>
+  <data key="d9">improvement,innovation</data>
+  <data key="d10">chunk-dc4869b2865a9a053d992bbbdd8111e3</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714401</data>
+  <data key="d13"></data>
+</edge>
+<edge source="LightRAG" target="Graph-Based Knowledge Structures">
+  <data key="d7">1.0</data>
+  <data key="d8">LightRAG integrates Graph-Based Knowledge Structures to facilitate the representation of interdependencies among various entities.</data>
+  <data key="d9">integration,relationship</data>
+  <data key="d10">chunk-dc4869b2865a9a053d992bbbdd8111e3</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714402</data>
+  <data key="d13"></data>
+</edge>
+<edge source="LightRAG" target="Incremental Update Algorithm">
+  <data key="d7">1.0</data>
+  <data key="d8">The Incremental Update Algorithm improves the responsiveness and effectiveness of LightRAG in dynamic data environments.</data>
+  <data key="d9">responsiveness,system efficiency</data>
+  <data key="d10">chunk-dc4869b2865a9a053d992bbbdd8111e3</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714403</data>
+  <data key="d13"></data>
+</edge>
+<edge source="LightRAG" target="Large Language Model">
+  <data key="d7">1.0</data>
+  <data key="d8">LightRAG incorporates the Large Language Model to enhance information retrieval and answer generation.</data>
+  <data key="d9">framework component,information generation</data>
+  <data key="d10">chunk-e9f27034d9712faa74c3195b10f7b76e</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714404</data>
+  <data key="d13"></data>
+</edge>
+<edge source="LightRAG" target="Graph-Based Index Phase">
+  <data key="d7">1.0</data>
+  <data key="d8">The Graph-Based Index Phase within LightRAG is where entities and relationships are extracted from text.</data>
+  <data key="d9">entity and relationship extraction,framework process</data>
+  <data key="d10">chunk-e9f27034d9712faa74c3195b10f7b76e</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714405</data>
+  <data key="d13"></data>
+</edge>
+<edge source="LightRAG" target="Graph-Based Retrieval Phase">
+  <data key="d7">1.0</data>
+  <data key="d8">The Graph-Based Retrieval Phase is part of LightRAG that focuses on generating keywords and retrieving entities and relationships for queries.</data>
+  <data key="d9">framework process,query processing</data>
+  <data key="d10">chunk-e9f27034d9712faa74c3195b10f7b76e</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714406</data>
+  <data key="d13"></data>
+</edge>
+<edge source="LightRAG" target="UltraDomain Benchmark">
+  <data key="d7">1.0</data>
+  <data key="d8">The UltraDomain Benchmark is used to assess the effectiveness of the LightRAG framework across various datasets.</data>
+  <data key="d9">effectiveness assessment,evaluation data</data>
+  <data key="d10">chunk-e9f27034d9712faa74c3195b10f7b76e</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714407</data>
+  <data key="d13"></data>
+</edge>
+<edge source="LightRAG" target="High-Order Relatedness">
+  <data key="d7">1.0</data>
+  <data key="d8">High-Order Relatedness is incorporated into LightRAG to enhance query relevance and depth by gathering neighboring nodes.</data>
+  <data key="d9">method incorporation,query enhancement</data>
+  <data key="d10">chunk-e9f27034d9712faa74c3195b10f7b76e</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714409</data>
+  <data key="d13"></data>
+</edge>
+<edge source="LightRAG" target="Research Questions">
+  <data key="d7">1.0</data>
+  <data key="d8">Research Questions are formulated to evaluate the performance and effectiveness of the LightRAG framework.</data>
+  <data key="d9">evaluation focus,performance metrics</data>
+  <data key="d10">chunk-e9f27034d9712faa74c3195b10f7b76e</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714410</data>
+  <data key="d13"></data>
+</edge>
+<edge source="LightRAG" target="Case Study">
+  <data key="d7">1.0</data>
+  <data key="d8">Case Study compares the effectiveness of LightRAG in response to specific machine learning queries.</data>
+  <data key="d9">comparison,evaluation</data>
+  <data key="d10">chunk-cb4558101a7d0732e0b0f406c610255c</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714412</data>
+  <data key="d13"></data>
+</edge>
+<edge source="LightRAG" target="LightRAG Framework">
+  <data key="d7">1.0</data>
+  <data key="d8">LightRAG is represented conceptually in the architecture of the LightRAG framework utilized for document retrieval.</data>
+  <data key="d9">conceptual development,framework</data>
+  <data key="d10">chunk-5670b97cac4fa5638ba7afec771b74a8</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714414</data>
+  <data key="d13"></data>
+</edge>
+<edge source="GNNs as Prefix" target="GraphGPT">
+  <data key="d7">1.0</data>
+  <data key="d8">GraphGPT serves as a notable implementation of GNNs as Prefix in processing graph data.</data>
+  <data key="d9">GNNs,sample implementation</data>
+  <data key="d10">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714392</data>
+  <data key="d13"></data>
+</edge>
+<edge source="GNNs as Prefix" target="LLaGA">
+  <data key="d7">1.0</data>
+  <data key="d8">LLaGA provides another example of GNNs as Prefix usage in graph processing.</data>
+  <data key="d9">GNNs,sample implementation</data>
+  <data key="d10">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714393</data>
+  <data key="d13"></data>
+</edge>
+<edge source="LLaGA" target="Runjin Chen">
+  <data key="d7">1.0</data>
+  <data key="d8">Runjin Chen is a contributor to the system LLaGA, related to graph and language integration.</data>
+  <data key="d9">contribution,research</data>
+  <data key="d10">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714396</data>
+  <data key="d13"></data>
+</edge>
+<edge source="LLMs as Prefix" target="GALM">
+  <data key="d7">1.0</data>
+  <data key="d8">GALM demonstrates the approach of LLMs as Prefix in processing graph data.</data>
+  <data key="d9">LLMs,method implementation</data>
+  <data key="d10">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714393</data>
+  <data key="d13"></data>
+</edge>
+<edge source="LLMs as Prefix" target="OFA">
+  <data key="d7">1.0</data>
+  <data key="d8">OFA is another example of the LLMs as Prefix method in processing graph data.</data>
+  <data key="d9">LLMs,method implementation</data>
+  <data key="d10">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714394</data>
+  <data key="d13"></data>
+</edge>
+<edge source="William Brannon" target="Congrat">
+  <data key="d7">1.0</data>
+  <data key="d8">William Brannon is a co-author on the Congrat paper focusing on joint graph and text embeddings.</data>
+  <data key="d9">contribution,research</data>
+  <data key="d10">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714395</data>
+  <data key="d13"></data>
+</edge>
+<edge source="William Brannon" target="self-supervised contrastive pretraining">
+  <data key="d7">1.0</data>
+  <data key="d8">William Brannon's research involves self-supervised contrastive pretraining for embedding generation.</data>
+  <data key="d9">method,research focus</data>
+  <data key="d10">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714397</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Chi-Min Chan" target="Rq-rag">
+  <data key="d7">1.0</data>
+  <data key="d8">Chi-Min Chan is an author discussing the learning to refine queries in retrieval augmented generation.</data>
+  <data key="d9">contribution,research</data>
+  <data key="d10">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714396</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Darren Edge" target="graph rag">
+  <data key="d7">1.0</data>
+  <data key="d8">Darren Edge's research involves a graph rag approach to summarization focusing on queries.</data>
+  <data key="d9">research focus,summarization</data>
+  <data key="d10">chunk-fd676ea25004fcc9cfc7f86a04f71fad</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714398</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Dawei Yin" target="Graphgpt: Graph Instruction Tuning for Large Language Models">
+  <data key="d7">1.0</data>
+  <data key="d8">Dawei Yin was involved in developing graph instruction tuning for large language models.</data>
+  <data key="d9">research involvement,tuning development</data>
+  <data key="d10">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714427</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Retrieval-Augmented Generation (RAG)" target="Large Language Models (LLMs)">
+  <data key="d7">1.0</data>
+  <data key="d8">Retrieval-Augmented Generation systems enhance the functionality of Large Language Models by integrating external knowledge sources.</data>
+  <data key="d9">enhancement,integration</data>
+  <data key="d10">chunk-dc4869b2865a9a053d992bbbdd8111e3</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714398</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Retrieval-Augmented Generation (RAG)" target="Chunking">
+  <data key="d7">1.0</data>
+  <data key="d8">Chunking significantly enhances the accuracy of the Retrieval-Augmented Generation process by allowing targeted retrieval.</data>
+  <data key="d9">information retrieval,process facilitation</data>
+  <data key="d10">chunk-dc4869b2865a9a053d992bbbdd8111e3</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714399</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Retrieval-Augmented Generation (RAG)" target="Existing RAG Systems">
+  <data key="d7">1.0</data>
+  <data key="d8">Existing RAG systems possess limitations that hinder their performance in providing coherent and contextually relevant responses.</data>
+  <data key="d9">limitations,performance</data>
+  <data key="d10">chunk-dc4869b2865a9a053d992bbbdd8111e3</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714400</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Incremental Update Algorithm" target="Rapidly Changing Data Environments">
+  <data key="d7">1.0</data>
+  <data key="d8">The Incremental Update Algorithm facilitates adaptation to rapidly changing data environments.</data>
+  <data key="d9">adaptation,system relevance</data>
+  <data key="d10">chunk-dc4869b2865a9a053d992bbbdd8111e3</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714404</data>
+  <data key="d13"></data>
+</edge>
+<edge source="UltraDomain Benchmark" target="Agriculture Domain">
+  <data key="d7">1.0</data>
+  <data key="d8">The Agriculture Domain is one of the focuses within the UltraDomain Benchmark, covering various agricultural topics.</data>
+  <data key="d9">agricultural practices,domain focus</data>
+  <data key="d10">chunk-e9f27034d9712faa74c3195b10f7b76e</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714402</data>
+  <data key="d13"></data>
+</edge>
+<edge source="UltraDomain Benchmark" target="Computer Science Domain">
+  <data key="d7">1.0</data>
+  <data key="d8">The Computer Science Domain is included in the UltraDomain Benchmark, highlighting topics in data science and software engineering.</data>
+  <data key="d9">data science and software engineering,domain focus</data>
+  <data key="d10">chunk-e9f27034d9712faa74c3195b10f7b76e</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714403</data>
+  <data key="d13"></data>
+</edge>
+<edge source="UltraDomain Benchmark" target="Legal Domain">
+  <data key="d7">1.0</data>
+  <data key="d8">The Legal Domain is part of the UltraDomain Benchmark, centered on corporate legal matters.</data>
+  <data key="d9">corporate legal practices,domain focus</data>
+  <data key="d10">chunk-e9f27034d9712faa74c3195b10f7b76e</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714403</data>
+  <data key="d13"></data>
+</edge>
+<edge source="UltraDomain Benchmark" target="Mixed Domain">
+  <data key="d7">1.0</data>
+  <data key="d8">The Mixed Domain features varied literary and philosophical texts within the UltraDomain Benchmark.</data>
+  <data key="d9">diverse texts,domain focus</data>
+  <data key="d10">chunk-e9f27034d9712faa74c3195b10f7b76e</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714404</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Machine Learning Metrics" target="Movie Recommendation Systems">
+  <data key="d7">1.0</data>
+  <data key="d8">Machine learning metrics provide insights into the effectiveness and accuracy of movie recommendation systems.</data>
+  <data key="d9">evaluation,performance analysis</data>
+  <data key="d10">chunk-cb4558101a7d0732e0b0f406c610255c</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714405</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Movie Recommendation Systems" target="User Satisfaction Metrics">
+  <data key="d7">1.0</data>
+  <data key="d8">User satisfaction metrics are essential for assessing how well movie recommendation systems meet user preferences.</data>
+  <data key="d9">evaluation,user focus</data>
+  <data key="d10">chunk-cb4558101a7d0732e0b0f406c610255c</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714406</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Movie Recommendation Systems" target="Mean Average Precision at K">
+  <data key="d7">1.0</data>
+  <data key="d8">Mean Average Precision at K is used as an evaluation metric for the accuracy of movie recommendations.</data>
+  <data key="d9">accuracy measure,evaluation metric</data>
+  <data key="d10">chunk-cb4558101a7d0732e0b0f406c610255c</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714407</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Movie Recommendation Systems" target="Area Under the Curve">
+  <data key="d7">1.0</data>
+  <data key="d8">Area Under the Curve serves as an evaluation metric assessing the ability of recommendation systems to distinguish between positive and negative outcomes.</data>
+  <data key="d9">discrimination ability,evaluation metric</data>
+  <data key="d10">chunk-cb4558101a7d0732e0b0f406c610255c</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714408</data>
+  <data key="d13"></data>
+</edge>
+<edge source="RAG Naive" target="RAG Comprehensiveness">
+  <data key="d7">1.0</data>
+  <data key="d8">RAG Naive's performance is evaluated based on its comprehensiveness across different metrics.</data>
+  <data key="d9">evaluation,performance metrics</data>
+  <data key="d10">chunk-9ab50d3a732fc9ec76f98f4af89f1844</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714407</data>
+  <data key="d13"></data>
+</edge>
+<edge source="RAG Light" target="RAG Comprehensiveness">
+  <data key="d7">1.0</data>
+  <data key="d8">RAG Light aims to provide comprehensive retrieval performance.</data>
+  <data key="d9">evaluation,performance metrics</data>
+  <data key="d10">chunk-9ab50d3a732fc9ec76f98f4af89f1844</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714408</data>
+  <data key="d13"></data>
+</edge>
+<edge source="RAG Light" target="Hybrid Mode">
+  <data key="d7">1.0</data>
+  <data key="d8">Hybrid Mode combines the strengths of RAG Light with deeper analyses to achieve balanced performance.</data>
+  <data key="d9">balanced performance,method integration</data>
+  <data key="d10">chunk-9ab50d3a732fc9ec76f98f4af89f1844</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714409</data>
+  <data key="d13"></data>
+</edge>
+<edge source="RAG Light" target="High-level-only Retrieval">
+  <data key="d7">1.0</data>
+  <data key="d8">High-level-only Retrieval prioritizes content breadth within RAG Light, affecting performance and detailed insights.</data>
+  <data key="d9">method variant,performance evaluation</data>
+  <data key="d10">chunk-9ab50d3a732fc9ec76f98f4af89f1844</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714410</data>
+  <data key="d13"></data>
+</edge>
+<edge source="RAG Diversity" target="NaiveRAG-Low">
+  <data key="d7">1.0</data>
+  <data key="d8">NaiveRAG-Low struggles with diversity, affecting its overall performance across datasets.</data>
+  <data key="d9">limitation,performance metrics</data>
+  <data key="d10">chunk-9ab50d3a732fc9ec76f98f4af89f1844</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714408</data>
+  <data key="d13"></data>
+</edge>
+<edge source="RAG Empowerment" target="NaiveRAG-High">
+  <data key="d7">1.0</data>
+  <data key="d8">NaiveRAG-High improves user control and context through enhanced empowerment metrics.</data>
+  <data key="d9">performance improvement,user control</data>
+  <data key="d10">chunk-9ab50d3a732fc9ec76f98f4af89f1844</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714408</data>
+  <data key="d13"></data>
+</edge>
+<edge source="NaiveRAG-Low" target="Low-level-only Retrieval">
+  <data key="d7">1.0</data>
+  <data key="d8">Low-level-only Retrieval is directly associated with the NaiveRAG-Low method, illustrating the performance impact due to its specific information focus.</data>
+  <data key="d9">method variant,performance impact</data>
+  <data key="d10">chunk-9ab50d3a732fc9ec76f98f4af89f1844</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714409</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Hybrid Mode" target="NA">
+  <data key="d7">1.0</data>
+  <data key="d8">Hybrid Mode combines both low-level and high-level retrieval methods for more thorough data analysis.</data>
+  <data key="d9">comprehensive analysis,method fusion</data>
+  <data key="d10">chunk-9ab50d3a732fc9ec76f98f4af89f1844</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714412</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Beekeeper" target="Honey Bees">
+  <data key="d7">1.0</data>
+  <data key="d8">Beekeepers manage Honey Bees to produce honey and ensure the health of bee colonies.</data>
+  <data key="d9">management,production</data>
+  <data key="d10">chunk-5670b97cac4fa5638ba7afec771b74a8</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714410</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Beekeeper" target="Bee">
+  <data key="d7">1.0</data>
+  <data key="d8">Beekeepers manage bees but do not develop individual relationships with them due to limited interaction time with each hive.</data>
+  <data key="d9">interaction,management</data>
+  <data key="d10">chunk-5670b97cac4fa5638ba7afec771b74a8</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714413</data>
+  <data key="d13"></data>
+</edge>
+<edge source="LightRAG Framework" target="BEEKEEPER Practices">
+  <data key="d7">1.0</data>
+  <data key="d8">The LightRAG Framework enhances BEEKEEPER Practices by providing efficient methods for managing data related to beekeeping.</data>
+  <data key="d9">efficiency,information management</data>
+  <data key="d10">chunk-5670b97cac4fa5638ba7afec771b74a8</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714412</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Ori Ram" target="In-Context Retrieval-Augmented Language Models">
+  <data key="d7">1.0</data>
+  <data key="d8">Ori Ram contributed research on in-context retrieval-augmented language models.</data>
+  <data key="d9">model development,research involvement</data>
+  <data key="d10">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714413</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Ori Ram" target="Transactions of the Association for Computational Linguistics">
+  <data key="d7">1.0</data>
+  <data key="d8">Ori Ram contributed research that was published in the Transactions of the Association for Computational Linguistics.</data>
+  <data key="d9">publication,research contribution</data>
+  <data key="d10">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714423</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Yoav Levine" target="In-Context Retrieval-Augmented Language Models">
+  <data key="d7">1.0</data>
+  <data key="d8">Yoav Levine contributed research on in-context retrieval-augmented language models.</data>
+  <data key="d9">model development,research involvement</data>
+  <data key="d10">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714414</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Yoav Levine" target="Transactions of the Association for Computational Linguistics">
+  <data key="d7">1.0</data>
+  <data key="d8">Yoav Levine contributed research that was published in the Transactions of the Association for Computational Linguistics.</data>
+  <data key="d9">publication,research contribution</data>
+  <data key="d10">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714424</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Itay Dalmedigos" target="In-Context Retrieval-Augmented Language Models">
+  <data key="d7">1.0</data>
+  <data key="d8">Itay Dalmedigos contributed research on in-context retrieval-augmented language models.</data>
+  <data key="d9">model development,research involvement</data>
+  <data key="d10">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714415</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Itay Dalmedigos" target="Transactions of the Association for Computational Linguistics">
+  <data key="d7">1.0</data>
+  <data key="d8">Itay Dalmedigos contributed research that was published in the Transactions of the Association for Computational Linguistics.</data>
+  <data key="d9">publication,research contribution</data>
+  <data key="d10">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714425</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Dor Muhlgay" target="In-Context Retrieval-Augmented Language Models">
+  <data key="d7">1.0</data>
+  <data key="d8">Dor Muhlgay contributed research on in-context retrieval-augmented language models.</data>
+  <data key="d9">model development,research involvement</data>
+  <data key="d10">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714416</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Dor Muhlgay" target="Transactions of the Association for Computational Linguistics">
+  <data key="d7">1.0</data>
+  <data key="d8">Dor Muhlgay contributed research that was published in the Transactions of the Association for Computational Linguistics.</data>
+  <data key="d9">publication,research contribution</data>
+  <data key="d10">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714425</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Amnon Shashua" target="In-Context Retrieval-Augmented Language Models">
+  <data key="d7">1.0</data>
+  <data key="d8">Amnon Shashua contributed research on in-context retrieval-augmented language models.</data>
+  <data key="d9">model development,research involvement</data>
+  <data key="d10">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714417</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Amnon Shashua" target="Transactions of the Association for Computational Linguistics">
+  <data key="d7">1.0</data>
+  <data key="d8">Amnon Shashua contributed research that was published in the Transactions of the Association for Computational Linguistics.</data>
+  <data key="d9">publication,research contribution</data>
+  <data key="d10">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714427</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Kevin Leyton-Brown" target="In-Context Retrieval-Augmented Language Models">
+  <data key="d7">1.0</data>
+  <data key="d8">Kevin Leyton-Brown contributed research on in-context retrieval-augmented language models.</data>
+  <data key="d9">model development,research involvement</data>
+  <data key="d10">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714419</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Kevin Leyton-Brown" target="Transactions of the Association for Computational Linguistics">
+  <data key="d7">1.0</data>
+  <data key="d8">Kevin Leyton-Brown contributed research that was published in the Transactions of the Association for Computational Linguistics.</data>
+  <data key="d9">publication,research contribution</data>
+  <data key="d10">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714428</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Yoav Shoham" target="In-Context Retrieval-Augmented Language Models">
+  <data key="d7">1.0</data>
+  <data key="d8">Yoav Shoham contributed research on in-context retrieval-augmented language models.</data>
+  <data key="d9">model development,research involvement</data>
+  <data key="d10">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714420</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Yoav Shoham" target="Transactions of the Association for Computational Linguistics">
+  <data key="d7">1.0</data>
+  <data key="d8">Yoav Shoham contributed research that was published in the Transactions of the Association for Computational Linguistics.</data>
+  <data key="d9">publication,research contribution</data>
+  <data key="d10">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714429</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Ladislav Rampášek" target="Recipe for a General, Powerful, Scalable Graph Transformer">
+  <data key="d7">1.0</data>
+  <data key="d8">Ladislav Rampášek contributed to the development of a general graph transformer.</data>
+  <data key="d9">graph transformer development,research involvement</data>
+  <data key="d10">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714416</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Ladislav Rampášek" target="International Conference on Neural Information Processing Systems">
+  <data key="d7">1.0</data>
+  <data key="d8">Ladislav Rampášek contributed research presented at the International Conference on Neural Information Processing Systems.</data>
+  <data key="d9">conference participation,research contribution</data>
+  <data key="d10">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714426</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Michael Galkin" target="Recipe for a General, Powerful, Scalable Graph Transformer">
+  <data key="d7">1.0</data>
+  <data key="d8">Michael Galkin contributed to the development of a general graph transformer.</data>
+  <data key="d9">graph transformer development,research involvement</data>
+  <data key="d10">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714416</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Michael Galkin" target="International Conference on Neural Information Processing Systems">
+  <data key="d7">1.0</data>
+  <data key="d8">Michael Galkin contributed research presented at the International Conference on Neural Information Processing Systems.</data>
+  <data key="d9">conference participation,research contribution</data>
+  <data key="d10">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714427</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Vijay Prakash Dwivedi" target="Recipe for a General, Powerful, Scalable Graph Transformer">
+  <data key="d7">1.0</data>
+  <data key="d8">Vijay Prakash Dwivedi contributed to the development of a general graph transformer.</data>
+  <data key="d9">graph transformer development,research involvement</data>
+  <data key="d10">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714417</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Vijay Prakash Dwivedi" target="International Conference on Neural Information Processing Systems">
+  <data key="d7">1.0</data>
+  <data key="d8">Vijay Prakash Dwivedi contributed research presented at the International Conference on Neural Information Processing Systems.</data>
+  <data key="d9">conference participation,research contribution</data>
+  <data key="d10">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714428</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Anh Tuan Luu" target="Recipe for a General, Powerful, Scalable Graph Transformer">
+  <data key="d7">1.0</data>
+  <data key="d8">Anh Tuan Luu contributed to the development of a general graph transformer.</data>
+  <data key="d9">graph transformer development,research involvement</data>
+  <data key="d10">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714418</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Anh Tuan Luu" target="International Conference on Neural Information Processing Systems">
+  <data key="d7">1.0</data>
+  <data key="d8">Anh Tuan Luu contributed research presented at the International Conference on Neural Information Processing Systems.</data>
+  <data key="d9">conference participation,research contribution</data>
+  <data key="d10">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714429</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Guy Wolf" target="Recipe for a General, Powerful, Scalable Graph Transformer">
+  <data key="d7">1.0</data>
+  <data key="d8">Guy Wolf contributed to the development of a general graph transformer.</data>
+  <data key="d9">graph transformer development,research involvement</data>
+  <data key="d10">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714418</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Guy Wolf" target="International Conference on Neural Information Processing Systems">
+  <data key="d7">1.0</data>
+  <data key="d8">Guy Wolf contributed research presented at the International Conference on Neural Information Processing Systems.</data>
+  <data key="d9">conference participation,research contribution</data>
+  <data key="d10">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714430</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Dominique Beaini" target="Recipe for a General, Powerful, Scalable Graph Transformer">
+  <data key="d7">1.0</data>
+  <data key="d8">Dominique Beaini contributed to the development of a general graph transformer.</data>
+  <data key="d9">graph transformer development,research involvement</data>
+  <data key="d10">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714420</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Dominique Beaini" target="International Conference on Neural Information Processing Systems">
+  <data key="d7">1.0</data>
+  <data key="d8">Dominique Beaini contributed research presented at the International Conference on Neural Information Processing Systems.</data>
+  <data key="d9">conference participation,research contribution</data>
+  <data key="d10">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714431</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Alireza Salemi" target="Evaluating Retrieval Quality in Retrieval-Augmented Generation">
+  <data key="d7">1.0</data>
+  <data key="d8">Alireza Salemi participated in research evaluating retrieval quality for generation.</data>
+  <data key="d9">evaluation process,research involvement</data>
+  <data key="d10">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714419</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Alireza Salemi" target="ACM International Conference on Research and Development in Information Retrieval">
+  <data key="d7">1.0</data>
+  <data key="d8">Alireza Salemi contributed research presented at the ACM International Conference on Research and Development in Information Retrieval.</data>
+  <data key="d9">conference participation,research contribution</data>
+  <data key="d10">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714428</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Hamed Zamani" target="Evaluating Retrieval Quality in Retrieval-Augmented Generation">
+  <data key="d7">1.0</data>
+  <data key="d8">Hamed Zamani participated in research evaluating retrieval quality for generation.</data>
+  <data key="d9">evaluation process,research involvement</data>
+  <data key="d10">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714420</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Hamed Zamani" target="ACM International Conference on Research and Development in Information Retrieval">
+  <data key="d7">1.0</data>
+  <data key="d8">Hamed Zamani contributed research presented at the ACM International Conference on Research and Development in Information Retrieval.</data>
+  <data key="d9">conference participation,research contribution</data>
+  <data key="d10">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714429</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Viju Sudhi" target="Rag-Ex: A Generic Framework for Explaining Retrieval Augmented Generation">
+  <data key="d7">1.0</data>
+  <data key="d8">Viju Sudhi contributed to the Rag-ex framework for explaining retrieval augmented generation.</data>
+  <data key="d9">framework development,research involvement</data>
+  <data key="d10">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714420</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Viju Sudhi" target="ACM International Conference on Research and Development in Information Retrieval">
+  <data key="d7">1.0</data>
+  <data key="d8">Viju Sudhi contributed research presented at the ACM International Conference on Research and Development in Information Retrieval.</data>
+  <data key="d9">conference participation,research contribution</data>
+  <data key="d10">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714430</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Sinchana Ramakanth Bhat" target="Rag-Ex: A Generic Framework for Explaining Retrieval Augmented Generation">
+  <data key="d7">1.0</data>
+  <data key="d8">Sinchana Ramakanth Bhat contributed to the Rag-ex framework for explaining retrieval augmented generation.</data>
+  <data key="d9">framework development,research involvement</data>
+  <data key="d10">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714422</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Sinchana Ramakanth Bhat" target="ACM International Conference on Research and Development in Information Retrieval">
+  <data key="d7">1.0</data>
+  <data key="d8">Sinchana Ramakanth Bhat contributed research presented at the ACM International Conference on Research and Development in Information Retrieval.</data>
+  <data key="d9">conference participation,research contribution</data>
+  <data key="d10">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714431</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Max Rudat" target="Rag-Ex: A Generic Framework for Explaining Retrieval Augmented Generation">
+  <data key="d7">1.0</data>
+  <data key="d8">Max Rudat contributed to the Rag-ex framework for explaining retrieval augmented generation.</data>
+  <data key="d9">framework development,research involvement</data>
+  <data key="d10">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714422</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Max Rudat" target="ACM International Conference on Research and Development in Information Retrieval">
+  <data key="d7">1.0</data>
+  <data key="d8">Max Rudat contributed research presented at the ACM International Conference on Research and Development in Information Retrieval.</data>
+  <data key="d9">conference participation,research contribution</data>
+  <data key="d10">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714432</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Roman Teucher" target="Rag-Ex: A Generic Framework for Explaining Retrieval Augmented Generation">
+  <data key="d7">1.0</data>
+  <data key="d8">Roman Teucher contributed to the Rag-ex framework for explaining retrieval augmented generation.</data>
+  <data key="d9">framework development,research involvement</data>
+  <data key="d10">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714423</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Roman Teucher" target="ACM International Conference on Research and Development in Information Retrieval">
+  <data key="d7">1.0</data>
+  <data key="d8">Roman Teucher contributed research presented at the ACM International Conference on Research and Development in Information Retrieval.</data>
+  <data key="d9">conference participation,research contribution</data>
+  <data key="d10">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714432</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Jiabin Tang" target="Graphgpt: Graph Instruction Tuning for Large Language Models">
+  <data key="d7">1.0</data>
+  <data key="d8">Jiabin Tang was involved in developing graph instruction tuning for large language models.</data>
+  <data key="d9">research involvement,tuning development</data>
+  <data key="d10">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714421</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Yuhao Yang" target="Graphgpt: Graph Instruction Tuning for Large Language Models">
+  <data key="d7">1.0</data>
+  <data key="d8">Yuhao Yang was involved in developing graph instruction tuning for large language models.</data>
+  <data key="d9">research involvement,tuning development</data>
+  <data key="d10">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714422</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Wei Wei" target="Graphgpt: Graph Instruction Tuning for Large Language Models">
+  <data key="d7">1.0</data>
+  <data key="d8">Wei Wei was involved in developing graph instruction tuning for large language models.</data>
+  <data key="d9">research involvement,tuning development</data>
+  <data key="d10">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714423</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Lei Shi" target="Graphgpt: Graph Instruction Tuning for Large Language Models">
+  <data key="d7">1.0</data>
+  <data key="d8">Lei Shi was involved in developing graph instruction tuning for large language models.</data>
+  <data key="d9">research involvement,tuning development</data>
+  <data key="d10">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714424</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Lixin Su" target="Graphgpt: Graph Instruction Tuning for Large Language Models">
+  <data key="d7">1.0</data>
+  <data key="d8">Lixin Su was involved in developing graph instruction tuning for large language models.</data>
+  <data key="d9">research involvement,tuning development</data>
+  <data key="d10">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714425</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Suqi Cheng" target="Graphgpt: Graph Instruction Tuning for Large Language Models">
+  <data key="d7">1.0</data>
+  <data key="d8">Suqi Cheng was involved in developing graph instruction tuning for large language models.</data>
+  <data key="d9">research involvement,tuning development</data>
+  <data key="d10">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714426</data>
+  <data key="d13"></data>
+</edge>
+<edge source="Chao Huang" target="Graphgpt: Graph Instruction Tuning for Large Language Models">
+  <data key="d7">1.0</data>
+  <data key="d8">Chao Huang was involved in developing graph instruction tuning for large language models.</data>
+  <data key="d9">research involvement,tuning development</data>
+  <data key="d10">chunk-2e88d22e757b745c1d8aafe1aef24015</data>
+  <data key="d11">unknown_source</data>
+  <data key="d12">1765714428</data>
+  <data key="d13"></data>
+</edge>
+</graph></graphml>

@@ -1,0 +1,189 @@
+╔═══════════════════════════════════════════════════════════════╗
+║                                                               ║
+║              BIENVENUE DANS VOTRE PROJET LIGHTRAG             ║
+║                                                               ║
+║         Analyse intelligente de votre document Word           ║
+║        "Présentation association mairie.docx"                 ║
+║                                                               ║
+╚═══════════════════════════════════════════════════════════════╝
+
+
+📍 VOTRE DOCUMENT EST ICI :
+══════════════════════════════════════════════════════════════
+
+✓ Emplacement : C:\Users\kosmo\pycode\LightRAG\
+✓ Nom : Présentation association mairie.docx
+✓ Taille : 25,923 octets (25 Ko)
+✓ Status : TROUVÉ
+
+
+🚀 COMMENT LANCER LE PROGRAMME ?
+══════════════════════════════════════════════════════════════
+
+MÉTHODE 1 : Double-clic (PLUS FACILE) ⭐
+────────────────────────────────────────
+
+1. Double-cliquez sur : VERIFIER_SEULEMENT.bat
+   → Vérifie que tout est prêt
+
+2. Double-cliquez sur : LANCER_ANALYSE.bat
+   → Lance l'analyse complète de votre document
+
+
+MÉTHODE 2 : Ligne de commande (PLUS TECHNIQUE)
+────────────────────────────────────────────────
+
+1. Ouvrez un terminal (cmd)
+   Windows + R  →  tapez "cmd"  →  Entrée
+
+2. Allez dans le dossier :
+   cd C:\Users\kosmo\pycode\LightRAG
+
+3. Vérifiez l'installation :
+   python verifier_installation.py
+
+4. Lancez l'analyse :
+   python mon_premier_test.py
+
+
+⚠️  AVANT DE COMMENCER : CONFIGUREZ VOTRE CLÉ API
+══════════════════════════════════════════════════════════════
+
+Vous DEVEZ avoir une clé API OpenAI :
+
+1. Allez sur : https://platform.openai.com/api-keys
+2. Créez un compte (si besoin)
+3. Créez une nouvelle clé API
+4. Copiez la clé (commence par sk-proj-...)
+
+5. Ouvrez le fichier : .env
+6. Remplacez : sk-votre-cle-api
+   Par votre vraie clé : sk-proj-xxxxxxxxxxxxxx
+7. Sauvegardez le fichier
+
+
+📁 FICHIERS DISPONIBLES
+══════════════════════════════════════════════════════════════
+
+FICHIERS À DOUBLE-CLIQUER :
+  ⭐ LANCER_ANALYSE.bat         → Lance tout automatiquement
+  ✓  VERIFIER_SEULEMENT.bat     → Vérifie l'installation
+
+PROGRAMMES PYTHON :
+  ⭐ mon_premier_test.py         → Programme principal
+  ✓  verifier_installation.py   → Script de vérification
+
+DOCUMENTATION :
+  📖 LIRE_EN_PREMIER.txt         → Ce fichier
+  📖 COMMENT_LANCER.md           → Guide détaillé de lancement
+  📖 DEMARRAGE_RAPIDE.txt        → Instructions rapides
+  📖 GUIDE_RAPIDE.md             → Guide complet d'utilisation
+  📖 claude-debutant.md          → Pour débutants (explications)
+  📖 claude.md                   → Documentation technique
+  📖 README_KOSMO.md             → Résumé de l'installation
+
+CONFIGURATION :
+  ⚙️  .env                        → Votre clé API (À CONFIGURER !)
+
+VOTRE DOCUMENT :
+  📄 Présentation association mairie.docx
+
+
+⏱️  COMBIEN DE TEMPS ÇA PREND ?
+══════════════════════════════════════════════════════════════
+
+Première analyse      : 2-5 minutes
+Questions (chacune)   : 10-30 secondes
+Analyses suivantes    : Beaucoup plus rapide (cache)
+
+
+💰 COÛTS
+══════════════════════════════════════════════════════════════
+
+Analyse du document   : ~0,05 - 0,15 €
+10 questions          : ~0,02 - 0,10 €
+TOTAL TYPIQUE         : ~0,10 - 0,25 €
+
+Surveillez : https://platform.openai.com/usage
+
+
+❓ QUE VA FAIRE LE PROGRAMME ?
+══════════════════════════════════════════════════════════════
+
+1. Lire votre document Word
+2. Analyser le contenu avec l'IA
+3. Créer un graphe de connaissances
+4. Poser 4 questions automatiques
+5. Mode interactif pour VOS questions
+
+Exemples de questions :
+  - Quel est l'objectif de cette présentation ?
+  - Résume-moi le document en 3 points
+  - Quelles sont les activités de l'association ?
+  - Y a-t-il un budget mentionné ?
+  - Qui sont les interlocuteurs principaux ?
+
+
+🆘 PROBLÈMES FRÉQUENTS
+══════════════════════════════════════════════════════════════
+
+"Invalid API key"
+  → Vérifiez votre fichier .env
+  → La clé doit commencer par sk-proj-
+
+"Module introuvable"
+  → Lancez : python verifier_installation.py
+  → Installez le module manquant
+
+"Document introuvable"
+  → Vérifiez que vous êtes dans le bon dossier
+  → Le document doit être dans LightRAG/
+
+Le programme est lent
+  → C'est NORMAL ! L'IA prend du temps
+  → Première analyse : 2-5 minutes
+  → Soyez patient
+
+
+📞 BESOIN D'AIDE ?
+══════════════════════════════════════════════════════════════
+
+1. Lisez : COMMENT_LANCER.md (très détaillé)
+2. Lisez : claude-debutant.md (pour comprendre)
+3. Lancez : VERIFIER_SEULEMENT.bat (diagnostic)
+
+Documentation officielle :
+  https://github.com/HKUDS/LightRAG
+
+
+═══════════════════════════════════════════════════════════════
+
+            🎯 VOUS ÊTES PRÊT À COMMENCER !
+
+1. Configurez votre clé API dans .env
+2. Double-cliquez sur : VERIFIER_SEULEMENT.bat
+3. Double-cliquez sur : LANCER_ANALYSE.bat
+
+═══════════════════════════════════════════════════════════════
+
+
+ALTERNATIVE GRATUITE (sans OpenAI)
+══════════════════════════════════════════════════════════════
+
+Si vous ne voulez pas payer OpenAI, utilisez Ollama :
+
+1. Installez Ollama : https://ollama.ai/
+2. Téléchargez les modèles :
+   ollama pull qwen2
+   ollama pull nomic-embed-text
+3. Lisez claude-debutant.md pour modifier le code
+
+Avantage  : Gratuit, fonctionne hors ligne
+Inconvénient : Plus lent, moins performant
+
+
+═══════════════════════════════════════════════════════════════
+
+Bonne analyse ! 🚀
+
+═══════════════════════════════════════════════════════════════

@@ -1,0 +1,506 @@
+{
+  "doc-e38bb9258f55d121381a68b77dbad24d": {
+    "relation_pairs": [
+      [
+        "In-Context Retrieval-Augmented Language Models",
+        "Yoav Levine"
+      ],
+      [
+        "Hybrid Mode",
+        "NA"
+      ],
+      [
+        "Itay Dalmedigos",
+        "Transactions of the Association for Computational Linguistics"
+      ],
+      [
+        "ACM International Conference on Research and Development in Information Retrieval",
+        "Viju Sudhi"
+      ],
+      [
+        "LLMs as Prefix",
+        "OFA"
+      ],
+      [
+        "Ori Ram",
+        "Transactions of the Association for Computational Linguistics"
+      ],
+      [
+        "Anh Tuan Luu",
+        "Recipe for a General, Powerful, Scalable Graph Transformer"
+      ],
+      [
+        "Rag-Ex: A Generic Framework for Explaining Retrieval Augmented Generation",
+        "Sinchana Ramakanth Bhat"
+      ],
+      [
+        "BEEKEEPER Practices",
+        "LightRAG Framework"
+      ],
+      [
+        "LightRAG",
+        "Research Questions"
+      ],
+      [
+        "Large Language Model",
+        "LightRAG"
+      ],
+      [
+        "Amnon Shashua",
+        "Transactions of the Association for Computational Linguistics"
+      ],
+      [
+        "Chi-Min Chan",
+        "Rq-rag"
+      ],
+      [
+        "RAG Comprehensiveness",
+        "RAG Naive"
+      ],
+      [
+        "CS Dataset",
+        "LightRAG"
+      ],
+      [
+        "Max Rudat",
+        "Rag-Ex: A Generic Framework for Explaining Retrieval Augmented Generation"
+      ],
+      [
+        "Graph-Based Retrieval Phase",
+        "LightRAG"
+      ],
+      [
+        "Community Structure",
+        "Dynamic Environments"
+      ],
+      [
+        "Dor Muhlgay",
+        "Transactions of the Association for Computational Linguistics"
+      ],
+      [
+        "LightRAG",
+        "RQ-RAG"
+      ],
+      [
+        "GraphRAG",
+        "RQ-RAG"
+      ],
+      [
+        "ACM International Conference on Research and Development in Information Retrieval",
+        "Max Rudat"
+      ],
+      [
+        "External Knowledge Database",
+        "Retrieval-Augmented Generation"
+      ],
+      [
+        "Chunking",
+        "Retrieval-Augmented Generation (RAG)"
+      ],
+      [
+        "Congrat",
+        "William Brannon"
+      ],
+      [
+        "Evaluating Retrieval Quality in Retrieval-Augmented Generation",
+        "Hamed Zamani"
+      ],
+      [
+        "Cardiologists",
+        "R(·)"
+      ],
+      [
+        "ACM International Conference on Research and Development in Information Retrieval",
+        "Sinchana Ramakanth Bhat"
+      ],
+      [
+        "LLaGA",
+        "Runjin Chen"
+      ],
+      [
+        "HyDE",
+        "LightRAG"
+      ],
+      [
+        "Agriculture Dataset",
+        "LightRAG"
+      ],
+      [
+        "International Conference on Neural Information Processing Systems",
+        "Vijay Prakash Dwivedi"
+      ],
+      [
+        "GraphRAG",
+        "LightRAG"
+      ],
+      [
+        "Dominique Beaini",
+        "Recipe for a General, Powerful, Scalable Graph Transformer"
+      ],
+      [
+        "LightRAG",
+        "LightRAG Framework"
+      ],
+      [
+        "Ladislav Rampášek",
+        "Recipe for a General, Powerful, Scalable Graph Transformer"
+      ],
+      [
+        "Graphgpt: Graph Instruction Tuning for Large Language Models",
+        "Lixin Su"
+      ],
+      [
+        "Incremental Update Algorithm",
+        "LightRAG"
+      ],
+      [
+        "Keyword Matching",
+        "Retrieval-Augmented Generation"
+      ],
+      [
+        "Comprehensiveness",
+        "LightRAG"
+      ],
+      [
+        "Amnon Shashua",
+        "In-Context Retrieval-Augmented Language Models"
+      ],
+      [
+        "ACM International Conference on Research and Development in Information Retrieval",
+        "Alireza Salemi"
+      ],
+      [
+        "Empowerment",
+        "LightRAG"
+      ],
+      [
+        "GNNs as Prefix",
+        "Graph Neural Networks"
+      ],
+      [
+        "Graph-Based Index Phase",
+        "LightRAG"
+      ],
+      [
+        "Dor Muhlgay",
+        "In-Context Retrieval-Augmented Language Models"
+      ],
+      [
+        "Existing RAG Systems",
+        "Retrieval-Augmented Generation (RAG)"
+      ],
+      [
+        "GraphRAG",
+        "Token Overhead"
+      ],
+      [
+        "Graphgpt: Graph Instruction Tuning for Large Language Models",
+        "Jiabin Tang"
+      ],
+      [
+        "Incremental Knowledge Base",
+        "LightRAG"
+      ],
+      [
+        "High-Order Relatedness",
+        "LightRAG"
+      ],
+      [
+        "Graph-Based Knowledge Structures",
+        "LightRAG"
+      ],
+      [
+        "Guy Wolf",
+        "International Conference on Neural Information Processing Systems"
+      ],
+      [
+        "Hybrid Mode",
+        "RAG Light"
+      ],
+      [
+        "In-Context Retrieval-Augmented Language Models",
+        "Kevin Leyton-Brown"
+      ],
+      [
+        "International Conference on Neural Information Processing Systems",
+        "Michael Galkin"
+      ],
+      [
+        "In-Context Retrieval-Augmented Language Models",
+        "Ori Ram"
+      ],
+      [
+        "Legal Domain",
+        "UltraDomain Benchmark"
+      ],
+      [
+        "Anh Tuan Luu",
+        "International Conference on Neural Information Processing Systems"
+      ],
+      [
+        "LightRAG",
+        "UltraDomain Benchmark"
+      ],
+      [
+        "Mean Average Precision at K",
+        "Movie Recommendation Systems"
+      ],
+      [
+        "Graphgpt: Graph Instruction Tuning for Large Language Models",
+        "Yuhao Yang"
+      ],
+      [
+        "Graph Structures",
+        "LightRAG"
+      ],
+      [
+        "Dawei Yin",
+        "Graphgpt: Graph Instruction Tuning for Large Language Models"
+      ],
+      [
+        "ACM International Conference on Research and Development in Information Retrieval",
+        "Hamed Zamani"
+      ],
+      [
+        "International Conference on Neural Information Processing Systems",
+        "Ladislav Rampášek"
+      ],
+      [
+        "Transactions of the Association for Computational Linguistics",
+        "Yoav Shoham"
+      ],
+      [
+        "LightRAG",
+        "Retrieval-Augmented Generation (RAG)"
+      ],
+      [
+        "Michael Galkin",
+        "Recipe for a General, Powerful, Scalable Graph Transformer"
+      ],
+      [
+        "LightRAG",
+        "Naive RAG"
+      ],
+      [
+        "GraphRAG",
+        "Naive RAG"
+      ],
+      [
+        "Rag-Ex: A Generic Framework for Explaining Retrieval Augmented Generation",
+        "Viju Sudhi"
+      ],
+      [
+        "Low-level-only Retrieval",
+        "NaiveRAG-Low"
+      ],
+      [
+        "LightRAG",
+        "NaiveRAG"
+      ],
+      [
+        "Graphgpt: Graph Instruction Tuning for Large Language Models",
+        "Suqi Cheng"
+      ],
+      [
+        "Machine Learning Metrics",
+        "Movie Recommendation Systems"
+      ],
+      [
+        "Case Study",
+        "LightRAG"
+      ],
+      [
+        "Agriculture Domain",
+        "UltraDomain Benchmark"
+      ],
+      [
+        "NaiveRAG-Low",
+        "RAG Diversity"
+      ],
+      [
+        "Beekeeper",
+        "Honey Bees"
+      ],
+      [
+        "William Brannon",
+        "self-supervised contrastive pretraining"
+      ],
+      [
+        "Computer Science Domain",
+        "UltraDomain Benchmark"
+      ],
+      [
+        "Community Structure",
+        "GraphRAG"
+      ],
+      [
+        "Dominique Beaini",
+        "International Conference on Neural Information Processing Systems"
+      ],
+      [
+        "Area Under the Curve",
+        "Movie Recommendation Systems"
+      ],
+      [
+        "RAG Comprehensiveness",
+        "RAG Light"
+      ],
+      [
+        "Dynamic Environments",
+        "LightRAG"
+      ],
+      [
+        "NaiveRAG-High",
+        "RAG Empowerment"
+      ],
+      [
+        "In-Context Retrieval-Augmented Language Models",
+        "Yoav Shoham"
+      ],
+      [
+        "3D Graph",
+        "LightRAG"
+      ],
+      [
+        "LightRAG",
+        "graph-based indexing"
+      ],
+      [
+        "Darren Edge",
+        "graph rag"
+      ],
+      [
+        "Large Language Models (LLMs)",
+        "Retrieval-Augmented Generation (RAG)"
+      ],
+      [
+        "Diversity",
+        "LightRAG"
+      ],
+      [
+        "GNNs as Prefix",
+        "LLaGA"
+      ],
+      [
+        "Graph Structures",
+        "Incremental Knowledge Base"
+      ],
+      [
+        "In-Context Retrieval-Augmented Language Models",
+        "Itay Dalmedigos"
+      ],
+      [
+        "Incremental Update Algorithm",
+        "Rapidly Changing Data Environments"
+      ],
+      [
+        "Rag-Ex: A Generic Framework for Explaining Retrieval Augmented Generation",
+        "Roman Teucher"
+      ],
+      [
+        "LLMs-Graphs Integration",
+        "LightRAG"
+      ],
+      [
+        "Alireza Salemi",
+        "Evaluating Retrieval Quality in Retrieval-Augmented Generation"
+      ],
+      [
+        "Chao Huang",
+        "Graphgpt: Graph Instruction Tuning for Large Language Models"
+      ],
+      [
+        "GALM",
+        "LLMs as Prefix"
+      ],
+      [
+        "Bee",
+        "Beekeeper"
+      ],
+      [
+        "High-level-only Retrieval",
+        "RAG Light"
+      ],
+      [
+        "Legal Dataset",
+        "LightRAG"
+      ],
+      [
+        "GPT-4o-mini",
+        "LightRAG"
+      ],
+      [
+        "GraphRAG",
+        "Legal Dataset"
+      ],
+      [
+        "Evaluation Dimensions",
+        "Win Rates"
+      ],
+      [
+        "Transactions of the Association for Computational Linguistics",
+        "Yoav Levine"
+      ],
+      [
+        "Graphgpt: Graph Instruction Tuning for Large Language Models",
+        "Wei Wei"
+      ],
+      [
+        "Cardiologists",
+        "Heart Disease"
+      ],
+      [
+        "Kevin Leyton-Brown",
+        "Transactions of the Association for Computational Linguistics"
+      ],
+      [
+        "LightRAG",
+        "Overall"
+      ],
+      [
+        "Movie Recommendation Systems",
+        "User Satisfaction Metrics"
+      ],
+      [
+        "Recipe for a General, Powerful, Scalable Graph Transformer",
+        "Vijay Prakash Dwivedi"
+      ],
+      [
+        "LightRAG",
+        "Retrieval-Augmented Generation"
+      ],
+      [
+        "Graphgpt: Graph Instruction Tuning for Large Language Models",
+        "Lei Shi"
+      ],
+      [
+        "Mixed Domain",
+        "UltraDomain Benchmark"
+      ],
+      [
+        "ACM International Conference on Research and Development in Information Retrieval",
+        "Roman Teucher"
+      ],
+      [
+        "GNNs as Prefix",
+        "GraphGPT"
+      ],
+      [
+        "Case Study",
+        "GraphRAG"
+      ],
+      [
+        "Guy Wolf",
+        "Recipe for a General, Powerful, Scalable Graph Transformer"
+      ],
+      [
+        "Graph Neural Networks",
+        "Large Language Models"
+      ]
+    ],
+    "count": 124,
+    "create_time": 1765714433,
+    "update_time": 1765714433,
+    "_id": "doc-e38bb9258f55d121381a68b77dbad24d"
+  }
+}

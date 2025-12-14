@@ -1,0 +1,1125 @@
+{
+  "Cardiologists<SEP>Heart Disease": {
+    "chunk_ids": [
+      "chunk-a4bfe3834a3a1fae1b473b574f4f8b49"
+    ],
+    "count": 1,
+    "create_time": 1765714381,
+    "update_time": 1765714381,
+    "_id": "Cardiologists<SEP>Heart Disease"
+  },
+  "Graph Structures<SEP>LightRAG": {
+    "chunk_ids": [
+      "chunk-a4bfe3834a3a1fae1b473b574f4f8b49"
+    ],
+    "count": 1,
+    "create_time": 1765714381,
+    "update_time": 1765714381,
+    "_id": "Graph Structures<SEP>LightRAG"
+  },
+  "GraphRAG<SEP>Token Overhead": {
+    "chunk_ids": [
+      "chunk-e721c558783dbd23774614190d304ec4"
+    ],
+    "count": 1,
+    "create_time": 1765714381,
+    "update_time": 1765714381,
+    "_id": "GraphRAG<SEP>Token Overhead"
+  },
+  "Cardiologists<SEP>R(·)": {
+    "chunk_ids": [
+      "chunk-a4bfe3834a3a1fae1b473b574f4f8b49"
+    ],
+    "count": 1,
+    "create_time": 1765714382,
+    "update_time": 1765714382,
+    "_id": "Cardiologists<SEP>R(·)"
+  },
+  "Incremental Knowledge Base<SEP>LightRAG": {
+    "chunk_ids": [
+      "chunk-a4bfe3834a3a1fae1b473b574f4f8b49"
+    ],
+    "count": 1,
+    "create_time": 1765714382,
+    "update_time": 1765714382,
+    "_id": "Incremental Knowledge Base<SEP>LightRAG"
+  },
+  "Graph Neural Networks<SEP>Large Language Models": {
+    "chunk_ids": [
+      "chunk-e721c558783dbd23774614190d304ec4"
+    ],
+    "count": 1,
+    "create_time": 1765714383,
+    "update_time": 1765714383,
+    "_id": "Graph Neural Networks<SEP>Large Language Models"
+  },
+  "GraphRAG<SEP>Legal Dataset": {
+    "chunk_ids": [
+      "chunk-e721c558783dbd23774614190d304ec4",
+      "chunk-292b2c4e27f94c258f6dfc74c228920f"
+    ],
+    "count": 2,
+    "create_time": 1765714383,
+    "update_time": 1765714383,
+    "_id": "GraphRAG<SEP>Legal Dataset"
+  },
+  "3D Graph<SEP>LightRAG": {
+    "chunk_ids": [
+      "chunk-a4bfe3834a3a1fae1b473b574f4f8b49"
+    ],
+    "count": 1,
+    "create_time": 1765714384,
+    "update_time": 1765714384,
+    "_id": "3D Graph<SEP>LightRAG"
+  },
+  "Graph Structures<SEP>Incremental Knowledge Base": {
+    "chunk_ids": [
+      "chunk-a4bfe3834a3a1fae1b473b574f4f8b49"
+    ],
+    "count": 1,
+    "create_time": 1765714384,
+    "update_time": 1765714384,
+    "_id": "Graph Structures<SEP>Incremental Knowledge Base"
+  },
+  "GraphRAG<SEP>Naive RAG": {
+    "chunk_ids": [
+      "chunk-a2f1a956b437fd5cdafc179f99aba025"
+    ],
+    "count": 1,
+    "create_time": 1765714384,
+    "update_time": 1765714384,
+    "_id": "GraphRAG<SEP>Naive RAG"
+  },
+  "LightRAG<SEP>Retrieval-Augmented Generation": {
+    "chunk_ids": [
+      "chunk-e721c558783dbd23774614190d304ec4",
+      "chunk-e9f27034d9712faa74c3195b10f7b76e",
+      "chunk-5670b97cac4fa5638ba7afec771b74a8"
+    ],
+    "count": 3,
+    "create_time": 1765714385,
+    "update_time": 1765714385,
+    "_id": "LightRAG<SEP>Retrieval-Augmented Generation"
+  },
+  "Dynamic Environments<SEP>LightRAG": {
+    "chunk_ids": [
+      "chunk-e721c558783dbd23774614190d304ec4"
+    ],
+    "count": 1,
+    "create_time": 1765714386,
+    "update_time": 1765714386,
+    "_id": "Dynamic Environments<SEP>LightRAG"
+  },
+  "Evaluation Dimensions<SEP>Win Rates": {
+    "chunk_ids": [
+      "chunk-a2f1a956b437fd5cdafc179f99aba025"
+    ],
+    "count": 1,
+    "create_time": 1765714386,
+    "update_time": 1765714386,
+    "_id": "Evaluation Dimensions<SEP>Win Rates"
+  },
+  "Legal Dataset<SEP>LightRAG": {
+    "chunk_ids": [
+      "chunk-e721c558783dbd23774614190d304ec4",
+      "chunk-292b2c4e27f94c258f6dfc74c228920f"
+    ],
+    "count": 2,
+    "create_time": 1765714386,
+    "update_time": 1765714386,
+    "_id": "Legal Dataset<SEP>LightRAG"
+  },
+  "Community Structure<SEP>Dynamic Environments": {
+    "chunk_ids": [
+      "chunk-e721c558783dbd23774614190d304ec4"
+    ],
+    "count": 1,
+    "create_time": 1765714386,
+    "update_time": 1765714386,
+    "_id": "Community Structure<SEP>Dynamic Environments"
+  },
+  "GraphRAG<SEP>RQ-RAG": {
+    "chunk_ids": [
+      "chunk-a2f1a956b437fd5cdafc179f99aba025"
+    ],
+    "count": 1,
+    "create_time": 1765714386,
+    "update_time": 1765714386,
+    "_id": "GraphRAG<SEP>RQ-RAG"
+  },
+  "Community Structure<SEP>GraphRAG": {
+    "chunk_ids": [
+      "chunk-e721c558783dbd23774614190d304ec4"
+    ],
+    "count": 1,
+    "create_time": 1765714387,
+    "update_time": 1765714387,
+    "_id": "Community Structure<SEP>GraphRAG"
+  },
+  "LightRAG<SEP>RQ-RAG": {
+    "chunk_ids": [
+      "chunk-a2f1a956b437fd5cdafc179f99aba025",
+      "chunk-e9f27034d9712faa74c3195b10f7b76e"
+    ],
+    "count": 2,
+    "create_time": 1765714388,
+    "update_time": 1765714388,
+    "_id": "LightRAG<SEP>RQ-RAG"
+  },
+  "HyDE<SEP>LightRAG": {
+    "chunk_ids": [
+      "chunk-a2f1a956b437fd5cdafc179f99aba025"
+    ],
+    "count": 1,
+    "create_time": 1765714388,
+    "update_time": 1765714388,
+    "_id": "HyDE<SEP>LightRAG"
+  },
+  "GPT-4o-mini<SEP>LightRAG": {
+    "chunk_ids": [
+      "chunk-a2f1a956b437fd5cdafc179f99aba025"
+    ],
+    "count": 1,
+    "create_time": 1765714389,
+    "update_time": 1765714389,
+    "_id": "GPT-4o-mini<SEP>LightRAG"
+  },
+  "LightRAG<SEP>Naive RAG": {
+    "chunk_ids": [
+      "chunk-a2f1a956b437fd5cdafc179f99aba025",
+      "chunk-e9f27034d9712faa74c3195b10f7b76e"
+    ],
+    "count": 2,
+    "create_time": 1765714389,
+    "update_time": 1765714389,
+    "_id": "LightRAG<SEP>Naive RAG"
+  },
+  "LightRAG<SEP>NaiveRAG": {
+    "chunk_ids": [
+      "chunk-292b2c4e27f94c258f6dfc74c228920f"
+    ],
+    "count": 1,
+    "create_time": 1765714390,
+    "update_time": 1765714390,
+    "_id": "LightRAG<SEP>NaiveRAG"
+  },
+  "Agriculture Dataset<SEP>LightRAG": {
+    "chunk_ids": [
+      "chunk-292b2c4e27f94c258f6dfc74c228920f"
+    ],
+    "count": 1,
+    "create_time": 1765714391,
+    "update_time": 1765714391,
+    "_id": "Agriculture Dataset<SEP>LightRAG"
+  },
+  "GNNs as Prefix<SEP>Graph Neural Networks": {
+    "chunk_ids": [
+      "chunk-fd676ea25004fcc9cfc7f86a04f71fad"
+    ],
+    "count": 1,
+    "create_time": 1765714391,
+    "update_time": 1765714391,
+    "_id": "GNNs as Prefix<SEP>Graph Neural Networks"
+  },
+  "GNNs as Prefix<SEP>GraphGPT": {
+    "chunk_ids": [
+      "chunk-fd676ea25004fcc9cfc7f86a04f71fad"
+    ],
+    "count": 1,
+    "create_time": 1765714392,
+    "update_time": 1765714392,
+    "_id": "GNNs as Prefix<SEP>GraphGPT"
+  },
+  "CS Dataset<SEP>LightRAG": {
+    "chunk_ids": [
+      "chunk-292b2c4e27f94c258f6dfc74c228920f"
+    ],
+    "count": 1,
+    "create_time": 1765714392,
+    "update_time": 1765714392,
+    "_id": "CS Dataset<SEP>LightRAG"
+  },
+  "GNNs as Prefix<SEP>LLaGA": {
+    "chunk_ids": [
+      "chunk-fd676ea25004fcc9cfc7f86a04f71fad"
+    ],
+    "count": 1,
+    "create_time": 1765714393,
+    "update_time": 1765714393,
+    "_id": "GNNs as Prefix<SEP>LLaGA"
+  },
+  "GALM<SEP>LLMs as Prefix": {
+    "chunk_ids": [
+      "chunk-fd676ea25004fcc9cfc7f86a04f71fad"
+    ],
+    "count": 1,
+    "create_time": 1765714393,
+    "update_time": 1765714393,
+    "_id": "GALM<SEP>LLMs as Prefix"
+  },
+  "GraphRAG<SEP>LightRAG": {
+    "chunk_ids": [
+      "chunk-292b2c4e27f94c258f6dfc74c228920f",
+      "chunk-cb4558101a7d0732e0b0f406c610255c"
+    ],
+    "count": 2,
+    "create_time": 1765714393,
+    "update_time": 1765714393,
+    "_id": "GraphRAG<SEP>LightRAG"
+  },
+  "Empowerment<SEP>LightRAG": {
+    "chunk_ids": [
+      "chunk-292b2c4e27f94c258f6dfc74c228920f"
+    ],
+    "count": 1,
+    "create_time": 1765714394,
+    "update_time": 1765714394,
+    "_id": "Empowerment<SEP>LightRAG"
+  },
+  "LLMs as Prefix<SEP>OFA": {
+    "chunk_ids": [
+      "chunk-fd676ea25004fcc9cfc7f86a04f71fad"
+    ],
+    "count": 1,
+    "create_time": 1765714394,
+    "update_time": 1765714394,
+    "_id": "LLMs as Prefix<SEP>OFA"
+  },
+  "Congrat<SEP>William Brannon": {
+    "chunk_ids": [
+      "chunk-fd676ea25004fcc9cfc7f86a04f71fad"
+    ],
+    "count": 1,
+    "create_time": 1765714394,
+    "update_time": 1765714394,
+    "_id": "Congrat<SEP>William Brannon"
+  },
+  "Comprehensiveness<SEP>LightRAG": {
+    "chunk_ids": [
+      "chunk-292b2c4e27f94c258f6dfc74c228920f"
+    ],
+    "count": 1,
+    "create_time": 1765714395,
+    "update_time": 1765714395,
+    "_id": "Comprehensiveness<SEP>LightRAG"
+  },
+  "Chi-Min Chan<SEP>Rq-rag": {
+    "chunk_ids": [
+      "chunk-fd676ea25004fcc9cfc7f86a04f71fad"
+    ],
+    "count": 1,
+    "create_time": 1765714395,
+    "update_time": 1765714395,
+    "_id": "Chi-Min Chan<SEP>Rq-rag"
+  },
+  "Diversity<SEP>LightRAG": {
+    "chunk_ids": [
+      "chunk-292b2c4e27f94c258f6dfc74c228920f"
+    ],
+    "count": 1,
+    "create_time": 1765714396,
+    "update_time": 1765714396,
+    "_id": "Diversity<SEP>LightRAG"
+  },
+  "LLaGA<SEP>Runjin Chen": {
+    "chunk_ids": [
+      "chunk-fd676ea25004fcc9cfc7f86a04f71fad"
+    ],
+    "count": 1,
+    "create_time": 1765714396,
+    "update_time": 1765714396,
+    "_id": "LLaGA<SEP>Runjin Chen"
+  },
+  "William Brannon<SEP>self-supervised contrastive pretraining": {
+    "chunk_ids": [
+      "chunk-fd676ea25004fcc9cfc7f86a04f71fad"
+    ],
+    "count": 1,
+    "create_time": 1765714397,
+    "update_time": 1765714397,
+    "_id": "William Brannon<SEP>self-supervised contrastive pretraining"
+  },
+  "Darren Edge<SEP>graph rag": {
+    "chunk_ids": [
+      "chunk-fd676ea25004fcc9cfc7f86a04f71fad"
+    ],
+    "count": 1,
+    "create_time": 1765714397,
+    "update_time": 1765714397,
+    "_id": "Darren Edge<SEP>graph rag"
+  },
+  "Large Language Models (LLMs)<SEP>Retrieval-Augmented Generation (RAG)": {
+    "chunk_ids": [
+      "chunk-dc4869b2865a9a053d992bbbdd8111e3"
+    ],
+    "count": 1,
+    "create_time": 1765714398,
+    "update_time": 1765714398,
+    "_id": "Large Language Models (LLMs)<SEP>Retrieval-Augmented Generation (RAG)"
+  },
+  "LightRAG<SEP>Overall": {
+    "chunk_ids": [
+      "chunk-292b2c4e27f94c258f6dfc74c228920f"
+    ],
+    "count": 1,
+    "create_time": 1765714398,
+    "update_time": 1765714398,
+    "_id": "LightRAG<SEP>Overall"
+  },
+  "Chunking<SEP>Retrieval-Augmented Generation (RAG)": {
+    "chunk_ids": [
+      "chunk-dc4869b2865a9a053d992bbbdd8111e3"
+    ],
+    "count": 1,
+    "create_time": 1765714399,
+    "update_time": 1765714399,
+    "_id": "Chunking<SEP>Retrieval-Augmented Generation (RAG)"
+  },
+  "LLMs-Graphs Integration<SEP>LightRAG": {
+    "chunk_ids": [
+      "chunk-fd676ea25004fcc9cfc7f86a04f71fad"
+    ],
+    "count": 1,
+    "create_time": 1765714399,
+    "update_time": 1765714399,
+    "_id": "LLMs-Graphs Integration<SEP>LightRAG"
+  },
+  "Existing RAG Systems<SEP>Retrieval-Augmented Generation (RAG)": {
+    "chunk_ids": [
+      "chunk-dc4869b2865a9a053d992bbbdd8111e3"
+    ],
+    "count": 1,
+    "create_time": 1765714400,
+    "update_time": 1765714400,
+    "_id": "Existing RAG Systems<SEP>Retrieval-Augmented Generation (RAG)"
+  },
+  "LightRAG<SEP>graph-based indexing": {
+    "chunk_ids": [
+      "chunk-fd676ea25004fcc9cfc7f86a04f71fad"
+    ],
+    "count": 1,
+    "create_time": 1765714400,
+    "update_time": 1765714400,
+    "_id": "LightRAG<SEP>graph-based indexing"
+  },
+  "LightRAG<SEP>Retrieval-Augmented Generation (RAG)": {
+    "chunk_ids": [
+      "chunk-dc4869b2865a9a053d992bbbdd8111e3"
+    ],
+    "count": 1,
+    "create_time": 1765714401,
+    "update_time": 1765714401,
+    "_id": "LightRAG<SEP>Retrieval-Augmented Generation (RAG)"
+  },
+  "Graph-Based Knowledge Structures<SEP>LightRAG": {
+    "chunk_ids": [
+      "chunk-dc4869b2865a9a053d992bbbdd8111e3"
+    ],
+    "count": 1,
+    "create_time": 1765714402,
+    "update_time": 1765714402,
+    "_id": "Graph-Based Knowledge Structures<SEP>LightRAG"
+  },
+  "Agriculture Domain<SEP>UltraDomain Benchmark": {
+    "chunk_ids": [
+      "chunk-e9f27034d9712faa74c3195b10f7b76e"
+    ],
+    "count": 1,
+    "create_time": 1765714402,
+    "update_time": 1765714402,
+    "_id": "Agriculture Domain<SEP>UltraDomain Benchmark"
+  },
+  "Incremental Update Algorithm<SEP>LightRAG": {
+    "chunk_ids": [
+      "chunk-dc4869b2865a9a053d992bbbdd8111e3"
+    ],
+    "count": 1,
+    "create_time": 1765714403,
+    "update_time": 1765714403,
+    "_id": "Incremental Update Algorithm<SEP>LightRAG"
+  },
+  "Computer Science Domain<SEP>UltraDomain Benchmark": {
+    "chunk_ids": [
+      "chunk-e9f27034d9712faa74c3195b10f7b76e"
+    ],
+    "count": 1,
+    "create_time": 1765714403,
+    "update_time": 1765714403,
+    "_id": "Computer Science Domain<SEP>UltraDomain Benchmark"
+  },
+  "Legal Domain<SEP>UltraDomain Benchmark": {
+    "chunk_ids": [
+      "chunk-e9f27034d9712faa74c3195b10f7b76e"
+    ],
+    "count": 1,
+    "create_time": 1765714403,
+    "update_time": 1765714403,
+    "_id": "Legal Domain<SEP>UltraDomain Benchmark"
+  },
+  "Large Language Model<SEP>LightRAG": {
+    "chunk_ids": [
+      "chunk-e9f27034d9712faa74c3195b10f7b76e"
+    ],
+    "count": 1,
+    "create_time": 1765714404,
+    "update_time": 1765714404,
+    "_id": "Large Language Model<SEP>LightRAG"
+  },
+  "Incremental Update Algorithm<SEP>Rapidly Changing Data Environments": {
+    "chunk_ids": [
+      "chunk-dc4869b2865a9a053d992bbbdd8111e3"
+    ],
+    "count": 1,
+    "create_time": 1765714404,
+    "update_time": 1765714404,
+    "_id": "Incremental Update Algorithm<SEP>Rapidly Changing Data Environments"
+  },
+  "Mixed Domain<SEP>UltraDomain Benchmark": {
+    "chunk_ids": [
+      "chunk-e9f27034d9712faa74c3195b10f7b76e"
+    ],
+    "count": 1,
+    "create_time": 1765714404,
+    "update_time": 1765714404,
+    "_id": "Mixed Domain<SEP>UltraDomain Benchmark"
+  },
+  "Keyword Matching<SEP>Retrieval-Augmented Generation": {
+    "chunk_ids": [
+      "chunk-e9f27034d9712faa74c3195b10f7b76e"
+    ],
+    "count": 1,
+    "create_time": 1765714404,
+    "update_time": 1765714404,
+    "_id": "Keyword Matching<SEP>Retrieval-Augmented Generation"
+  },
+  "Graph-Based Index Phase<SEP>LightRAG": {
+    "chunk_ids": [
+      "chunk-e9f27034d9712faa74c3195b10f7b76e"
+    ],
+    "count": 1,
+    "create_time": 1765714405,
+    "update_time": 1765714405,
+    "_id": "Graph-Based Index Phase<SEP>LightRAG"
+  },
+  "Machine Learning Metrics<SEP>Movie Recommendation Systems": {
+    "chunk_ids": [
+      "chunk-cb4558101a7d0732e0b0f406c610255c"
+    ],
+    "count": 1,
+    "create_time": 1765714405,
+    "update_time": 1765714405,
+    "_id": "Machine Learning Metrics<SEP>Movie Recommendation Systems"
+  },
+  "Graph-Based Retrieval Phase<SEP>LightRAG": {
+    "chunk_ids": [
+      "chunk-e9f27034d9712faa74c3195b10f7b76e"
+    ],
+    "count": 1,
+    "create_time": 1765714406,
+    "update_time": 1765714406,
+    "_id": "Graph-Based Retrieval Phase<SEP>LightRAG"
+  },
+  "Movie Recommendation Systems<SEP>User Satisfaction Metrics": {
+    "chunk_ids": [
+      "chunk-cb4558101a7d0732e0b0f406c610255c"
+    ],
+    "count": 1,
+    "create_time": 1765714406,
+    "update_time": 1765714406,
+    "_id": "Movie Recommendation Systems<SEP>User Satisfaction Metrics"
+  },
+  "LightRAG<SEP>UltraDomain Benchmark": {
+    "chunk_ids": [
+      "chunk-e9f27034d9712faa74c3195b10f7b76e"
+    ],
+    "count": 1,
+    "create_time": 1765714407,
+    "update_time": 1765714407,
+    "_id": "LightRAG<SEP>UltraDomain Benchmark"
+  },
+  "Mean Average Precision at K<SEP>Movie Recommendation Systems": {
+    "chunk_ids": [
+      "chunk-cb4558101a7d0732e0b0f406c610255c"
+    ],
+    "count": 1,
+    "create_time": 1765714407,
+    "update_time": 1765714407,
+    "_id": "Mean Average Precision at K<SEP>Movie Recommendation Systems"
+  },
+  "RAG Comprehensiveness<SEP>RAG Naive": {
+    "chunk_ids": [
+      "chunk-9ab50d3a732fc9ec76f98f4af89f1844"
+    ],
+    "count": 1,
+    "create_time": 1765714407,
+    "update_time": 1765714407,
+    "_id": "RAG Comprehensiveness<SEP>RAG Naive"
+  },
+  "High-Order Relatedness<SEP>LightRAG": {
+    "chunk_ids": [
+      "chunk-e9f27034d9712faa74c3195b10f7b76e"
+    ],
+    "count": 1,
+    "create_time": 1765714408,
+    "update_time": 1765714408,
+    "_id": "High-Order Relatedness<SEP>LightRAG"
+  },
+  "RAG Comprehensiveness<SEP>RAG Light": {
+    "chunk_ids": [
+      "chunk-9ab50d3a732fc9ec76f98f4af89f1844"
+    ],
+    "count": 1,
+    "create_time": 1765714408,
+    "update_time": 1765714408,
+    "_id": "RAG Comprehensiveness<SEP>RAG Light"
+  },
+  "NaiveRAG-High<SEP>RAG Empowerment": {
+    "chunk_ids": [
+      "chunk-9ab50d3a732fc9ec76f98f4af89f1844"
+    ],
+    "count": 1,
+    "create_time": 1765714408,
+    "update_time": 1765714408,
+    "_id": "NaiveRAG-High<SEP>RAG Empowerment"
+  },
+  "Area Under the Curve<SEP>Movie Recommendation Systems": {
+    "chunk_ids": [
+      "chunk-cb4558101a7d0732e0b0f406c610255c"
+    ],
+    "count": 1,
+    "create_time": 1765714408,
+    "update_time": 1765714408,
+    "_id": "Area Under the Curve<SEP>Movie Recommendation Systems"
+  },
+  "NaiveRAG-Low<SEP>RAG Diversity": {
+    "chunk_ids": [
+      "chunk-9ab50d3a732fc9ec76f98f4af89f1844"
+    ],
+    "count": 1,
+    "create_time": 1765714408,
+    "update_time": 1765714408,
+    "_id": "NaiveRAG-Low<SEP>RAG Diversity"
+  },
+  "Hybrid Mode<SEP>RAG Light": {
+    "chunk_ids": [
+      "chunk-9ab50d3a732fc9ec76f98f4af89f1844"
+    ],
+    "count": 1,
+    "create_time": 1765714409,
+    "update_time": 1765714409,
+    "_id": "Hybrid Mode<SEP>RAG Light"
+  },
+  "Low-level-only Retrieval<SEP>NaiveRAG-Low": {
+    "chunk_ids": [
+      "chunk-9ab50d3a732fc9ec76f98f4af89f1844"
+    ],
+    "count": 1,
+    "create_time": 1765714409,
+    "update_time": 1765714409,
+    "_id": "Low-level-only Retrieval<SEP>NaiveRAG-Low"
+  },
+  "LightRAG<SEP>Research Questions": {
+    "chunk_ids": [
+      "chunk-e9f27034d9712faa74c3195b10f7b76e"
+    ],
+    "count": 1,
+    "create_time": 1765714410,
+    "update_time": 1765714410,
+    "_id": "LightRAG<SEP>Research Questions"
+  },
+  "Beekeeper<SEP>Honey Bees": {
+    "chunk_ids": [
+      "chunk-5670b97cac4fa5638ba7afec771b74a8"
+    ],
+    "count": 1,
+    "create_time": 1765714410,
+    "update_time": 1765714410,
+    "_id": "Beekeeper<SEP>Honey Bees"
+  },
+  "High-level-only Retrieval<SEP>RAG Light": {
+    "chunk_ids": [
+      "chunk-9ab50d3a732fc9ec76f98f4af89f1844"
+    ],
+    "count": 1,
+    "create_time": 1765714410,
+    "update_time": 1765714410,
+    "_id": "High-level-only Retrieval<SEP>RAG Light"
+  },
+  "Hybrid Mode<SEP>NA": {
+    "chunk_ids": [
+      "chunk-9ab50d3a732fc9ec76f98f4af89f1844"
+    ],
+    "count": 1,
+    "create_time": 1765714410,
+    "update_time": 1765714410,
+    "_id": "Hybrid Mode<SEP>NA"
+  },
+  "External Knowledge Database<SEP>Retrieval-Augmented Generation": {
+    "chunk_ids": [
+      "chunk-5670b97cac4fa5638ba7afec771b74a8"
+    ],
+    "count": 1,
+    "create_time": 1765714410,
+    "update_time": 1765714410,
+    "_id": "External Knowledge Database<SEP>Retrieval-Augmented Generation"
+  },
+  "Bee<SEP>Beekeeper": {
+    "chunk_ids": [
+      "chunk-5670b97cac4fa5638ba7afec771b74a8"
+    ],
+    "count": 1,
+    "create_time": 1765714411,
+    "update_time": 1765714411,
+    "_id": "Bee<SEP>Beekeeper"
+  },
+  "Case Study<SEP>LightRAG": {
+    "chunk_ids": [
+      "chunk-cb4558101a7d0732e0b0f406c610255c"
+    ],
+    "count": 1,
+    "create_time": 1765714412,
+    "update_time": 1765714412,
+    "_id": "Case Study<SEP>LightRAG"
+  },
+  "BEEKEEPER Practices<SEP>LightRAG Framework": {
+    "chunk_ids": [
+      "chunk-5670b97cac4fa5638ba7afec771b74a8"
+    ],
+    "count": 1,
+    "create_time": 1765714412,
+    "update_time": 1765714412,
+    "_id": "BEEKEEPER Practices<SEP>LightRAG Framework"
+  },
+  "In-Context Retrieval-Augmented Language Models<SEP>Ori Ram": {
+    "chunk_ids": [
+      "chunk-2e88d22e757b745c1d8aafe1aef24015"
+    ],
+    "count": 1,
+    "create_time": 1765714412,
+    "update_time": 1765714412,
+    "_id": "In-Context Retrieval-Augmented Language Models<SEP>Ori Ram"
+  },
+  "LightRAG<SEP>LightRAG Framework": {
+    "chunk_ids": [
+      "chunk-5670b97cac4fa5638ba7afec771b74a8"
+    ],
+    "count": 1,
+    "create_time": 1765714413,
+    "update_time": 1765714413,
+    "_id": "LightRAG<SEP>LightRAG Framework"
+  },
+  "Case Study<SEP>GraphRAG": {
+    "chunk_ids": [
+      "chunk-cb4558101a7d0732e0b0f406c610255c"
+    ],
+    "count": 1,
+    "create_time": 1765714413,
+    "update_time": 1765714413,
+    "_id": "Case Study<SEP>GraphRAG"
+  },
+  "In-Context Retrieval-Augmented Language Models<SEP>Yoav Levine": {
+    "chunk_ids": [
+      "chunk-2e88d22e757b745c1d8aafe1aef24015"
+    ],
+    "count": 1,
+    "create_time": 1765714414,
+    "update_time": 1765714414,
+    "_id": "In-Context Retrieval-Augmented Language Models<SEP>Yoav Levine"
+  },
+  "Ladislav Rampášek<SEP>Recipe for a General, Powerful, Scalable Graph Transformer": {
+    "chunk_ids": [
+      "chunk-2e88d22e757b745c1d8aafe1aef24015"
+    ],
+    "count": 1,
+    "create_time": 1765714415,
+    "update_time": 1765714415,
+    "_id": "Ladislav Rampášek<SEP>Recipe for a General, Powerful, Scalable Graph Transformer"
+  },
+  "In-Context Retrieval-Augmented Language Models<SEP>Itay Dalmedigos": {
+    "chunk_ids": [
+      "chunk-2e88d22e757b745c1d8aafe1aef24015"
+    ],
+    "count": 1,
+    "create_time": 1765714415,
+    "update_time": 1765714415,
+    "_id": "In-Context Retrieval-Augmented Language Models<SEP>Itay Dalmedigos"
+  },
+  "Michael Galkin<SEP>Recipe for a General, Powerful, Scalable Graph Transformer": {
+    "chunk_ids": [
+      "chunk-2e88d22e757b745c1d8aafe1aef24015"
+    ],
+    "count": 1,
+    "create_time": 1765714416,
+    "update_time": 1765714416,
+    "_id": "Michael Galkin<SEP>Recipe for a General, Powerful, Scalable Graph Transformer"
+  },
+  "Dor Muhlgay<SEP>In-Context Retrieval-Augmented Language Models": {
+    "chunk_ids": [
+      "chunk-2e88d22e757b745c1d8aafe1aef24015"
+    ],
+    "count": 1,
+    "create_time": 1765714416,
+    "update_time": 1765714416,
+    "_id": "Dor Muhlgay<SEP>In-Context Retrieval-Augmented Language Models"
+  },
+  "Recipe for a General, Powerful, Scalable Graph Transformer<SEP>Vijay Prakash Dwivedi": {
+    "chunk_ids": [
+      "chunk-2e88d22e757b745c1d8aafe1aef24015"
+    ],
+    "count": 1,
+    "create_time": 1765714417,
+    "update_time": 1765714417,
+    "_id": "Recipe for a General, Powerful, Scalable Graph Transformer<SEP>Vijay Prakash Dwivedi"
+  },
+  "Amnon Shashua<SEP>In-Context Retrieval-Augmented Language Models": {
+    "chunk_ids": [
+      "chunk-2e88d22e757b745c1d8aafe1aef24015"
+    ],
+    "count": 1,
+    "create_time": 1765714417,
+    "update_time": 1765714417,
+    "_id": "Amnon Shashua<SEP>In-Context Retrieval-Augmented Language Models"
+  },
+  "Alireza Salemi<SEP>Evaluating Retrieval Quality in Retrieval-Augmented Generation": {
+    "chunk_ids": [
+      "chunk-2e88d22e757b745c1d8aafe1aef24015"
+    ],
+    "count": 1,
+    "create_time": 1765714417,
+    "update_time": 1765714417,
+    "_id": "Alireza Salemi<SEP>Evaluating Retrieval Quality in Retrieval-Augmented Generation"
+  },
+  "Anh Tuan Luu<SEP>Recipe for a General, Powerful, Scalable Graph Transformer": {
+    "chunk_ids": [
+      "chunk-2e88d22e757b745c1d8aafe1aef24015"
+    ],
+    "count": 1,
+    "create_time": 1765714418,
+    "update_time": 1765714418,
+    "_id": "Anh Tuan Luu<SEP>Recipe for a General, Powerful, Scalable Graph Transformer"
+  },
+  "Guy Wolf<SEP>Recipe for a General, Powerful, Scalable Graph Transformer": {
+    "chunk_ids": [
+      "chunk-2e88d22e757b745c1d8aafe1aef24015"
+    ],
+    "count": 1,
+    "create_time": 1765714418,
+    "update_time": 1765714418,
+    "_id": "Guy Wolf<SEP>Recipe for a General, Powerful, Scalable Graph Transformer"
+  },
+  "Rag-Ex: A Generic Framework for Explaining Retrieval Augmented Generation<SEP>Viju Sudhi": {
+    "chunk_ids": [
+      "chunk-2e88d22e757b745c1d8aafe1aef24015"
+    ],
+    "count": 1,
+    "create_time": 1765714418,
+    "update_time": 1765714418,
+    "_id": "Rag-Ex: A Generic Framework for Explaining Retrieval Augmented Generation<SEP>Viju Sudhi"
+  },
+  "In-Context Retrieval-Augmented Language Models<SEP>Kevin Leyton-Brown": {
+    "chunk_ids": [
+      "chunk-2e88d22e757b745c1d8aafe1aef24015"
+    ],
+    "count": 1,
+    "create_time": 1765714419,
+    "update_time": 1765714419,
+    "_id": "In-Context Retrieval-Augmented Language Models<SEP>Kevin Leyton-Brown"
+  },
+  "Evaluating Retrieval Quality in Retrieval-Augmented Generation<SEP>Hamed Zamani": {
+    "chunk_ids": [
+      "chunk-2e88d22e757b745c1d8aafe1aef24015"
+    ],
+    "count": 1,
+    "create_time": 1765714420,
+    "update_time": 1765714420,
+    "_id": "Evaluating Retrieval Quality in Retrieval-Augmented Generation<SEP>Hamed Zamani"
+  },
+  "In-Context Retrieval-Augmented Language Models<SEP>Yoav Shoham": {
+    "chunk_ids": [
+      "chunk-2e88d22e757b745c1d8aafe1aef24015"
+    ],
+    "count": 1,
+    "create_time": 1765714420,
+    "update_time": 1765714420,
+    "_id": "In-Context Retrieval-Augmented Language Models<SEP>Yoav Shoham"
+  },
+  "Dominique Beaini<SEP>Recipe for a General, Powerful, Scalable Graph Transformer": {
+    "chunk_ids": [
+      "chunk-2e88d22e757b745c1d8aafe1aef24015"
+    ],
+    "count": 1,
+    "create_time": 1765714420,
+    "update_time": 1765714420,
+    "_id": "Dominique Beaini<SEP>Recipe for a General, Powerful, Scalable Graph Transformer"
+  },
+  "Graphgpt: Graph Instruction Tuning for Large Language Models<SEP>Jiabin Tang": {
+    "chunk_ids": [
+      "chunk-2e88d22e757b745c1d8aafe1aef24015"
+    ],
+    "count": 1,
+    "create_time": 1765714420,
+    "update_time": 1765714420,
+    "_id": "Graphgpt: Graph Instruction Tuning for Large Language Models<SEP>Jiabin Tang"
+  },
+  "Rag-Ex: A Generic Framework for Explaining Retrieval Augmented Generation<SEP>Sinchana Ramakanth Bhat": {
+    "chunk_ids": [
+      "chunk-2e88d22e757b745c1d8aafe1aef24015"
+    ],
+    "count": 1,
+    "create_time": 1765714422,
+    "update_time": 1765714422,
+    "_id": "Rag-Ex: A Generic Framework for Explaining Retrieval Augmented Generation<SEP>Sinchana Ramakanth Bhat"
+  },
+  "Graphgpt: Graph Instruction Tuning for Large Language Models<SEP>Yuhao Yang": {
+    "chunk_ids": [
+      "chunk-2e88d22e757b745c1d8aafe1aef24015"
+    ],
+    "count": 1,
+    "create_time": 1765714422,
+    "update_time": 1765714422,
+    "_id": "Graphgpt: Graph Instruction Tuning for Large Language Models<SEP>Yuhao Yang"
+  },
+  "Max Rudat<SEP>Rag-Ex: A Generic Framework for Explaining Retrieval Augmented Generation": {
+    "chunk_ids": [
+      "chunk-2e88d22e757b745c1d8aafe1aef24015"
+    ],
+    "count": 1,
+    "create_time": 1765714422,
+    "update_time": 1765714422,
+    "_id": "Max Rudat<SEP>Rag-Ex: A Generic Framework for Explaining Retrieval Augmented Generation"
+  },
+  "Rag-Ex: A Generic Framework for Explaining Retrieval Augmented Generation<SEP>Roman Teucher": {
+    "chunk_ids": [
+      "chunk-2e88d22e757b745c1d8aafe1aef24015"
+    ],
+    "count": 1,
+    "create_time": 1765714423,
+    "update_time": 1765714423,
+    "_id": "Rag-Ex: A Generic Framework for Explaining Retrieval Augmented Generation<SEP>Roman Teucher"
+  },
+  "Graphgpt: Graph Instruction Tuning for Large Language Models<SEP>Wei Wei": {
+    "chunk_ids": [
+      "chunk-2e88d22e757b745c1d8aafe1aef24015"
+    ],
+    "count": 1,
+    "create_time": 1765714423,
+    "update_time": 1765714423,
+    "_id": "Graphgpt: Graph Instruction Tuning for Large Language Models<SEP>Wei Wei"
+  },
+  "Ori Ram<SEP>Transactions of the Association for Computational Linguistics": {
+    "chunk_ids": [
+      "chunk-2e88d22e757b745c1d8aafe1aef24015"
+    ],
+    "count": 1,
+    "create_time": 1765714423,
+    "update_time": 1765714423,
+    "_id": "Ori Ram<SEP>Transactions of the Association for Computational Linguistics"
+  },
+  "Transactions of the Association for Computational Linguistics<SEP>Yoav Levine": {
+    "chunk_ids": [
+      "chunk-2e88d22e757b745c1d8aafe1aef24015"
+    ],
+    "count": 1,
+    "create_time": 1765714424,
+    "update_time": 1765714424,
+    "_id": "Transactions of the Association for Computational Linguistics<SEP>Yoav Levine"
+  },
+  "Graphgpt: Graph Instruction Tuning for Large Language Models<SEP>Lei Shi": {
+    "chunk_ids": [
+      "chunk-2e88d22e757b745c1d8aafe1aef24015"
+    ],
+    "count": 1,
+    "create_time": 1765714424,
+    "update_time": 1765714424,
+    "_id": "Graphgpt: Graph Instruction Tuning for Large Language Models<SEP>Lei Shi"
+  },
+  "Graphgpt: Graph Instruction Tuning for Large Language Models<SEP>Lixin Su": {
+    "chunk_ids": [
+      "chunk-2e88d22e757b745c1d8aafe1aef24015"
+    ],
+    "count": 1,
+    "create_time": 1765714425,
+    "update_time": 1765714425,
+    "_id": "Graphgpt: Graph Instruction Tuning for Large Language Models<SEP>Lixin Su"
+  },
+  "Itay Dalmedigos<SEP>Transactions of the Association for Computational Linguistics": {
+    "chunk_ids": [
+      "chunk-2e88d22e757b745c1d8aafe1aef24015"
+    ],
+    "count": 1,
+    "create_time": 1765714425,
+    "update_time": 1765714425,
+    "_id": "Itay Dalmedigos<SEP>Transactions of the Association for Computational Linguistics"
+  },
+  "Dor Muhlgay<SEP>Transactions of the Association for Computational Linguistics": {
+    "chunk_ids": [
+      "chunk-2e88d22e757b745c1d8aafe1aef24015"
+    ],
+    "count": 1,
+    "create_time": 1765714425,
+    "update_time": 1765714425,
+    "_id": "Dor Muhlgay<SEP>Transactions of the Association for Computational Linguistics"
+  },
+  "Graphgpt: Graph Instruction Tuning for Large Language Models<SEP>Suqi Cheng": {
+    "chunk_ids": [
+      "chunk-2e88d22e757b745c1d8aafe1aef24015"
+    ],
+    "count": 1,
+    "create_time": 1765714426,
+    "update_time": 1765714426,
+    "_id": "Graphgpt: Graph Instruction Tuning for Large Language Models<SEP>Suqi Cheng"
+  },
+  "International Conference on Neural Information Processing Systems<SEP>Ladislav Rampášek": {
+    "chunk_ids": [
+      "chunk-2e88d22e757b745c1d8aafe1aef24015"
+    ],
+    "count": 1,
+    "create_time": 1765714426,
+    "update_time": 1765714426,
+    "_id": "International Conference on Neural Information Processing Systems<SEP>Ladislav Rampášek"
+  },
+  "International Conference on Neural Information Processing Systems<SEP>Michael Galkin": {
+    "chunk_ids": [
+      "chunk-2e88d22e757b745c1d8aafe1aef24015"
+    ],
+    "count": 1,
+    "create_time": 1765714427,
+    "update_time": 1765714427,
+    "_id": "International Conference on Neural Information Processing Systems<SEP>Michael Galkin"
+  },
+  "Dawei Yin<SEP>Graphgpt: Graph Instruction Tuning for Large Language Models": {
+    "chunk_ids": [
+      "chunk-2e88d22e757b745c1d8aafe1aef24015"
+    ],
+    "count": 1,
+    "create_time": 1765714427,
+    "update_time": 1765714427,
+    "_id": "Dawei Yin<SEP>Graphgpt: Graph Instruction Tuning for Large Language Models"
+  },
+  "Amnon Shashua<SEP>Transactions of the Association for Computational Linguistics": {
+    "chunk_ids": [
+      "chunk-2e88d22e757b745c1d8aafe1aef24015"
+    ],
+    "count": 1,
+    "create_time": 1765714427,
+    "update_time": 1765714427,
+    "_id": "Amnon Shashua<SEP>Transactions of the Association for Computational Linguistics"
+  },
+  "International Conference on Neural Information Processing Systems<SEP>Vijay Prakash Dwivedi": {
+    "chunk_ids": [
+      "chunk-2e88d22e757b745c1d8aafe1aef24015"
+    ],
+    "count": 1,
+    "create_time": 1765714428,
+    "update_time": 1765714428,
+    "_id": "International Conference on Neural Information Processing Systems<SEP>Vijay Prakash Dwivedi"
+  },
+  "Kevin Leyton-Brown<SEP>Transactions of the Association for Computational Linguistics": {
+    "chunk_ids": [
+      "chunk-2e88d22e757b745c1d8aafe1aef24015"
+    ],
+    "count": 1,
+    "create_time": 1765714428,
+    "update_time": 1765714428,
+    "_id": "Kevin Leyton-Brown<SEP>Transactions of the Association for Computational Linguistics"
+  },
+  "Chao Huang<SEP>Graphgpt: Graph Instruction Tuning for Large Language Models": {
+    "chunk_ids": [
+      "chunk-2e88d22e757b745c1d8aafe1aef24015"
+    ],
+    "count": 1,
+    "create_time": 1765714428,
+    "update_time": 1765714428,
+    "_id": "Chao Huang<SEP>Graphgpt: Graph Instruction Tuning for Large Language Models"
+  },
+  "ACM International Conference on Research and Development in Information Retrieval<SEP>Alireza Salemi": {
+    "chunk_ids": [
+      "chunk-2e88d22e757b745c1d8aafe1aef24015"
+    ],
+    "count": 1,
+    "create_time": 1765714428,
+    "update_time": 1765714428,
+    "_id": "ACM International Conference on Research and Development in Information Retrieval<SEP>Alireza Salemi"
+  },
+  "Anh Tuan Luu<SEP>International Conference on Neural Information Processing Systems": {
+    "chunk_ids": [
+      "chunk-2e88d22e757b745c1d8aafe1aef24015"
+    ],
+    "count": 1,
+    "create_time": 1765714429,
+    "update_time": 1765714429,
+    "_id": "Anh Tuan Luu<SEP>International Conference on Neural Information Processing Systems"
+  },
+  "Transactions of the Association for Computational Linguistics<SEP>Yoav Shoham": {
+    "chunk_ids": [
+      "chunk-2e88d22e757b745c1d8aafe1aef24015"
+    ],
+    "count": 1,
+    "create_time": 1765714429,
+    "update_time": 1765714429,
+    "_id": "Transactions of the Association for Computational Linguistics<SEP>Yoav Shoham"
+  },
+  "ACM International Conference on Research and Development in Information Retrieval<SEP>Hamed Zamani": {
+    "chunk_ids": [
+      "chunk-2e88d22e757b745c1d8aafe1aef24015"
+    ],
+    "count": 1,
+    "create_time": 1765714429,
+    "update_time": 1765714429,
+    "_id": "ACM International Conference on Research and Development in Information Retrieval<SEP>Hamed Zamani"
+  },
+  "Guy Wolf<SEP>International Conference on Neural Information Processing Systems": {
+    "chunk_ids": [
+      "chunk-2e88d22e757b745c1d8aafe1aef24015"
+    ],
+    "count": 1,
+    "create_time": 1765714430,
+    "update_time": 1765714430,
+    "_id": "Guy Wolf<SEP>International Conference on Neural Information Processing Systems"
+  },
+  "ACM International Conference on Research and Development in Information Retrieval<SEP>Viju Sudhi": {
+    "chunk_ids": [
+      "chunk-2e88d22e757b745c1d8aafe1aef24015"
+    ],
+    "count": 1,
+    "create_time": 1765714430,
+    "update_time": 1765714430,
+    "_id": "ACM International Conference on Research and Development in Information Retrieval<SEP>Viju Sudhi"
+  },
+  "Dominique Beaini<SEP>International Conference on Neural Information Processing Systems": {
+    "chunk_ids": [
+      "chunk-2e88d22e757b745c1d8aafe1aef24015"
+    ],
+    "count": 1,
+    "create_time": 1765714431,
+    "update_time": 1765714431,
+    "_id": "Dominique Beaini<SEP>International Conference on Neural Information Processing Systems"
+  },
+  "ACM International Conference on Research and Development in Information Retrieval<SEP>Sinchana Ramakanth Bhat": {
+    "chunk_ids": [
+      "chunk-2e88d22e757b745c1d8aafe1aef24015"
+    ],
+    "count": 1,
+    "create_time": 1765714431,
+    "update_time": 1765714431,
+    "_id": "ACM International Conference on Research and Development in Information Retrieval<SEP>Sinchana Ramakanth Bhat"
+  },
+  "ACM International Conference on Research and Development in Information Retrieval<SEP>Max Rudat": {
+    "chunk_ids": [
+      "chunk-2e88d22e757b745c1d8aafe1aef24015"
+    ],
+    "count": 1,
+    "create_time": 1765714432,
+    "update_time": 1765714432,
+    "_id": "ACM International Conference on Research and Development in Information Retrieval<SEP>Max Rudat"
+  },
+  "ACM International Conference on Research and Development in Information Retrieval<SEP>Roman Teucher": {
+    "chunk_ids": [
+      "chunk-2e88d22e757b745c1d8aafe1aef24015"
+    ],
+    "count": 1,
+    "create_time": 1765714432,
+    "update_time": 1765714432,
+    "_id": "ACM International Conference on Research and Development in Information Retrieval<SEP>Roman Teucher"
+  }
+}
