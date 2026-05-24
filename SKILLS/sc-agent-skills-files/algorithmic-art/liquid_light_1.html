@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bioluminescent Tides - Generative Art</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Anthropic Brand Colors */
+        :root {
+            --anthropic-dark: #141413;
+            --anthropic-light: #faf9f5;
+            --anthropic-mid-gray: #b0aea5;
+            --anthropic-light-gray: #e8e6dc;
+            --anthropic-orange: #d97757;
+            --anthropic-blue: #6a9bcc;
+            --anthropic-green: #788c5d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, var(--anthropic-light) 0%, #f5f3ee 100%);
+            min-height: 100vh;
+            color: var(--anthropic-dark);
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 320px;
+            flex-shrink: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(20, 20, 19, 0.1);
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        .sidebar h1 {
+            font-family: 'Lora', serif;
+            font-size: 24px;
+            font-weight: 500;
+            color: var(--anthropic-dark);
+            margin-bottom: 8px;
+        }
+
+        .sidebar .subtitle {
+            color: var(--anthropic-mid-gray);
+            font-size: 14px;
+            margin-bottom: 32px;
+            line-height: 1.4;
+        }
+
+        /* Control Sections */
+        .control-section {
+            margin-bottom: 32px;
+        }
+
+        .control-section h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--anthropic-dark);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .control-section h3::before {
+            content: '•';
+            color: var(--anthropic-orange);
+            font-weight: bold;
+        }
+
+        /* Seed Controls */
+        .seed-input {
+            width: 100%;
+            background: var(--anthropic-light);
+            padding: 12px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            margin-bottom: 12px;
+            border: 1px solid var(--anthropic-light-gray);
+            text-align: center;
+        }
+
+        .seed-input:focus {
+            outline: none;
+            border-color: var(--anthropic-orange);
+            box-shadow: 0 0 0 2px rgba(217, 119, 87, 0.1);
+            background: white;
+        }
+
+        .seed-controls {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .regen-button {
+            margin-bottom: 0;
+        }
+
+        /* Parameter Controls */
+        .control-group {
+            margin-bottom: 20px;
+        }
+
+        .control-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--anthropic-dark);
+            margin-bottom: 8px;
+        }
+
+        .slider-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .slider-container input[type="range"] {
+            flex: 1;
+            height: 4px;
+            background: var(--anthropic-light-gray);
+            border-radius: 2px;
+            outline: none;
+            -webkit-appearance: none;
+        }
+
+        .slider-container input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 16px;
+            height: 16px;
+            background: var(--anthropic-orange);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .slider-container input[type="range"]::-webkit-slider-thumb:hover {
+            transform: scale(1.1);
+            background: #c86641;
+        }
+
+        .slider-container input[type="range"]::-moz-range-thumb {
+            width: 16px;
+            height: 16px;
+            background: var(--anthropic-orange);
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .value-display {
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            color: var(--anthropic-mid-gray);
+            min-width: 60px;
+            text-align: right;
+        }
+
+        /* Color Pickers */
+        .color-group {
+            margin-bottom: 16px;
+        }
+
+        .color-group label {
+            display: block;
+            font-size: 12px;
+            color: var(--anthropic-mid-gray);
+            margin-bottom: 4px;
+        }
+
+        .color-picker-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .color-picker-container input[type="color"] {
+            width: 32px;
+            height: 32px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            background: none;
+            padding: 0;
+        }
+
+        .color-value {
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            color: var(--anthropic-mid-gray);
+        }
+
+        /* Buttons */
+        .button {
+            background: var(--anthropic-orange);
+            color: white;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            width: 100%;
+        }
+
+        .button:hover {
+            background: #c86641;
+            transform: translateY(-1px);
+        }
+
+        .button:active {
+            transform: translateY(0);
+        }
+
+        .button.secondary {
+            background: var(--anthropic-blue);
+        }
+
+        .button.secondary:hover {
+            background: #5a8bb8;
+        }
+
+        .button.tertiary {
+            background: var(--anthropic-green);
+        }
+
+        .button.tertiary:hover {
+            background: #6b7b52;
+        }
+
+        .button-row {
+            display: flex;
+            gap: 8px;
+        }
+
+        .button-row .button {
+            flex: 1;
+        }
+
+        /* Canvas Area */
+        .canvas-area {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 0;
+        }
+
+        #canvas-container {
+            width: 100%;
+            max-width: 1000px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(20, 20, 19, 0.1);
+            background: white;
+        }
+
+        #canvas-container canvas {
+            display: block;
+            width: 100% !important;
+            height: auto !important;
+        }
+
+        /* Loading State */
+        .loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: var(--anthropic-mid-gray);
+        }
+
+        /* Responsive - Stack on mobile */
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+            }
+
+            .canvas-area {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Control Sidebar -->
+        <div class="sidebar">
+            <!-- Headers -->
+            <h1>Bioluminescent Tides</h1>
+            <div class="subtitle">Liquid light at twilight—flow fields and luminescent particles breathing with the ocean's rhythm</div>
+
+            <!-- Seed Section -->
+            <div class="control-section">
+                <h3>Seed</h3>
+                <input type="number" id="seed-input" class="seed-input" value="42" onchange="updateSeed()">
+                <div class="seed-controls">
+                    <button class="button secondary" onclick="previousSeed()">← Prev</button>
+                    <button class="button secondary" onclick="nextSeed()">Next →</button>
+                </div>
+                <button class="button tertiary regen-button" onclick="randomSeedAndUpdate()">↻ Random</button>
+            </div>
+
+            <!-- Parameters Section -->
+            <div class="control-section">
+                <h3>Parameters</h3>
+                
+                <!-- Particle Count -->
+                <div class="control-group">
+                    <label>Particle Count</label>
+                    <div class="slider-container">
+                        <input type="range" id="particleCount" min="2000" max="15000" step="500" value="8000" oninput="updateParam('particleCount', this.value)">
+                        <span class="value-display" id="particleCount-value">8000</span>
+                    </div>
+                </div>
+
+                <!-- Flow Strength -->
+                <div class="control-group">
+                    <label>Flow Strength</label>
+                    <div class="slider-container">
+                        <input type="range" id="flowStrength" min="0.1" max="3.0" step="0.1" value="1.2" oninput="updateParam('flowStrength', this.value)">
+                        <span class="value-display" id="flowStrength-value">1.2</span>
+                    </div>
+                </div>
+
+                <!-- Deep Current Scale -->
+                <div class="control-group">
+                    <label>Deep Current Scale</label>
+                    <div class="slider-container">
+                        <input type="range" id="deepScale" min="0.0005" max="0.003" step="0.0001" value="0.0012" oninput="updateParam('deepScale', this.value)">
+                        <span class="value-display" id="deepScale-value">0.0012</span>
+                    </div>
+                </div>
+
+                <!-- Wave Turbulence -->
+                <div class="control-group">
+                    <label>Wave Turbulence</label>
+                    <div class="slider-container">
+                        <input type="range" id="waveScale" min="0.002" max="0.01" step="0.0005" value="0.005" oninput="updateParam('waveScale', this.value)">
+                        <span class="value-display" id="waveScale-value">0.005</span>
+                    </div>
+                </div>
+
+                <!-- Micro Eddies -->
+                <div class="control-group">
+                    <label>Micro Eddies</label>
+                    <div class="slider-container">
+                        <input type="range" id="eddyScale" min="0.01" max="0.04" step="0.002" value="0.022" oninput="updateParam('eddyScale', this.value)">
+                        <span class="value-display" id="eddyScale-value">0.022</span>
+                    </div>
+                </div>
+
+                <!-- Breathing Rate -->
+                <div class="control-group">
+                    <label>Breathing Rate</label>
+                    <div class="slider-container">
+                        <input type="range" id="breathRate" min="0.0005" max="0.005" step="0.0005" value="0.002" oninput="updateParam('breathRate', this.value)">
+                        <span class="value-display" id="breathRate-value">0.002</span>
+                    </div>
+                </div>
+
+                <!-- Glow Intensity -->
+                <div class="control-group">
+                    <label>Glow Intensity</label>
+                    <div class="slider-container">
+                        <input type="range" id="glowIntensity" min="1" max="10" step="0.5" value="4" oninput="updateParam('glowIntensity', this.value)">
+                        <span class="value-display" id="glowIntensity-value">4</span>
+                    </div>
+                </div>
+
+                <!-- Trail Persistence -->
+                <div class="control-group">
+                    <label>Trail Persistence</label>
+                    <div class="slider-container">
+                        <input type="range" id="trailAlpha" min="1" max="10" step="1" value="4" oninput="updateParam('trailAlpha', this.value)">
+                        <span class="value-display" id="trailAlpha-value">4</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Colors Section -->
+            <div class="control-section">
+                <h3>Colors</h3>
+                
+                <!-- Deep Ocean -->
+                <div class="color-group">
+                    <label>Deep Ocean</label>
+                    <div class="color-picker-container">
+                        <input type="color" id="color1" value="#0a1628" onchange="updateColor('color1', this.value)">
+                        <span class="color-value" id="color1-value">#0a1628</span>
+                    </div>
+                </div>
+
+                <!-- Cyan Glow -->
+                <div class="color-group">
+                    <label>Cyan Glow</label>
+                    <div class="color-picker-container">
+                        <input type="color" id="color2" value="#00d4ff" onchange="updateColor('color2', this.value)">
+                        <span class="color-value" id="color2-value">#00d4ff</span>
+                    </div>
+                </div>
+
+                <!-- Violet Deep -->
+                <div class="color-group">
+                    <label>Violet Deep</label>
+                    <div class="color-picker-container">
+                        <input type="color" id="color3" value="#6b4aff" onchange="updateColor('color3', this.value)">
+                        <span class="color-value" id="color3-value">#6b4aff</span>
+                    </div>
+                </div>
+
+                <!-- Green Accent -->
+                <div class="color-group">
+                    <label>Green Accent</label>
+                    <div class="color-picker-container">
+                        <input type="color" id="color4" value="#00ff88" onchange="updateColor('color4', this.value)">
+                        <span class="color-value" id="color4-value">#00ff88</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Actions Section -->
+            <div class="control-section">
+                <h3>Actions</h3>
+                <div class="button-row">
+                    <button class="button" onclick="resetParameters()">Reset</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Canvas Area -->
+        <div class="canvas-area">
+            <div id="canvas-container">
+                <div class="loading">Initializing bioluminescent tides...</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ═══════════════════════════════════════════════════════════════════════
+        // GENERATIVE ART PARAMETERS
+        // ═══════════════════════════════════════════════════════════════════════
+
+        let params = {
+            seed: 42,
+            particleCount: 8000,
+            flowStrength: 1.2,
+            deepScale: 0.0012,
+            waveScale: 0.005,
+            eddyScale: 0.022,
+            breathRate: 0.002,
+            glowIntensity: 4,
+            trailAlpha: 4,
+            colorPalette: {
+                deep: '#0a1628',
+                cyan: '#00d4ff',
+                violet: '#6b4aff',
+                green: '#00ff88'
+            }
+        };
+
+        let defaultParams = JSON.parse(JSON.stringify(params)); // Deep copy for reset
+
+        // ═══════════════════════════════════════════════════════════════════════
+        // P5.JS BIOLUMINESCENT TIDES ALGORITHM
+        // ═══════════════════════════════════════════════════════════════════════
+
+        let particles = [];
+        let flowField = [];
+        let cols, rows;
+        let resolution = 15; // Flow field grid resolution
+        let time = 0; // For breathing animation
+        let pg; // Graphics buffer for glow effect
+
+        function setup() {
+            let canvas = createCanvas(1200, 1200);
+            canvas.parent('canvas-container');
+            
+            // Create graphics buffer for trails
+            pg = createGraphics(1200, 1200);
+            
+            initializeSystem();
+            
+            // Remove loading message
+            document.querySelector('.loading').style.display = 'none';
+        }
+
+        function initializeSystem() {
+            // Seed the randomness for reproducibility
+            randomSeed(params.seed);
+            noiseSeed(params.seed);
+
+            // Reset time
+            time = 0;
+
+            // Clear particles and recreate
+            particles = [];
+            
+            // Initialize particles with random positions
+            for (let i = 0; i < params.particleCount; i++) {
+                particles.push(new Particle());
+            }
+
+            // Calculate flow field dimensions
+            cols = floor(width / resolution);
+            rows = floor(height / resolution);
+            
+            // Initialize flow field array
+            flowField = new Array(cols * rows);
+
+            // Clear background with deep ocean color
+            pg.background(params.colorPalette.deep);
+            background(params.colorPalette.deep);
+        }
+
+        function draw() {
+            // Update time for breathing effect
+            time += params.breathRate;
+            
+            // Breathing modulation (sine wave for smooth oscillation)
+            let breathPhase = sin(time) * 0.5 + 0.5; // Normalize to 0-1
+            
+            // Generate flow field with breathing modulation
+            let zoff = time * 0.05; // Slow evolution over time
+            
+            for (let y = 0; y < rows; y++) {
+                for (let x = 0; x < cols; x++) {
+                    let index = x + y * cols;
+                    
+                    // Sample three layers of noise at different scales
+                    let xPos = x * resolution;
+                    let yPos = y * resolution;
+                    
+                    // Deep current - slow, broad movements
+                    let deepAngle = noise(xPos * params.deepScale, yPos * params.deepScale, zoff) * TWO_PI * 4;
+                    let deepVec = p5.Vector.fromAngle(deepAngle);
+                    deepVec.mult(0.4);
+                    
+                    // Wave turbulence - medium frequency
+                    let waveAngle = noise(xPos * params.waveScale, yPos * params.waveScale, zoff * 2) * TWO_PI * 2;
+                    let waveVec = p5.Vector.fromAngle(waveAngle);
+                    waveVec.mult(0.4);
+                    
+                    // Micro eddies - high frequency perturbations
+                    let eddyAngle = noise(xPos * params.eddyScale, yPos * params.eddyScale, zoff * 3) * TWO_PI;
+                    let eddyVec = p5.Vector.fromAngle(eddyAngle);
+                    eddyVec.mult(0.2);
+                    
+                    // Combine vectors with breathing modulation
+                    let combinedVec = p5.Vector.add(deepVec, waveVec);
+                    combinedVec.add(eddyVec);
+                    combinedVec.mult(params.flowStrength * (0.5 + breathPhase * 0.5));
+                    
+                    flowField[index] = combinedVec;
+                }
+            }
+            
+            // Fade previous frame slightly for trail effect
+            pg.noStroke();
+            pg.fill(params.colorPalette.deep, params.trailAlpha);
+            pg.rect(0, 0, width, height);
+            
+            // Update and draw particles
+            for (let particle of particles) {
+                particle.follow(flowField);
+                particle.update();
+                particle.show();
+            }
+            
+            // Draw the persistence buffer to main canvas
+            image(pg, 0, 0);
+        }
+
+        // ═══════════════════════════════════════════════════════════════════════
+        // PARTICLE SYSTEM
+        // ═══════════════════════════════════════════════════════════════════════
+
+        class Particle {
+            constructor() {
+                this.pos = createVector(random(width), random(height));
+                this.vel = createVector(0, 0);
+                this.acc = createVector(0, 0);
+                this.maxSpeed = 3;
+                this.prevPos = this.pos.copy();
+                
+                // Particle properties
+                this.age = 0;
+                this.maxAge = random(300, 800);
+                this.size = random(1, 2.5);
+            }
+            
+            follow(vectors) {
+                let x = floor(this.pos.x / resolution);
+                let y = floor(this.pos.y / resolution);
+                x = constrain(x, 0, cols - 1);
+                y = constrain(y, 0, rows - 1);
+                let index = x + y * cols;
+                let force = vectors[index];
+                if (force) {
+                    this.applyForce(force);
+                }
+            }
+            
+            applyForce(force) {
+                this.acc.add(force);
+            }
+            
+            update() {
+                this.vel.add(this.acc);
+                this.vel.limit(this.maxSpeed);
+                this.pos.add(this.vel);
+                this.acc.mult(0);
+                
+                this.age++;
+                
+                // Wrap around edges
+                if (this.pos.x > width) {
+                    this.pos.x = 0;
+                    this.prevPos.x = this.pos.x;
+                }
+                if (this.pos.x < 0) {
+                    this.pos.x = width;
+                    this.prevPos.x = this.pos.x;
+                }
+                if (this.pos.y > height) {
+                    this.pos.y = 0;
+                    this.prevPos.y = this.pos.y;
+                }
+                if (this.pos.y < 0) {
+                    this.pos.y = height;
+                    this.prevPos.y = this.pos.y;
+                }
+                
+                // Reset particle if too old
+                if (this.age > this.maxAge) {
+                    this.age = 0;
+                    this.pos.x = random(width);
+                    this.pos.y = random(height);
+                    this.prevPos = this.pos.copy();
+                }
+            }
+            
+            show() {
+                // Calculate color based on velocity and position
+                let speed = this.vel.mag();
+                let speedNorm = constrain(speed / this.maxSpeed, 0, 1);
+                
+                // Depth factor based on y position (deeper = more violet)
+                let depthFactor = this.pos.y / height;
+                
+                // Parse colors
+                let deepColor = color(params.colorPalette.deep);
+                let cyanColor = color(params.colorPalette.cyan);
+                let violetColor = color(params.colorPalette.violet);
+                let greenColor = color(params.colorPalette.green);
+                
+                // Mix colors based on speed and depth
+                let particleColor;
+                if (speedNorm > 0.7) {
+                    // Fast particles - bright cyan with green accent
+                    particleColor = lerpColor(cyanColor, greenColor, (speedNorm - 0.7) * 3);
+                } else if (depthFactor > 0.6) {
+                    // Deep particles - violet tint
+                    particleColor = lerpColor(cyanColor, violetColor, depthFactor - 0.6);
+                } else {
+                    // Medium particles - cyan
+                    particleColor = cyanColor;
+                }
+                
+                // Opacity based on speed and age
+                let ageFade = 1 - (this.age / this.maxAge);
+                let opacity = speedNorm * ageFade * params.glowIntensity * 25;
+                
+                // Draw glow effect with multiple passes
+                pg.strokeWeight(this.size * 3);
+                pg.stroke(red(particleColor), green(particleColor), blue(particleColor), opacity * 0.3);
+                pg.line(this.prevPos.x, this.prevPos.y, this.pos.x, this.pos.y);
+                
+                pg.strokeWeight(this.size * 1.5);
+                pg.stroke(red(particleColor), green(particleColor), blue(particleColor), opacity * 0.6);
+                pg.line(this.prevPos.x, this.prevPos.y, this.pos.x, this.pos.y);
+                
+                pg.strokeWeight(this.size);
+                pg.stroke(red(particleColor), green(particleColor), blue(particleColor), opacity);
+                pg.line(this.prevPos.x, this.prevPos.y, this.pos.x, this.pos.y);
+                
+                // Update previous position
+                this.prevPos.x = this.pos.x;
+                this.prevPos.y = this.pos.y;
+            }
+        }
+
+        // ═══════════════════════════════════════════════════════════════════════
+        // UI CONTROL HANDLERS
+        // ═══════════════════════════════════════════════════════════════════════
+
+        function updateParam(paramName, value) {
+            params[paramName] = parseFloat(value);
+            document.getElementById(paramName + '-value').textContent = value;
+            
+            // For particle count changes, need to reinitialize
+            if (paramName === 'particleCount') {
+                initializeSystem();
+            }
+        }
+
+        function updateColor(colorId, value) {
+            document.getElementById(colorId + '-value').textContent = value;
+            
+            // Map color IDs to palette keys
+            const colorMap = {
+                'color1': 'deep',
+                'color2': 'cyan',
+                'color3': 'violet',
+                'color4': 'green'
+            };
+            
+            params.colorPalette[colorMap[colorId]] = value;
+            
+            // Reinitialize to apply new colors
+            if (colorMap[colorId] === 'deep') {
+                pg.background(value);
+            }
+        }
+
+        // ═══════════════════════════════════════════════════════════════════════
+        // SEED CONTROL FUNCTIONS
+        // ═══════════════════════════════════════════════════════════════════════
+
+        function updateSeedDisplay() {
+            document.getElementById('seed-input').value = params.seed;
+        }
+
+        function updateSeed() {
+            let input = document.getElementById('seed-input');
+            let newSeed = parseInt(input.value);
+            if (newSeed && newSeed > 0) {
+                params.seed = newSeed;
+                initializeSystem();
+            } else {
+                updateSeedDisplay();
+            }
+        }
+
+        function previousSeed() {
+            params.seed = Math.max(1, params.seed - 1);
+            updateSeedDisplay();
+            initializeSystem();
+        }
+
+        function nextSeed() {
+            params.seed = params.seed + 1;
+            updateSeedDisplay();
+            initializeSystem();
+        }
+
+        function randomSeedAndUpdate() {
+            params.seed = Math.floor(Math.random() * 999999) + 1;
+            updateSeedDisplay();
+            initializeSystem();
+        }
+
+        function resetParameters() {
+            params = JSON.parse(JSON.stringify(defaultParams));
+            
+            // Update all UI elements
+            document.getElementById('particleCount').value = params.particleCount;
+            document.getElementById('particleCount-value').textContent = params.particleCount;
+            
+            document.getElementById('flowStrength').value = params.flowStrength;
+            document.getElementById('flowStrength-value').textContent = params.flowStrength;
+            
+            document.getElementById('deepScale').value = params.deepScale;
+            document.getElementById('deepScale-value').textContent = params.deepScale;
+            
+            document.getElementById('waveScale').value = params.waveScale;
+            document.getElementById('waveScale-value').textContent = params.waveScale;
+            
+            document.getElementById('eddyScale').value = params.eddyScale;
+            document.getElementById('eddyScale-value').textContent = params.eddyScale;
+            
+            document.getElementById('breathRate').value = params.breathRate;
+            document.getElementById('breathRate-value').textContent = params.breathRate;
+            
+            document.getElementById('glowIntensity').value = params.glowIntensity;
+            document.getElementById('glowIntensity-value').textContent = params.glowIntensity;
+            
+            document.getElementById('trailAlpha').value = params.trailAlpha;
+            document.getElementById('trailAlpha-value').textContent = params.trailAlpha;
+            
+            // Reset colors
+            document.getElementById('color1').value = params.colorPalette.deep;
+            document.getElementById('color1-value').textContent = params.colorPalette.deep;
+            document.getElementById('color2').value = params.colorPalette.cyan;
+            document.getElementById('color2-value').textContent = params.colorPalette.cyan;
+            document.getElementById('color3').value = params.colorPalette.violet;
+            document.getElementById('color3-value').textContent = params.colorPalette.violet;
+            document.getElementById('color4').value = params.colorPalette.green;
+            document.getElementById('color4-value').textContent = params.colorPalette.green;
+            
+            updateSeedDisplay();
+            initializeSystem();
+        }
+
+        // Initialize UI on load
+        window.addEventListener('load', function() {
+            updateSeedDisplay();
+        });
+    </script>
+</body>
+</html>
