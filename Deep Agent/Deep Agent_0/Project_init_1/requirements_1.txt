@@ -1,0 +1,5 @@
+deepagents
+langchain-anthropic
+tavily-python
+python-dotenv
+"langgraph-cli[inmem]"
